@@ -21,7 +21,7 @@ function buildMetadata(userData) {
     
   
     var userInfo;
-    d3.csv("UCS-Satellite_Trimmed_ekinplaying.csv").function((Data) => {
+    d3.csv("Data/launchDate.csv").function((Data) => {
   
       var resultArray = data.results;
       userInfo = data.user;
