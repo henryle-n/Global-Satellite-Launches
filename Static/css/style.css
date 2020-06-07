@@ -1,9 +1,16 @@
 .api-list {
     padding: 2rem;
-    background-color: rgba(247, 239, 239, 0.747);
+    background-color: rgba(247, 239, 239, 0.836);
     font-size: 2.0rem;
     border: lightblue;
     border-radius: 2rem;
+    margin-top: 100px;
+}
+
+a:hover {
+    color: rgb(150, 48, 8);
+    background-color: lightgoldenrodyellow;
+    /* display: inline-block; */
 }
 
 
@@ -21,16 +28,43 @@
 #btn-back {
     padding: 1rem;
     margin-top: 2rem;
-    background-color: rgb(184, 129, 181);
-    color: rgb(241, 237, 237);
+    background-color: #E2C3C9;
+    color: rgb(42, 113, 141);
 }
 
 #btn-back:hover {
-    background-color: rgb(226, 198, 147);
+    background-color: #C6BCC7;
     color: rgb(42, 35, 141);
 
 }
 
 body {
-    background-color: rgba(111, 166, 170, 0.678);
+    height: 100%;
+    margin: 0;
+    background-color: #C6BCC7;
+    
 }
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+
+.jumbotron {
+    background-color: #F0DACC;
+    border-radius: 2rem;
+}
+
+.bg-cover {
+    /* The image used */
+    background-image: url("/static/img/apiPic.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

@@ -1,11 +1,11 @@
 # dependencies
-from  SatelliteClass import SatLauch 
+from  SatelliteClass import SatLaunch 
 from flask import Flask, jsonify, render_template
 
 #################################################
 # Database Setup
 #################################################
-data = SatLauch("sqlite:///Data/UCS_Satellite.sqlite")
+data = SatLaunch("sqlite:///Data/UCS_Satellite.db")
 
 #################################################
 # Flask Setup
@@ -17,41 +17,76 @@ app = Flask(__name__)
 # Flask Routes
 #################################################
 
+# main home page route - this will be static
+# big jumpotron and learn more
 @app.route("/")
-def homePage():
+def home_page():
     ''' Home Page Access Route'''
     return render_template("index.html")
 
+@app.route("/H.O.E")
+def main_page():
+    ''' Main Page Access Route'''
+    return render_template("hoe.html")
+
+# route to static HTML of APIs route
 @app.route("/api")
-def get_all_APIs():
-    """List all available API routes."""
+def api_list():
+    """List all available API routes"""
     return render_template("api.html")
 
-@app.route("/api/v1.0/ids")
-def get_all_ids():
-    return jsonify(data.get_subject_ids())
+# route to static HTML Team personal/ professional info
+@app.route("/about")
+def about_us():
+    """Team rooster and info"""
+    return render_template("about.html")
 
-@app.route("/api/v1.0/otu")
-def get_all_otu():
-    return jsonify(data.get_otu_ref())
+# route to static HTML Team contact info
+@app.route("/contact")
+def contact_us():
+    '''Team contact info'''
+    return render_template("contact.html")
 
-@app.route("/api/v1.0/info")
-def get_all_user_results():
-    return jsonify(data.get_data_by_user())    
+# route to satellite name records of 46 years
+@app.route("/api/satellite-directory")
+def get_all_satellite_names():
+    return jsonify(data.get_satellite_names())
 
-@app.route("/api/v1.0/info/<subject_id>")
-def get_one_user_results(subject_id):
-    return jsonify(data.get_data_by_user(subject_id))    
+# route to launch date records of 46 years
+@app.route("/api/launch-date")
+def get_all_launch_date():
+    return jsonify(data.get_launch_date())
 
-@app.route("/api/v1.0/subjects")
-def get_all_subjects():
-    return jsonify(data.get_subjects())
+# route to metadata - table data description
+@app.route("/api/metadata")
+def get_metadata():
+    return jsonify(data.meta_info())   
 
-@app.route("/api/v1.0/subjects/<subject_id>")
-def get_one_subject(subject_id):
-    return jsonify(data.get_subjects(subject_id))
+# route to demographic data 
+@app.route("/api/demographic")
+def get_all_demoG_data():
+    return jsonify(data.get_demographic_data())
 
+# filterable by satellite name
+@app.route("/api/demographic/<satellite_name>")
+def get_selected_demoG_data(satellite_name):
+    return jsonify(data.get_demographic_data(satellite_name))
 
+# route to 46 years satellite launch by country, and counts
+@app.route("/api/lauch-history-by-country")
+def get_all_country_counts():
+    return jsonify(data.get_40yr_sat_lauch_by_country())
 
+# route to 46 years satellite launch by chosen country, and counts
+@app.route("/api/lauch-history-by-country/<country_name>")
+def get_selected_country_counts(country_name):
+    return jsonify(data.get_40yr_sat_lauch_by_country(country_name))
+
+# master data of 1974-2020 Satellite Info DB
+@app.route("/api/master-record")
+def get_master_recs():
+    return jsonify(data.get_40yr_master_record())
+
+# exe program
 if __name__ == '__main__':
     app.run(debug=True)

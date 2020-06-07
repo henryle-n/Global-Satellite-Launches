@@ -5,7 +5,7 @@ Orig_Sequence,Satellite_Names,Launch_Date,Country_of_Operator_Owner,Launch_Site,
 3,AAUSat-4,2016-04-25,Denmark,Guiana Space Center,University of Aalborg,Earth Observation,LEO,1.6,95.9,1
 4,Skynet 4C ,1990-08-30,United Kingdom,Guiana Space Center,Intelsat/Paradigm Secure Communications (wholly owned by EADS Astrium),Communications,GEO,23.93,1436.07,"1,474"
 5,"TDRS-5 (Tracking and Data Relay Satellite, TDRS-E)",1991-08-02,USA,Cape Canaveral,SES S.A.,Communications,GEO,23.95,1436.99,"3,180"
-6,"TDRS-6 (Tracking and Data Relay Satellite, TDRS-F)",1993-01-13,USA,Cape Canaveral,National Aeronautics and Space Administration (NASA)/SES Americom (SES [Société Européenne des Satellites (SES)]),Communications,GEO,23.93,1435.7,"3,180"
+6,"TDRS-6 (Tracking and Data Relay Satellite, TDRS-F)",1993-01-13,USA,Cape Canaveral,National Aeronautics and Space Administration (NASA)/SES Americom (SES [Socit Europenne des Satellites (SES)]),Communications,GEO,23.93,1435.7,"3,180"
 7,"UFO-2 (USA 95) ""UHF Follow-On""",1993-09-03,USA,Cape Canaveral,US Navy,Communications,GEO,23.94,1436.12,"3,200"
 8,"Milstar DFS-1 (USA 99, Milstar 1-F1) (Military Strategic and Tactical Relay)",1994-02-07,USA,Cape Canaveral,US Air Force,Communications,GEO,23.94,1436.13,"4,536"
 9,"Mercury 1 (Advanced Vortex 1, USA 105)",1994-08-27,USA,Cape Canaveral,National Reconnaissance Office (NRO)/US Air Force,Earth Observation,GEO,23.94,1436.13,"8,000"
@@ -52,7 +52,7 @@ Orig_Sequence,Satellite_Names,Launch_Date,Country_of_Operator_Owner,Launch_Site,
 50,DSP 18 (USA 130) (Defense Support Program),1997-02-23,USA,Cape Canaveral,US Air Force,Earth Observation,GEO,23.94,1436.27,"2,380"
 51,ALE-2 (Astro Live Experiences-2),2019-12-06,Japan,Rocket Lab Launch Complex 1,Astro Live Experiences,Earth Science,LEO,1.53,92.06,75
 52,Al-Farabi-2,2018-12-03,Kazakhstan,Vandenberg AFB,Al-Farabi Kazakh National University,Technology Development,LEO,1.6,96.2,4
-53,ALiCE  (AFIT LEO iMESA CNT E),2013-12-06,USA,Vandenberg AFB,US Air Force Institute of Technology,Technology Development,LEO,1.63,98.0,5
+53,ALiCE(AFIT LEO iMESA CNT E),2013-12-06,USA,Vandenberg AFB,US Air Force Institute of Technology,Technology Development,LEO,1.63,98.0,5
 54,Alsat 2B,2016-09-26,Algeria,Satish Dhawan Space Centre,Algerian Space Agency (ASAL),Earth Observation,LEO,1.63,97.7,117
 55,Alsat-1B,2016-09-26,Algeria,Satish Dhawan Space Centre,Algerian Space Agency (ASAL),Earth Observation,LEO,1.64,98.4,103
 56,AlSat-1N,2016-09-26,Algeria,Satish Dhawan Space Centre,Algerian Space Agency (ASAL)/UK Space Agency,Technology Development,LEO,1.64,98.3,10
@@ -138,7 +138,7 @@ Orig_Sequence,Satellite_Names,Launch_Date,Country_of_Operator_Owner,Launch_Site,
 136,Galaxy-3C,2002-06-15,USA,Sea Launch Odyssey,"PanAmSat (Intelsat S.A.)/DirecTV, Inc.",Communications,GEO,23.94,1436.11,"4,860"
 137,Athenoxat-1 ((Athene Noctua Experimental Satellite) ,2015-12-16,Singapore,Satish Dhawan Space Centre,Microspace Rapid Pvt Ltd.,Technology Development,LEO,1.59,95.46,6
 138,"ATL-1 (Advanced Technology of Laser, Magyar-OSCAR 106, MO-106)",2019-12-06,Hungary,Rocket Lab Launch Complex 1,ATL (Advanced Technology of Laser),Technology Development,LEO,1.53,92.0,1
-139,Aurora  (Tabletsat-2U-EO),2014-06-19,Russia,Dombarovsky Air Base,Sputnix Ltd.,Technology Development,LEO,1.61,96.7,25
+139,Aurora(Tabletsat-2U-EO),2014-06-19,Russia,Dombarovsky Air Base,Sputnix Ltd.,Technology Development,LEO,1.61,96.7,25
 140,"Eutelsat 5 West A (Atlantic Bird 3, Stellat 5)",2002-07-05,Multinational,Guiana Space Center,EUTELSAT S.A.,Communications,GEO,23.93,1436.08,"4,050"
 141,N-Star C ,2002-07-05,Japan,Guiana Space Center,Sky Perfect JSAT Corporation,Communications,GEO,23.93,1436.08,"1,625"
 142,AztecSat-1,2020-02-19,USA/Mexico,International Space Station,Autonomous Popular University of the State of Puebla,Technology Development,LEO,1.55,92.9,2
@@ -361,8 +361,8 @@ Orig_Sequence,Satellite_Names,Launch_Date,Country_of_Operator_Owner,Launch_Site,
 359,Spaceway 3,2007-08-14,USA,Guiana Space Center,Hughes Space and Communications Co. ,Communications,GEO,23.94,1436.1,"6,100"
 360,INSAT 4CR (Indian National Satellite),2007-09-02,India,Satish Dhawan Space Centre,Indian Space Research Organization (ISRO),Communications,GEO,23.94,1436.11,"2,130"
 361,Diwata-1 (PHL-Microsat-1),2016-04-27,Philippines,International Space Station,University of the Philippines,Earth Observation,LEO,1.52,91.5,50
-362,Diwata-2B,2018-10-29,Japan,Tanegashima Space Center,"Philippines Department of Science and Technology, University of the Philippines Diliman, and Japans Hokkaido University and Tohoku University",Earth Observation,LEO,1.61,96.8,56
-363,DLR Tubsat ,1999-05-26,Germany,Satish Dhawan Space Centre,Deutsches Zentrum für Luft- und Raumfahrt,Earth Science,LEO,1.65,99.2,45
+362,Diwata-2B,2018-10-29,Japan,Tanegashima Space Center,"Philippines Department of Science and Technology, University of the Philippines Diliman, and Japans Hokkaido University and Tohoku University",Earth Observation,LEO,1.61,96.8,56
+363,DLR Tubsat ,1999-05-26,Germany,Satish Dhawan Space Centre,Deutsches Zentrum fr Luft- und Raumfahrt,Earth Science,LEO,1.65,99.2,45
 364,DMC 3-1 (Disaster Monitoring Constellation),2015-07-10,United Kingdom,Satish Dhawan Space Centre,Surrey Satellite Technology Ltd.,Earth Observation,LEO,1.63,97.71,447
 365,DMC 3-2 (Disaster Monitoring Constellation),2015-07-10,United Kingdom,Satish Dhawan Space Centre,Surrey Satellite Technology Ltd.,Earth Observation,LEO,1.63,97.71,447
 366,DMC 3-3 (Disaster Monitoring Constellation),2015-07-10,United Kingdom,Satish Dhawan Space Centre,Surrey Satellite Technology Ltd.,Earth Observation,LEO,1.63,97.69,447
@@ -602,15 +602,15 @@ Orig_Sequence,Satellite_Names,Launch_Date,Country_of_Operator_Owner,Launch_Site,
 600,Dove 4p-8 (0 Flock 4p-8 2275),2019-11-27,USA,Satish Dhawan Space Centre,"Planet Labs, Inc.",Earth Observation,LEO,1.58,94.7,4
 601,"Dove 4p-9 (0 Flock 4p-9 2257)
 Dove 4p-10 -- 2019-081E 
-Dove 4p-11  2019-081F 
-Dove 4p-12  2019-081G 
+Dove 4p-11  2019-081F 
+Dove 4p-12  2019-081G 
 Dove 4p-4 -- 2019-081H 
 Dove 4p-3 -- 2019-081J 
-Dove 4p-2  2019-081K 
+Dove 4p-2  2019-081K 
 Dove 4p-1 -- 2019-081L 
 Dove 4p-8 -- 2019-081M 
 Dove 4p-7 -- 2019-081N 
-Dove 4p-6  2019-081P 
+Dove 4p-6  2019-081P 
 Dove 4p-5 -- 2019-081Q 
 ",2019-11-27,USA,Satish Dhawan Space Centre,"Planet Labs, Inc.",Earth Observation,LEO,1.58,94.7,4
 602,Dove-4a-5 (0 Flock 4a-5 2227),2019-04-01,USA,Satish Dhawan Space Centre,"Planet Labs, Inc.",Earth Observation,LEO,1.58,94.6,4
@@ -675,10 +675,10 @@ Dove 4p-5 -- 2019-081Q
 661,"Eutelsat 33E (Hot Bird  13D, Eutelsat 3C, Hot Bird 10, Atlantic Bird 4A)",2009-02-11,Multinational,Guiana Space Center,EUTELSAT S.A.,Communications,GEO,23.93,1436.07,"4,892"
 662,Express-AM44,2009-02-11,Russia,Baikonur Cosmodrome,International Organization of Space Communications (Intersputnik),Communications,GEO,24.11,1446.57,"2,532"
 663,NSS-9,2009-02-11,Netherlands,Guiana Space Center,SES S.A.,Communications,GEO,23.94,1436.17,"2,238"
-664,SPIRALE-A (Système Préparatoire Infra-Rouge pour l'Alerte),2009-02-11,France,Guiana Space Center,Ministry of Defense/General Delegation for Ordnance (DGA),Technology Development,Elliptical,9.12,547.0,117
+664,SPIRALE-A (Systme Prparatoire Infra-Rouge pour l'Alerte),2009-02-11,France,Guiana Space Center,Ministry of Defense/General Delegation for Ordnance (DGA),Technology Development,Elliptical,9.12,547.0,117
 665,ETRSS-1,2019-12-20,Ethiopia,Taiyuan Launch Center,Ethiopian Space Science and Technology Institute,Earth Observation,LEO,1.62,97.1,70
 666,Eu:CROPIS (Euglena and Combined Regenerative Organic-Food Production in Space),2018-12-03,Germany,Vandenberg AFB,German Aerospace Center (DLR),Technology Development,LEO,1.6,96.3,230
-667,SPIRALE-B (Système Préparatoire Infra-Rouge pour l'Alerte),2009-02-11,France,Guiana Space Center,Ministry of Defense/General Delegation for Ordnance (DGA),Technology Development,Elliptical,5.23,314.0,117
+667,SPIRALE-B (Systme Prparatoire Infra-Rouge pour l'Alerte),2009-02-11,France,Guiana Space Center,Ministry of Defense/General Delegation for Ordnance (DGA),Technology Development,Elliptical,5.23,314.0,117
 668,Telstar 11N,2009-02-26,Canada,Sea Launch Odyssey,"Telesat Canada Ltd. (BCE, Inc.)",Communications,GEO,23.94,1436.13,"4,010"
 669,Eutelsat 10A (Eutelsat W-2A),2009-04-03,Multinational,Baikonur Cosmodrome,EUTELSAT S.A.,Communications,GEO,23.93,1436.09,"5,900"
 670,"Wideband Global Satcom 2 (WGS-2, USA 204)",2009-04-04,USA,Cape Canaveral,Military Satellite Communications - US Air Force,Communications,GEO,23.94,1436.12,"5,987"
@@ -695,7 +695,7 @@ Dove 4p-5 -- 2019-081Q
 681,"PAN-1 (Nemesis, Palladium at Night, P360, USA 207)",2009-09-08,USA,Cape Canaveral,Unknown US intelligence agency,Earth Observation,GEO,23.94,1436.12,0
 682,Nimiq 5,2009-09-17,Canada,Baikonur Cosmodrome,Echostar Corporation (entire payload leased from Telesat Canada Ltd.),Communications,GEO,23.94,1436.1,"4,745"
 683,Amazonas-2,2009-10-01,Spain,Guiana Space Center,Hispamar (subsidiary of Hispasat - Spain),Communications,GEO,23.93,1436.08,"5,465"
-684,COMSATBw-1 (COmmunications SATellite für BundesWehr),2009-10-01,Germany,Guiana Space Center,Armed Forces,Communications,GEO,23.94,1436.1,"2,440"
+684,COMSATBw-1 (COmmunications SATellite fr BundesWehr),2009-10-01,Germany,Guiana Space Center,Armed Forces,Communications,GEO,23.94,1436.1,"2,440"
 685,NSS-12,2009-10-29,Netherlands,Guiana Space Center,SES S.A.,Communications,GEO,23.93,1436.08,0
 686,Thor-6,2009-10-29,Norway,Guiana Space Center,Telenor Satellite Broadcasting,Communications,GEO,23.94,1436.1,"3,050"
 687,Intelsat 14 (IS-14),2009-11-23,USA,Cape Canaveral,Intelsat S.A.,Communications,GEO,23.93,1436.05,"5,613"
@@ -716,7 +716,7 @@ Dove 4p-5 -- 2019-081Q
 702,Echostar 14,2010-03-20,USA,Baikonur Cosmodrome,"Echostar Satellite Services, LLC",Communications,GEO,23.94,1436.11,"6,384"
 703,SES-1 (AMC-4R),2010-04-24,Luxembourg,Baikonur Cosmodrome,SES S.A.,Communications,GEO,23.94,1436.1,0
 704,Astra 3B,2010-05-21,Luxembourg,Guiana Space Center,SES S.A.,Communications,GEO,23.94,1436.11,"5,471"
-705,COMSATBw-2 (COmmunications SATellite für BundesWehr),2010-05-21,Germany,Guiana Space Center,Armed Forces,Communications,GEO,23.94,1436.11,"2,440"
+705,COMSATBw-2 (COmmunications SATellite fr BundesWehr),2010-05-21,Germany,Guiana Space Center,Armed Forces,Communications,GEO,23.94,1436.11,"2,440"
 706,Badr 5 (Arabsat 5B),2010-06-03,Multinational,Baikonur Cosmodrome,Arab Satellite Communications Org. (ASCO),Communications,GEO,24.0,1439.76,"5,420"
 707,Badr 5A (Arabsat 5A),2010-06-26,Multinational,Guiana Space Center,Arab Satellite Communications Org. (ASCO),Communications,GEO,23.79,1427.27,"4,940"
 708,"COMS-1 (Communication, Ocean and Meteorological Satellite; Cheollian)",2010-06-26,South Korea,Guiana Space Center,Korea Aerospace Research Institute (KARI),Earth Observation/Communications,GEO,23.94,1436.1,"2,460"
@@ -724,7 +724,7 @@ Dove 4p-5 -- 2019-081Q
 710,Beidou IGSO-1 (Compass G-5),2010-07-31,China,Xichang Satellite Launch Center,Chinese Defense Ministry,Navigation/Global Positioning,GEO,23.93,1435.82,"4,200"
 711,Nilesat 201,2010-08-04,Egypt,Guiana Space Center,Egyptian Radio and TV Union ,Communications,GEO,23.94,1436.23,"3,200"
 712,"ExSeedSat-1 (Vusat Oscar 96, VO96)",2018-12-03,India,Vandenberg AFB,Exseed Space,Communications,LEO,1.6,96.3,4
-713,Eyesat,2019-12-18,ESA,Guiana Space Center,CNES (Centre national d'études spatiales),Space Science,LEO,1.58,94.9,5
+713,Eyesat,2019-12-18,ESA,Guiana Space Center,CNES (Centre national d'tudes spatiales),Space Science,LEO,1.58,94.9,5
 714,FACSAT-1 ,2018-11-29,Colombia,Satish Dhawan Space Centre,Colombian Air Force,Earth Observation,LEO,1.58,95.0,5
 715,Falconsat-3,2007-03-09,USA,Cape Canaveral,US Air Force Academy,Technology Development,LEO,1.59,95.4,46
 716,Falconsat-6,2018-12-03,USA,Vandenberg AFB,US Air Force Academy,Technology Development,LEO,1.6,96.3,181
@@ -751,7 +751,7 @@ Dove 4p-5 -- 2019-081Q
 737,FLP (Flying Laptop),2017-07-14,Germany,Baikonur Cosmodrome,University of Stuttgart,Earth Observation/Space Science,LEO,1.61,96.6,120
 738,Beidou G4 (Compass G-4),2010-10-31,China,Xichang Satellite Launch Center,Chinese Defense Ministry,Navigation/Global Positioning,GEO,23.94,1436.1,"6,000"
 739,FormoSat-5,2017-08-25,Taiwan,Vandenberg AFB,National Space Organization,Earth Observation,LEO,1.65,99.1,525
-740,FORTÉ (Fast On-orbit Recording of Transient Events),1997-08-29,USA,Vandenberg AFB,Los Alamos National Laboratory,Earth Observation,LEO,1.68,101.0,215
+740,FORT (Fast On-orbit Recording of Transient Events),1997-08-29,USA,Vandenberg AFB,Los Alamos National Laboratory,Earth Observation,LEO,1.68,101.0,215
 741,Fossasat-1,2019-12-06,Spain,Rocket Lab Launch Complex 1,Fossa Systems,Technology Development,LEO,1.53,92.0,1
 742,Fox-1A (AO-85),2015-10-08,USA,Cape Canaveral,AMSAT-NA,Communications/Technology Development,LEO,1.63,97.7,1
 743,Fox-1Cliff (AO 95),2018-12-03,USA,Vandenberg AFB,AMSAT-NA,Communications,LEO,1.6,96.3,2
@@ -805,11 +805,11 @@ Dove 4p-5 -- 2019-081Q
 791,Gaofen 7,2019-11-03,China,Taiyuan Launch Center,Ministry of Natural Resources/Ministry of Housing and Urban-Rural Development/National Bureau of Statistics,Earth Observation,LEO,1.58,94.5,9
 792,Gaofen 8,2015-06-26,China,Taiyuan Launch Center,People's Liberation Army (C41),Earth Observation,LEO,1.57,94.36,"1,000"
 793,Gaofen 9,2015-09-14,China,Jiuquan Satellite Launch Center,China National Academy of Sciences (CNSAS),Earth Observation,LEO,1.63,97.54,"1,000"
-794,Gaofen-1-02,2018-03-30,China,Taiyuan Launch Center,"Chinas Ministry of Land and Resources, Ministry of Environmental Protection, and Ministry of Agriculture",Earth Observation,LEO,1.62,97.5,805
-795,Gaofen-1-03,2018-03-30,China,Taiyuan Launch Center,"Chinas Ministry of Land and Resources, Ministry of Environmental Protection, and Ministry of Agriculture",Earth Observation,LEO,1.62,97.5,805
-796,Gaofen-1-04,2018-03-30,China,Taiyuan Launch Center,"Chinas Ministry of Land and Resources, Ministry of Environmental Protection, and Ministry of Agriculture",Earth Observation,LEO,1.62,97.5,805
-797,Gaofen-1-05,2018-05-08,China,Taiyuan Launch Center,"Chinas Ministry of Land and Resources, Ministry of Environmental Protection, and Ministry of Agriculture",Earth Observation,LEO,1.64,98.4,805
-798,Gaofen-1-06,2018-06-03,China,Jiuquan Satellite Launch Center,"Chinas Ministry of Land and Resources, Ministry of Environmental Protection, and Ministry of Agriculture",Earth Observation,LEO,1.62,97.3,"1,064"
+794,Gaofen-1-02,2018-03-30,China,Taiyuan Launch Center,"Chinas Ministry of Land and Resources, Ministry of Environmental Protection, and Ministry of Agriculture",Earth Observation,LEO,1.62,97.5,805
+795,Gaofen-1-03,2018-03-30,China,Taiyuan Launch Center,"Chinas Ministry of Land and Resources, Ministry of Environmental Protection, and Ministry of Agriculture",Earth Observation,LEO,1.62,97.5,805
+796,Gaofen-1-04,2018-03-30,China,Taiyuan Launch Center,"Chinas Ministry of Land and Resources, Ministry of Environmental Protection, and Ministry of Agriculture",Earth Observation,LEO,1.62,97.5,805
+797,Gaofen-1-05,2018-05-08,China,Taiyuan Launch Center,"Chinas Ministry of Land and Resources, Ministry of Environmental Protection, and Ministry of Agriculture",Earth Observation,LEO,1.64,98.4,805
+798,Gaofen-1-06,2018-06-03,China,Jiuquan Satellite Launch Center,"Chinas Ministry of Land and Resources, Ministry of Environmental Protection, and Ministry of Agriculture",Earth Observation,LEO,1.62,97.3,"1,064"
 799,"SBIRS GEO 1 (Space Based Infrared System Geosynchronous 1, USA 230)",2011-05-07,USA,Cape Canaveral,US Air Force,Earth Observation,GEO,23.94,1436.11,"4,500"
 800,GSAT-8,2011-05-20,India,Guiana Space Center,Indian Space Research Organization (ISRO),Communications/Navigation,GEO,23.94,1436.23,"3,093"
 801,GATOSS (Global Air Traffic Awareness and Optimizing through Spaceborne Surveillance),2013-11-21,Denmark,Dombarovsky Air Base,GomSpace ApS,Technology Development,LEO,1.65,98.9,5
@@ -890,8 +890,8 @@ Dove 4p-5 -- 2019-081Q
 876,GSAT-12,2011-07-15,India,Satish Dhawan Space Centre,Indian Space Research Organization (ISRO),Communications,GEO,23.94,1436.1,"1,410"
 877,KazSat-2,2011-07-15,Kazakhstan,Baikonur Cosmodrome,JSC KazSat,Communications,GEO,23.94,1436.13,"1,300"
 878,SES-3,2011-07-15,Luxembourg,Baikonur Cosmodrome,SES S.A.,Communications,GEO,23.99,1439.41,"3,112"
-879,Göktürk 1,2016-12-05,Turkey,Guiana Space Center,Turkish Ministry of National Defense,Earth Observation,LEO,1.64,98.42,"1,060"
-880,Göktürk 2,2012-12-18,Turkey,Jiuquan Satellite Launch Center,Turkish Ministry of National Defense,Earth Observation,LEO,1.64,98.35,409
+879,Gktrk 1,2016-12-05,Turkey,Guiana Space Center,Turkish Ministry of National Defense,Earth Observation,LEO,1.64,98.42,"1,060"
+880,Gktrk 2,2012-12-18,Turkey,Jiuquan Satellite Launch Center,Turkish Ministry of National Defense,Earth Observation,LEO,1.64,98.35,409
 881,GomX-4A,2018-02-02,Denmark,Jiuquan Satellite Launch Center,GomSpace ApS,Earth Observation,LEO,1.58,94.5,8
 882,GomX-4B,2018-02-02,Denmark,Jiuquan Satellite Launch Center,GomSpace ApS,Technology Development,LEO,1.58,94.5,8
 883,Gonets M-03,2012-07-28,Russia,Plesetsk Cosmodrome,Gonets Satcom,Communications,LEO,1.93,115.9,270
@@ -948,8 +948,8 @@ Dove 4p-5 -- 2019-081Q
 934,HEAD-1 ,2017-11-14,China,Taiyuan Launch Center,HEAD Aerospace,Earth Observation,LEO,1.68,100.9,45
 935,HEAD-2A,2019-12-07,China,Taiyuan Launch Center,HEAD Aerospace,Earth Observation,LEO,1.58,94.6,45
 936,HEAD-2B,2019-12-07,China,Taiyuan Launch Center,HEAD Aerospace,Earth Observation,LEO,1.58,94.6,45
-937,Helios 2A ,2004-12-18,France/Italy/Belgium/Spain/Greece,Guiana Space Center,Centre National d'Etudes Spatiales (CNES)/Délégation Générale de l'Armement (DGA),Earth Observation,LEO,1.63,98.0,"4,200"
-938,Helios 2B,2009-12-18,France/Italy/Belgium/Spain/Greece,Guiana Space Center,Centre National d'Etudes Spatiales (CNES)/Délégation Générale de l'Armement (DGA),Earth Observation,LEO,1.64,98.37,"4,200"
+937,Helios 2A ,2004-12-18,France/Italy/Belgium/Spain/Greece,Guiana Space Center,Centre National d'Etudes Spatiales (CNES)/Dlgation Gnrale de l'Armement (DGA),Earth Observation,LEO,1.63,98.0,"4,200"
+938,Helios 2B,2009-12-18,France/Italy/Belgium/Spain/Greece,Guiana Space Center,Centre National d'Etudes Spatiales (CNES)/Dlgation Gnrale de l'Armement (DGA),Earth Observation,LEO,1.64,98.37,"4,200"
 939,MUOS-1 (Mobile User Objective System 1),2012-02-24,USA,Cape Canaveral,DoD/US Navy,Communications,GEO,23.94,1436.1,"6,804"
 940,Intelsat 22,2012-03-25,USA,Baikonur Cosmodrome,Intelsat S.A.,Communications,GEO,23.94,1436.11,"6,199"
 941,Apstar 7,2012-03-31,China,Xichang Satellite Launch Center,APT Satellite Holdings Ltd.,Communications,GEO,24.01,1440.31,"5,054"
@@ -1052,13 +1052,13 @@ Dove 4p-5 -- 2019-081Q
 1038,Raduga 1-M3 ,2013-11-11,Russia,Baikonur Cosmodrome,Ministry of Defense,Communications,GEO,23.94,1436.13,"2,400"
 1039,SES-8,2013-12-03,Luxembourg,Cape Canaveral,SES S.A.,Communications,GEO,23.93,1436.07,"3,138"
 1040,INMARSAT 5 F1,2013-12-08,United Kingdom,Baikonur Cosmodrome,"INMARSAT, Ltd.",Communications,GEO,23.94,1436.13,"6,070"
-1041,TKSat-1 (Túpac Katari Satellite 1),2013-12-20,Bolivia,Xichang Satellite Launch Center,Bolivia Aerospace Bureau,Communications,GEO,23.93,1436.07,"5,000"
+1041,TKSat-1 (Tpac Katari Satellite 1),2013-12-20,Bolivia,Xichang Satellite Launch Center,Bolivia Aerospace Bureau,Communications,GEO,23.93,1436.07,"5,000"
 1042,Express-AM5,2013-12-26,Russia,Baikonur Cosmodrome,International Organization of Space Communications (Intersputnik),Communications,GEO,23.84,1430.6,"3,400"
 1043,GSAT-14,2014-01-05,India,Satish Dhawan Space Centre,Indian Space Research Organization (ISRO),Communications,GEO,23.94,1436.1,"1,982"
 1044,Thaicom-6,2014-01-06,Thailand,Cape Canaveral,Thaicom Public Company Ltd. ,Communications,GEO,23.94,1436.3,"3,325"
 1045,"TDRS-12 (Tracking and Data Relay Satellite, TDRS L)",2014-01-23,USA,Cape Canaveral,National Aeronautics and Space Administration (NASA),Communications,GEO,23.93,1435.88,"3,454"
 1046,"ABS-2 (Koreasat-8, ST-3)",2014-02-06,Multinational,Guiana Space Center,Asia Broadcast Satellite Ltd.,Communications,GEO,23.93,1436.03,"6,330"
-1047,Athena-Fidus  (Access on THeatres for European Nations Allied forces - French Italian Dual Use Satellite),2014-02-06,France/Italy,Guiana Space Center,Centre National d'Etudes Spatiales (CNES)/Agenzia Spaziale Italiana (ASI),Communications,GEO,23.93,1436.06,"3,080"
+1047,Athena-Fidus(Access on THeatres for European Nations Allied forces - French Italian Dual Use Satellite),2014-02-06,France/Italy,Guiana Space Center,Centre National d'Etudes Spatiales (CNES)/Agenzia Spaziale Italiana (ASI),Communications,GEO,23.93,1436.06,"3,080"
 1048,Turksat 4A,2014-02-14,Turkey,Baikonur Cosmodrome,Turksat,Communications,GEO,23.93,1436.08,"4,869"
 1049,Express-AT1,2014-03-15,Russia,Baikonur Cosmodrome,International Organization of Space Communications (Intersputnik),Communications,GEO,23.94,1436.4,"1,726"
 1050,Express-AT2,2014-03-15,Russia,Baikonur Cosmodrome,International Organization of Space Communications (Intersputnik),Communications,GEO,23.83,1429.75,"1,427"
@@ -1192,7 +1192,7 @@ Dove 4p-5 -- 2019-081Q
 1178,Jingshi-1 (BNU-1),2019-09-12,China,Taiyuan Launch Center,Chinese University Corporation for Polar Research,Earth Observation,LEO,1.66,99.6,16
 1179,JYISat (JO 97),2018-12-03,Jordan,Vandenberg AFB,Crown Prince Foundation,Communications,LEO,1.56,93.6,2
 1180,Kaituo-1A (Xinyan-2),2015-09-19,China,Taiyuan Launch Center,China Aerospace Science and Technology Corp. (CASC),Technology Development,LEO,1.59,95.18,130
-1181,Kanopus-B (Kanopus Vulcan 1) ,2012-07-22,Russia,Baikonur Cosmodrome,Scientific Production Corporation (joint stock creation of Russian Space Agency),Earth Observation,LEO,1.58,94.7,400
+1181,Kanopus-B(Kanopus Vulcan 1),2012-07-22,Russia,Baikonur Cosmodrome,Scientific Production Corporation (joint stock creation of Russian Space Agency),Earth Observation,LEO,1.58,94.7,400
 1182,Kanopus-V-IK-2,2017-07-14,Russia,Baikonur Cosmodrome,Roscosmos State Corporation,Earth Observation,LEO,1.58,94.7,500
 1183,Kanopus-V-IK-3,2018-01-31,Russia,Vostochny Cosmodrome,Roscosmos State Corporation,Earth Observation,LEO,1.58,94.7,500
 1184,Kanopus-V-IK-4,2018-01-31,Russia,Vostochny Cosmodrome,Roscosmos State Corporation,Earth Observation,LEO,1.58,94.7,500
@@ -1357,11 +1357,11 @@ Dove 4p-5 -- 2019-081Q
 1343,MMS-3 (Magnetospheric Multiscale Mission),2015-03-13,USA,Cape Canaveral,National Aeronautics and Space Administration (NASA),Space Science,Elliptical,23.88,1433.0,"1,360"
 1344,MMS-4 (Magnetospheric Multiscale Mission),2015-03-13,USA,Cape Canaveral,National Aeronautics and Space Administration (NASA),Space Science,Elliptical,23.88,1433.0,"1,360"
 1345,Lucky-7,2019-07-05,Czech Republic,Vostochny Cosmodrome,SkyFox Labs,Technology Development,LEO,1.59,95.2,1
-1346,Lume-1,2018-12-27,Spain,Vostochny Cosmodrome,University of Vigo/Alén Space,Communications,LEO,1.58,94.5,2
+1346,Lume-1,2018-12-27,Spain,Vostochny Cosmodrome,University of Vigo/Aln Space,Communications,LEO,1.58,94.5,2
 1347,Luojia 1,2018-06-03,China,Jiuquan Satellite Launch Center,Wuhan University,Earth Observation,LEO,1.62,97.5,5
 1348,M3MSat (Maritime Monitoring and Messaging Microsatellite),2016-06-22,Canada,Satish Dhawan Space Centre,Defence Research and Development Canada (DRDC)/Canadian Space Agency,Earth Observation,LEO,1.58,94.7,85
 1349,MakerSat-1,2020-01-31,USA,Cygnus,Northwest Nazarene University,Technology Development,LEO,1.57,93.9,2
-1350,Maroc Tubsat ,2001-12-10,Morocco/Germany,Baikonur Cosmodrome,CTRS Morocco/Institut für Luft-und Raumfahrttechnik (Berlin),Technology Development,LEO,1.75,105.1,47
+1350,Maroc Tubsat ,2001-12-10,Morocco/Germany,Baikonur Cosmodrome,CTRS Morocco/Institut fr Luft-und Raumfahrttechnik (Berlin),Technology Development,LEO,1.75,105.1,47
 1351,Max Valier,2017-06-23,Italy,Satish Dhawan Space Centre,"Max Valier school Bolzano, Italy, Oskar von Miller school, Merano, Italy",Space Science/Technology Development,LEO,1.58,94.7,16
 1352,Maya-1 (Birds-2),2018-08-10,Philippines,International Space Station,Kyushu Institute of Technology (KIT),Earth Observation,LEO,1.58,94.7,1
 1353,M-Cubed/E1P-U2 (Michigan Multipurpose Minisat; Explorer 1 Prime - Unit 2 -  HRBE [William A. Hiscock Radiation Belt Explorer]),2011-10-28,USA,Vandenberg AFB,University of Michigan/Montana University,Technology Development,LEO,1.62,97.45,2
@@ -1422,8 +1422,8 @@ Dove 4p-5 -- 2019-081Q
 1408,Garpun-12L (Cosmos 2513),2015-12-10,Russia,Baikonur Cosmodrome,Ministry of Defense,Communications,GEO,23.94,1436.1,"5,000"
 1409,Electro-L2 ,2015-12-11,Russia,Baikonur Cosmodrome,Roshydromet - Planeta,Earth Observation,GEO,23.91,1434.47,"1,800"
 1410,NanoACE,2017-07-14,USA,Baikonur Cosmodrome,"Tyvak Nanosatellite Systems, Inc.",Technology Development,LEO,1.61,96.6,6
-1411,Nanosat-1,2004-12-18,Spain,Guiana Space Center,Instituto Nacional de Técnia Aeroespacial (INTA),Communications,LEO,1.63,97.9,20
-1412,Nanosat-1B,2009-07-29,Spain,Baikonur Cosmodrome,Instituto Nacional de Técnia Aeroespacial (INTA),Communications/Technology Development,LEO,1.62,97.3,20
+1411,Nanosat-1,2004-12-18,Spain,Guiana Space Center,Instituto Nacional de Tcnia Aeroespacial (INTA),Communications,LEO,1.63,97.9,20
+1412,Nanosat-1B,2009-07-29,Spain,Baikonur Cosmodrome,Instituto Nacional de Tcnia Aeroespacial (INTA),Communications/Technology Development,LEO,1.62,97.3,20
 1413,"Navstar GPS IIF-1 (Navstar SVN 62, PRN 25, USA 213)",2010-05-28,USA,Cape Canaveral,DoD/US Air Force,Navigation/Global Positioning,MEO,11.98,718.94,"1,630"
 1414,"Navstar GPS IIF-10 (Navstar SVN 72, PRN 8, USA 262)",2015-07-15,USA,Cape Canaveral,DoD/US Air Force,Navigation/Global Positioning,MEO,12.15,728.96,"1,630"
 1415,"Navstar GPS IIF-11 (Navstar SVN 73, PRN 10, USA 265)",2015-10-31,USA,Cape Canaveral,DoD/US Air Force,Navigation/Global Positioning,MEO,1.63,97.7,"1,630"
@@ -1459,7 +1459,7 @@ Dove 4p-5 -- 2019-081Q
 1445,"Navstar GPS IIR-M-8 (Navstar SVN 50, PRN 05, USA 206)",2009-08-17,USA,Cape Canaveral,DoD/US Air Force,Navigation/Global Positioning,MEO,11.97,718.07,"2,059"
 1446,Naxing 2,2015-09-19,China,Taiyuan Launch Center,Tsinghua University,Technology Development,LEO,1.59,95.22,20
 1447,"Nayif-1 (Emirates Oscar 88, EO88)",2017-02-15,United Arab Emirates,Satish Dhawan Space Centre,Mohammed bin Rashid Space Centre/American University of Sharjah,Communications/Technology Development,LEO,1.58,94.6,2
-1448,NEOSSat (Near Earth Object Surveillance Satellite),2013-02-25,Canada,Satish Dhawan Space Centre,Canadian Space Agency,Space Observation,LEO,1.67,100.4,74
+1448,NEOSSat(Near Earth Object Surveillance Satellite),2013-02-25,Canada,Satish Dhawan Space Centre,Canadian Space Agency,Space Observation,LEO,1.67,100.4,74
 1449,NepaliSat-1,2019-06-17,Nepal,International Space Station,National Academy of Science and Technology (NAST),Earth Observation,LEO,1.55,92.7,1
 1450,NextSat-1,2018-12-03,South Korea,Vandenberg AFB,Korea Advanced Institute of Science and Technology (KAIST),Space Science,LEO,1.6,96.3,100
 1451,Nexus (Fuji-Oscar-99),2019-01-18,Japan,Uchinoura Space Center,Nihon University,Communications,LEO,1.58,94.5,4
@@ -1501,13 +1501,13 @@ Dove 4p-5 -- 2019-081Q
 1487,Thaicom-8,2016-05-27,Thailand,Cape Canaveral,Thaicom Public Company Ltd. ,Communications,GEO,24.0,1440.09,"3,025"
 1488,"NUDTSat (National University of Defense Satellite, QB50-CN06/BE06)",2017-06-23,China,Satish Dhawan Space Centre,National University of Defense Technology,Earth Science,LEO,1.58,94.7,5
 1489,Intelsat 31/DLA 2,2016-06-09,USA,Baikonur Cosmodrome,Intelsat S.A.,Communications,GEO,23.92,1435.1,"6,450"
-1490,ÑuSat-1 (Fresco),2016-05-29,Argentina,Taiyuan Launch Center,Satellogic S.A.,Earth Observation,LEO,1.57,94.41,35
-1491,ÑuSat-2 (Batata),2016-05-29,Argentina,Taiyuan Launch Center,Satellogic S.A.,Earth Observation,LEO,1.57,94.41,35
-1492,ÑuSat-3 (Milanesat),2017-06-15,Argentina,Jiuquan Satellite Launch Center,Satellogic S.A.,Earth Observation,LEO,1.59,95.44,35
-1493,ÑuSat-4 (Ada),2018-02-02,Argentina,Jiuquan Satellite Launch Center,Satellogic S.A.,Earth Observation,LEO,1.58,94.5,35
-1494,ÑuSat-5 (Maryam),2018-02-02,Argentina,Jiuquan Satellite Launch Center,Satellogic S.A.,Earth Observation,LEO,1.58,94.5,35
-1495,ÑuSat-7 (Sophie),2020-01-15,Argentina,Taiyuan Launch Center,Satellogic S.A.,Earth Observation,LEO,1.57,94.2,45
-1496,ÑuSat-8 (Marie),2020-01-15,Argentina,Taiyuan Launch Center,Satellogic S.A.,Earth Observation,LEO,1.57,94.2,45
+1490,uSat-1 (Fresco),2016-05-29,Argentina,Taiyuan Launch Center,Satellogic S.A.,Earth Observation,LEO,1.57,94.41,35
+1491,uSat-2 (Batata),2016-05-29,Argentina,Taiyuan Launch Center,Satellogic S.A.,Earth Observation,LEO,1.57,94.41,35
+1492,uSat-3 (Milanesat),2017-06-15,Argentina,Jiuquan Satellite Launch Center,Satellogic S.A.,Earth Observation,LEO,1.59,95.44,35
+1493,uSat-4 (Ada),2018-02-02,Argentina,Jiuquan Satellite Launch Center,Satellogic S.A.,Earth Observation,LEO,1.58,94.5,35
+1494,uSat-5 (Maryam),2018-02-02,Argentina,Jiuquan Satellite Launch Center,Satellogic S.A.,Earth Observation,LEO,1.58,94.5,35
+1495,uSat-7 (Sophie),2020-01-15,Argentina,Taiyuan Launch Center,Satellogic S.A.,Earth Observation,LEO,1.57,94.2,45
+1496,uSat-8 (Marie),2020-01-15,Argentina,Taiyuan Launch Center,Satellogic S.A.,Earth Observation,LEO,1.57,94.2,45
 1497,NuSTAR (Nuclear Spectroscopic Telescope Array),2012-06-13,USA,Kwajalein Island,National Aeronautics and Space Administration (NASA),Space Science,LEO,1.62,97.2,360
 1498,"O/OREOS (Organism/Organic Exposure to Orbital Stresses, USA 219)",2010-11-20,USA,Kodiak Launch Complex,National Aeronautics and Space Administration (NASA)-Ames Research Center/Stanford University,Space Science,LEO,1.62,97.48,6
 1499,O3b FM02,2013-06-25,United Kingdom,Guiana Space Center,O3b Networks Ltd.,Communications,MEO,4.8,287.93,700
@@ -1530,7 +1530,7 @@ Dove 4p-5 -- 2019-081Q
 1516,O3b FM19,2019-04-04,United Kingdom,Guiana Space Center,O3b Networks Ltd.,Communications,MEO,4.68,280.86,700
 1517,O3b FM20,2019-04-04,United Kingdom,Guiana Space Center,O3b Networks Ltd.,Communications,MEO,4.68,280.73,700
 1518,O3b PFM,2013-06-25,United Kingdom,Guiana Space Center,O3b Networks Ltd.,Communications,MEO,4.8,287.93,700
-1519,OCO 2  (Orbiting Carbon Observatory),2014-07-02,USA,Vandenberg AFB,National Aeronautics and Space Administration (NASA),Earth Observation,LEO,1.65,98.83,454
+1519,OCO 2(Orbiting Carbon Observatory),2014-07-02,USA,Vandenberg AFB,National Aeronautics and Space Administration (NASA),Earth Observation,LEO,1.65,98.83,454
 1520,"Advanced Orion 7 (Mentor, NRO L-37, USA 268)",2016-06-11,USA,Cape Canaveral,National Reconnaissance Office (NRO),Earth Observation,GEO,23.95,1437.19,"5,000"
 1521,Odin ,2001-02-20,Sweden,Svobodny Cosmodrome,Swedish National Space Board,Earth Observation,LEO,1.6,96.1,250
 1522,Ofeq 10,2014-04-09,Israel,Palmachim Launch Complex ,Ministry of Defense,Earth Observation,LEO,1.57,94.47,300
@@ -1684,8 +1684,8 @@ Dove 4p-5 -- 2019-081Q
 1670,Persona-3 (Cosmos 2506),2015-06-23,Russia,Plesetsk Cosmodrome,Ministry of Defense,Earth Observation,LEO,1.65,99.0,"7,000"
 1671,PeruSat-1,2016-09-16,Peru,Guiana Space Center,Peruvian SpaceAgency,Earth Observation,LEO,1.64,98.7,430
 1672,PISAT ,2016-09-26,India,Satish Dhawan Space Centre,Indian Space Research Organization (ISRO),Technology Development,LEO,1.58,94.8,6
-1673,Pléiades HR1A,2011-12-17,France/Italy,Guiana Space Center,"Ministry of Defense/Centre National d'Etudes Spatiales (CNES) - cooperation with Austria, Belgium, Spain, Sweden",Earth Observation,LEO,1.64,98.7,"1,000"
-1674,Pléiades HR1B,2012-12-02,France,Guiana Space Center,"Ministry of Defense/Centre National d'Etudes Spatiales (CNES) - cooperation with Austria, Belgium, Spain, Sweden",Earth Observation,LEO,1.64,98.45,970
+1673,Pliades HR1A,2011-12-17,France/Italy,Guiana Space Center,"Ministry of Defense/Centre National d'Etudes Spatiales (CNES) - cooperation with Austria, Belgium, Spain, Sweden",Earth Observation,LEO,1.64,98.7,"1,000"
+1674,Pliades HR1B,2012-12-02,France,Guiana Space Center,"Ministry of Defense/Centre National d'Etudes Spatiales (CNES) - cooperation with Austria, Belgium, Spain, Sweden",Earth Observation,LEO,1.64,98.45,970
 1675,"Polar Scout A (Polar Scout 1, ORS-7, Yukon)",2018-12-03,USA,Vandenberg AFB,US Coast Guard,Communications,LEO,1.6,96.3,6
 1676,"Polar Scout B (Polar Scout 2, ORS-7, Kodiak)",2018-12-03,USA,Vandenberg AFB,US Coast Guard,Communications,LEO,1.6,96.3,6
 1677,PolyITAN-1,2014-06-19,Ukraine,Dombarovsky Air Base,National Technical University,Technology Development,LEO,1.62,97.03,1
@@ -1786,7 +1786,7 @@ Dove 4p-5 -- 2019-081Q
 1772,"Rumba (part of Cluster quartet, Cluster 2 FM5)",2000-08-09,ESA,Baikonur Cosmodrome,European Space Agency (ESA) (and 250 international scientific investigators),Space Science,Elliptical,57.18,3431.1,"1,200"
 1773,"Salsa (part of Cluster quartet, Cluster 2 FM6)",2000-07-16,ESA,Baikonur Cosmodrome,European Space Agency (ESA) (and 250 international scientific investigators),Space Science,Elliptical,56.97,3418.0,"1,200"
 1774,"Samba (part of Cluster quartet, Cluster 2 FM7)",2000-07-16,ESA,Baikonur Cosmodrome,European Space Agency (ESA) (and 250 international scientific investigators),Space Science,Elliptical,57.17,3430.28,"1,200"
-1775,SAOCOM-1A (Satélite Argentino de Observación Con Microondas),2018-10-07,Argentina,Vandenberg AFB,National Space Activities Commission (CONAE),Earth Observation,LEO,1.62,97.2,"1,650"
+1775,SAOCOM-1A (Satlite Argentino de Observacin Con Microondas),2018-10-07,Argentina,Vandenberg AFB,National Space Activities Commission (CONAE),Earth Observation,LEO,1.62,97.2,"1,650"
 1776,Sapphire (Space Surveillance Mission of Canada),2013-02-25,Canada,Satish Dhawan Space Centre,Department of National Defense,Space Observation,LEO,1.67,100.4,148
 1777,SARAL (Satellite with ARGOS and ALTIKA),2013-02-25,India/France,Satish Dhawan Space Centre,Indian Space Research Organization (ISRO)/Centre National d'Etudes Spatiales (CNES),Earth Observation,LEO,1.68,100.53,407
 1778,SAR-Lupe 1,2006-12-19,Germany,Plesetsk Cosmodrome,Armed Forces,Earth Observation,LEO,1.57,94.3,770
@@ -1825,8 +1825,8 @@ Dove 4p-5 -- 2019-081Q
 1811,"SB-WASS 3-8 (Space Based Wide Area Surveillance System) NOSS 3-8, USA 274, NRO L79, Intruder)",2017-03-01,USA,Vandenberg AFB,National Reconnaissance Office (NRO)/US Navy,Earth Observation,LEO,1.79,107.4,"6,500"
 1812,"SB-WASS 3-8 (Space Based Wide Area Surveillance System) NOSS 3-8, USA 274, NRO L79, Intruder)",2017-03-01,USA,Vandenberg AFB,National Reconnaissance Office (NRO)/US Navy,Earth Observation,LEO,1.79,107.4,"6,500"
 1813,ScatSat-1,2016-09-26,India,Satish Dhawan Space Centre,Indian Space Research Organization (ISRO),Earth Observation,LEO,1.66,99.3,371
-1814,SCD-1 (Satélite de Coleta de Dados),1993-02-09,Brazil,Cape Canaveral,Instituto Nacional de Pesquisas Espaciais (INPE),Earth Observation,LEO,1.66,99.7,110
-1815,SCD-2 (Satélite de Coleta de Dados),1998-10-23,Brazil,Cape Canaveral,Instituto Nacional de Pesquisas Espaciais (INPE),Earth Observation,LEO,1.66,99.8,110
+1814,SCD-1 (Satlite de Coleta de Dados),1993-02-09,Brazil,Cape Canaveral,Instituto Nacional de Pesquisas Espaciais (INPE),Earth Observation,LEO,1.66,99.7,110
+1815,SCD-2 (Satlite de Coleta de Dados),1998-10-23,Brazil,Cape Canaveral,Instituto Nacional de Pesquisas Espaciais (INPE),Earth Observation,LEO,1.66,99.8,110
 1816,Scisat-1 (Atmospheric Chemistry Experiment),2003-08-12,Canada,Vandenberg AFB,Canadian Space Agency,Space Science,LEO,1.63,97.6,150
 1817,Fengyun 4A (FY 4A),2016-12-10,China,Xichang Satellite Launch Center,China Meteorological Administration,Earth Observation,GEO,23.93,1436.0,"5,300"
 1818,"SDS III-4 (Satellite Data System) (NRO L-1, USA 179, Quasar) ",2004-08-31,USA,Cape Canaveral,National Reconnaissance Office (NRO)/US Air Force,Communications,Elliptical,11.96,717.7,0
@@ -1949,14 +1949,14 @@ Dove 4p-5 -- 2019-081Q
 1935,SNaP-3 Alice,2015-10-08,USA,Cape Canaveral,US Army Space and Missile Defense Command,Technology Development,LEO,1.63,97.68,5
 1936,SNaP-3 Eddie,2015-10-08,USA,Cape Canaveral,US Army Space and Missile Defense Command,Technology Development,LEO,1.63,97.69,5
 1937,SNaP-3 Jimi,2015-10-08,USA,Cape Canaveral,US Army Space and Missile Defense Command,Technology Development,LEO,1.63,97.67,5
-1938,SNaP-3-1  (Space and Missile Defense Command NanoSat Program),2013-12-06,USA,Vandenberg AFB,US Southern Command,Communications,LEO,1.63,98.0,0
+1938,SNaP-3-1(Space and Missile Defense Command NanoSat Program),2013-12-06,USA,Vandenberg AFB,US Southern Command,Communications,LEO,1.63,98.0,0
 1939,S-Net-1,2018-01-31,Germany,Vostochny Cosmodrome,Technical University Berlin,Technology Development,LEO,1.6,96.2,9
 1940,S-Net-2,2018-01-31,Germany,Vostochny Cosmodrome,Technical University Berlin,Technology Development,LEO,1.6,96.2,9
 1941,S-Net-3,2018-01-31,Germany,Vostochny Cosmodrome,Technical University Berlin,Technology Development,LEO,1.6,96.2,9
 1942,S-Net-4,2018-01-31,Germany,Vostochny Cosmodrome,Technical University Berlin,Technology Development,LEO,1.6,96.2,9
 1943,SNUGLITE,2018-12-03,South Korea,Vandenberg AFB,Seoul National University,Technology Development,LEO,1.6,96.3,3
 1944,SNUSat-2,2018-12-03,South Korea,Vandenberg AFB,Seoul National University,Technology Development,LEO,1.6,96.3,4
-1945,SOCRATES  (Space Optical Communications Research Advanced TEchnology Satellite),2014-05-24,Japan,Tanegashima Space Center,National Institute of Information and Communications Technology (JPN),Technology Development,LEO,1.62,97.17,48
+1945,SOCRATES(Space Optical Communications Research Advanced TEchnology Satellite),2014-05-24,Japan,Tanegashima Space Center,National Institute of Information and Communications Technology (JPN),Technology Development,LEO,1.62,97.17,48
 1946,"SOHLA 1 (Space Oriented Higashiosaka Leading Association, Maido 1)",2009-01-23,Japan,Tanegashima Space Center,Astrotech SOHLA,Technology Development,LEO,1.63,98.0,50
 1947,SOKRAT,2019-07-05,Russia,Vostochny Cosmodrome,Moscow State University,Space Science,LEO,1.59,95.2,4
 1948,SONATE (SOlutus NAno satteliTE),2019-07-05,Germany,Vostochny Cosmodrome,University of Wuerzburg,Technology Development,LEO,1.59,95.2,1
@@ -1982,12 +1982,12 @@ Dove 4p-5 -- 2019-081Q
 1968,Alcomsat (Algerian Communications Satellite),2017-12-10,Algeria,Xichang Satellite Launch Center,Algerian Space Agency (ASAL),Communications,GEO,23.94,1436.1,"5,225"
 1969,Beidou DW 26,2018-01-11,China,Xichang Satellite Launch Center,Chinese Defense Ministry,Navigation/Global Positioning,MEO,12.89,773.2,800
 1970,SpooQy-1,2019-06-17,Singapore,International Space Station,National University of Singapore,Space Science,LEO,1.55,92.7,4
-1971,Spot 6 (Système Probatoire dObservation de la Terre),2012-09-09,France/Belgium/Sweden,Satish Dhawan Space Centre,Spot Image,Earth Observation,LEO,1.65,98.73,720
-1972,Spot 7 (Système Probatoire dObservation de la Terre),2014-06-30,France/Belgium/Sweden,Satish Dhawan Space Centre,Spot Image,Earth Observation,LEO,1.63,97.77,714
-1973,SPROUT  (SPace Research On Unique Technology),2014-05-24,Japan,Tanegashima Space Center,Nihon University,Technology Development,LEO,1.62,97.13,7
+1971,Spot 6 (Systme Probatoire dObservation de la Terre),2012-09-09,France/Belgium/Sweden,Satish Dhawan Space Centre,Spot Image,Earth Observation,LEO,1.65,98.73,720
+1972,Spot 7 (Systme Probatoire dObservation de la Terre),2014-06-30,France/Belgium/Sweden,Satish Dhawan Space Centre,Spot Image,Earth Observation,LEO,1.63,97.77,714
+1973,SPROUT(SPace Research On Unique Technology),2014-05-24,Japan,Tanegashima Space Center,Nihon University,Technology Development,LEO,1.62,97.13,7
 1974,SRMSat (Sri Ramaswamy Memorial Satellite),2011-10-12,India,Satish Dhawan Space Centre,SRM University,Technology Development,LEO,1.7,102.1,11
 1975,SRSS-1 (Sudan Remote Sensing Satellite 1),2019-11-03,Sudan,Taiyuan Launch Center,Government of Sudan,Earth Observation,LEO,1.58,94.5,50
-1976,SSOT (Sistema Satelital para la Observación de la Tierra),2011-12-17,Chile,Guiana Space Center,Chilean Air Force,Earth Observation,LEO,1.62,97.2,117
+1976,SSOT (Sistema Satelital para la Observacin de la Tierra),2011-12-17,Chile,Guiana Space Center,Chilean Air Force,Earth Observation,LEO,1.62,97.2,117
 1977,SSTL-S1-4 ,2018-09-16,United Kingdom,Satish Dhawan Space Centre,Surrey Satellite Technology Ltd.,Earth Observation,LEO,1.6,96.3,440
 1978,Beidou DW 27,2018-01-11,China,Xichang Satellite Launch Center,Chinese Defense Ministry,Navigation/Global Positioning,MEO,12.89,773.2,800
 1979,"SBIRS GEO 4 (Space Based Infrared System Geosynchronous 4, USA 282)",2018-01-19,USA,Cape Canaveral,US Air Force,Earth Observation,GEO,23.94,1436.1,"4,500"
@@ -2385,7 +2385,7 @@ Dove 4p-5 -- 2019-081Q
 2371,Swayam,2016-06-22,India,Satish Dhawan Space Centre,"College of Engineering, Pune",Technology Development,LEO,1.58,94.7,1
 2372,Swiatowid,2019-07-12,Poland,International Space Station,SatRevolution,Earth Observation,LEO,1.55,92.8,3
 2373,Swift ,2004-11-20,USA/United Kingdom/Italy,Cape Canaveral,Goddard Space Flight Center/Penn State University,Space Science,LEO,1.6,96.3,"1,463"
-2374,SwissCube,2009-09-23,Switzerland,Satish Dhawan Space Centre,Ecole Polytechnique Fédérale de Lausanne (EPFL),Technology Development,LEO,1.65,99.1,1
+2374,SwissCube,2009-09-23,Switzerland,Satish Dhawan Space Centre,Ecole Polytechnique Fdrale de Lausanne (EPFL),Technology Development,LEO,1.65,99.1,1
 2375,Hispasat 30W-6 (Hispasat 1F),2018-03-06,Spain,Cape Canaveral,Hispasat,Communications,GEO,23.94,1436.11,"6,100"
 2376,Beidou DW 30,2018-03-29,China,Xichang Satellite Launch Center,Chinese Defense Ministry,Navigation/Global Positioning,MEO,12.89,773.2,800
 2377,TacSat 4,2011-09-27,USA,Kodiak Launch Complex,Naval Research Laboratory,Technology Development,Elliptical,3.92,235.16,450
@@ -2420,10 +2420,10 @@ Dove 4p-5 -- 2019-081Q
 2406,Beidou DW 35,2018-08-24,China,Xichang Satellite Launch Center,Chinese Defense Ministry,Navigation/Global Positioning,MEO,12.89,773.2,800
 2407,TEMPEST-D,2018-07-13,USA,International Space Station,Colorado State University,Space Science,LEO,1.54,92.6,10
 2408,Beidou DW 36,2018-08-24,China,Xichang Satellite Launch Center,Chinese Defense Ministry,Navigation/Global Positioning,MEO,12.89,773.2,800
-2409,TerraSAR-X 1 (Terra Synthetic Aperture Radar X-Band),2007-06-15,Germany,Baikonur Cosmodrome,German Aerospace Center (DLR)/Infoterra,Earth Observation,LEO,1.58,94.8,"1,230"
+2409,TerraSAR-X1 (Terra Synthetic Aperture Radar X-Band),2007-06-15,Germany,Baikonur Cosmodrome,German Aerospace Center (DLR)/Infoterra,Earth Observation,LEO,1.58,94.8,"1,230"
 2410,Telstar 18 VANTAGE (Apstar 5C),2018-09-10,Canada,Cape Canaveral,"Telesat Canada Ltd. (BCE, Inc.)/APT Satellite Holdings Ltd.",Communications,GEO,23.93,1436.09,"7,060"
 2411,ELFIN-A,2018-09-15,USA,Vandenberg AFB,University of California,Space Science,LEO,1.56,93.7,4
-2412,"TET-1 (Technologieerprobungsträger 1, Technology Experiment Carrier)",2012-07-22,Germany,Baikonur Cosmodrome,German Aerospace Center (DLR),Technology Development,LEO,1.58,94.7,120
+2412,"TET-1 (Technologieerprobungstrger 1, Technology Experiment Carrier)",2012-07-22,Germany,Baikonur Cosmodrome,German Aerospace Center (DLR),Technology Development,LEO,1.58,94.7,120
 2413,ELFIN-Star,2018-09-15,USA,Vandenberg AFB,University of California,Space Science,LEO,1.56,93.7,4
 2414,Beidou DW 37,2018-09-19,China,Xichang Satellite Launch Center,Chinese Defense Ministry,Navigation/Global Positioning,MEO,13.12,787.1,800
 2415,Beidou DW 38,2018-09-19,China,Xichang Satellite Launch Center,Chinese Defense Ministry,Navigation/Global Positioning,MEO,12.88,773.1,800
@@ -2443,10 +2443,10 @@ Dove 4p-5 -- 2019-081Q
 2429,Tianhui 2-01,2019-04-29,China,Taiyuan Launch Center,China Aerospace Science and Technology Corp. (CASC),Earth Observation,LEO,1.58,94.8,"2,500"
 2430,Tianhui 2-02,2019-04-29,China,Taiyuan Launch Center,China Aerospace Science and Technology Corp. (CASC),Earth Observation,LEO,1.58,94.8,"2,500"
 2431,Tiankun-1,2017-03-02,China,Jiuquan Satellite Launch Center,Chinese Academy of Launch Vehicle Technology (CASIC),Earth Observation/Technology Development,LEO,1.54,92.4,0
-2432,Es'hail-2,2018-11-15,Qatar,Cape Canaveral,EshailSat,Communications,GEO,23.94,1436.1,"5,300"
+2432,Es'hail-2,2018-11-15,Qatar,Cape Canaveral,EshailSat,Communications,GEO,23.94,1436.1,"5,300"
 2433,Beidou DW 42,2018-11-18,China,Xichang Satellite Launch Center,Chinese Defense Ministry,Navigation/Global Positioning,MEO,13.12,787.1,800
 2434,Beidou DW 43,2018-11-18,China,Xichang Satellite Launch Center,Chinese Defense Ministry,Navigation/Global Positioning,MEO,13.12,787.1,800
-2435,3Cat-1,2018-11-29,Spain,Satish Dhawan Space Centre,Universitat Politècnica de Catalunya,Technology Development,LEO,1.58,95.0,4
+2435,3Cat-1,2018-11-29,Spain,Satish Dhawan Space Centre,Universitat Politcnica de Catalunya,Technology Development,LEO,1.58,95.0,4
 2436,Hiber-1,2018-11-29,Netherlands,Satish Dhawan Space Centre,Hiber Global,Technology Development,LEO,1.58,95.0,4
 2437,Tianqi-1,2018-10-29,China,Jiuquan Satellite Launch Center,Guodian Gaoke,Communications,LEO,1.58,94.9,8
 2438,Tianqi-2,2019-08-17,China,Jiuquan Satellite Launch Center,Guodian Gaoke,Communications,LEO,1.59,95.5,8
@@ -2471,7 +2471,7 @@ Dove 4p-5 -- 2019-081Q
 2457,Tianzhi-1,2018-11-19,China,Jiuquan Satellite Launch Center,Chinese Academy of Sciences (CAS)/China Academy of Space Technology,Technology Development,LEO,1.59,95.2,27
 2458,Hiber-2,2018-12-03,Netherlands,Vandenberg AFB,Hiber Global,Technology Development,LEO,1.6,96.3,7
 2459,TIGRISat,2014-06-19,Iraq,Dombarovsky Air Base,La Sapienza University of Rome,Earth Observation,LEO,1.63,97.82,1
-2460,TIMED (Thermosphere  Ionosphere  Mesosphere  Energetics and Dynamics),2001-12-07,USA,Vandenberg AFB,"National Aeronautics and Space Administration (NASA)/Applied Physics Laboratory, Johns Hopkins",Space Science,LEO,1.62,97.0,587
+2460,TIMED (Thermosphere  Ionosphere  Mesosphere  Energetics and Dynamics),2001-12-07,USA,Vandenberg AFB,"National Aeronautics and Space Administration (NASA)/Applied Physics Laboratory, Johns Hopkins",Space Science,LEO,1.62,97.0,587
 2461,GEO-Kompsat-2A,2018-12-04,South Korea,Guiana Space Center,Korea Meteorological Administration/National Meteorological Satellite Center,Earth Observation,GEO,23.93,1436.04,"3,507"
 2462,GSAT-11,2018-12-04,India,Guiana Space Center,Indian Space Research Organization (ISRO),Communications,GEO,23.93,1436.09,"5,854"
 2463,GSAT-7A,2018-12-19,India,Satish Dhawan Space Centre,Indian Air Force,Communications,GEO,23.94,1436.11,"2,250"
@@ -2483,7 +2483,7 @@ Dove 4p-5 -- 2019-081Q
 2469,GSAT-31,2019-02-05,India,Guiana Space Center,Indian Space Research Organization (ISRO),Communications,GEO,23.94,1436.1,"2,536"
 2470,Tselina-2 (Cosmos 2428),2007-06-29,Russia,Baikonur Cosmodrome,Ministry of Defense,Earth Observation,LEO,1.7,102.0,"3,200"
 2471,TSUBAME,2014-11-06,Japan,Dombarovsky Air Base,"Tokyo Institute of Technology, Tokyo University of Science and JAXA",Earth Observation,LEO,1.59,95.38,49
-2472,"TUGSat-1  (Technische Universität Graz Satellit, CanX-3b, BRITE-Austria)",2013-02-25,Austria,Satish Dhawan Space Centre,Technical University of Graz,Technology Development,LEO,1.67,100.3,14
+2472,"TUGSat-1(Technische Universitt Graz Satellit, CanX-3b, BRITE-Austria)",2013-02-25,Austria,Satish Dhawan Space Centre,Technical University of Graz,Technology Development,LEO,1.67,100.3,14
 2473,Hellas-Sat 4/SGS-1 (Saudi Geostationary Satellite 1),2019-02-05,Greece,Guiana Space Center,Hellas-Sat Consortium Ltd.,Communications,GEO,23.94,1436.1,"6,495"
 2474,Nusantara Satu,2019-02-21,Indonesia,Cape Canaveral,PT Pasifik Satelit Nusantara,Communications,GEO,23.94,1436.1,"4,100"
 2475,Zhongxing 6C (ChinaSat 6C),2019-03-11,China,Xichang Satellite Launch Center,China Satellite Communication Corp. (China Satcom),Communications,GEO,23.94,1436.1,"4,600"
@@ -2501,24 +2501,24 @@ Dove 4p-5 -- 2019-081Q
 2487,UiTMSAT-1 (Birds-2),2018-08-10,Malaysia,International Space Station,Universiti Teknologi Mara (UiTM),Earth Observation,LEO,1.54,92.6,1
 2488,"UK-DMC-2 (BNSCSat-2, British National Science Center Satellite 2)",2009-07-29,United Kingdom,Baikonur Cosmodrome,UK/DMC International Imaging (DMCII),Earth Observation,LEO,1.63,98.0,97
 2489,UKube-1 (UK Cubesat 1),2014-07-08,United Kingdom,Baikonur Cosmodrome,UK Space Agency,Technology Development,LEO,1.62,97.27,3
-2490,UNIFORM 1  (UNiversity International FORmation Mission 1),2014-05-24,Japan,Tanegashima Space Center,Wakayama University (UNIFORM consortium),Earth Observation,LEO,1.62,97.2,50
+2490,UNIFORM 1(UNiversity International FORmation Mission 1),2014-05-24,Japan,Tanegashima Space Center,Wakayama University (UNIFORM consortium),Earth Observation,LEO,1.62,97.2,50
 2491,UNITE (Undergraduate Nano Ionospheric Temperature Explorer),2019-01-31,USA,International Space Station,University of Southern Indiana/NASA,Space Science,LEO,1.55,92.7,5
 2492,"Ursa Maior ((University of Rome la SApienza MicroAttitude In ORbit testing, QB50 IT02)",2017-06-23,Italy,Satish Dhawan Space Centre,University of Rome,Earth Science,LEO,1.58,94.7,5
-2493,UWE-3 (University of Würzburg Experimental Satellite 3),2013-11-21,Germany,Dombarovsky Air Base,University of Würzburg,Communications,LEO,1.63,97.6,1
-2494,UWE-4 (University of Würzburg Experimental Satellite 4),2018-12-27,Germany,Vostochny Cosmodrome,University of Würzburg,Technology Development/Educational,LEO,1.6,96.2,2
+2493,UWE-3 (University of Wrzburg Experimental Satellite 3),2013-11-21,Germany,Dombarovsky Air Base,University of Wrzburg,Communications,LEO,1.63,97.6,1
+2494,UWE-4 (University of Wrzburg Experimental Satellite 4),2018-12-27,Germany,Vostochny Cosmodrome,University of Wrzburg,Technology Development/Educational,LEO,1.6,96.2,2
 2495,AT&T T16,2019-06-20,USA,Guiana Space Center,"DirecTV, Inc.",Communications,GEO,23.93,1436.07,"6,350"
 2496,Eutelsat 7C,2019-06-20,Multinational,Guiana Space Center,EUTELSAT S.A.,Communications,GEO,23.93,1436.0,"3,400"
 2497,VDNH-80,2019-07-05,Russia,Vostochny Cosmodrome,Moscow State University,Space Science,LEO,1.59,95.2,4
 2498,Velox 1,2014-06-30,Singapore,Satish Dhawan Space Centre,Nanyang Technological University,Technology Development,LEO,1.63,97.7,4
 2499,Velox 2,2015-12-16,Singapore,Satish Dhawan Space Centre,Nanyang Technological University,Technology Development,LEO,1.59,95.48,13
 2500,Velox C1,2015-12-16,Singapore,Satish Dhawan Space Centre,Nanyang Technological University,Technology Development,LEO,1.59,95.48,123
-2501,Venµs,2017-08-01,France/Israel,Guiana Space Center,Centre National d'Etudes Spatiales (CNES)/Israel Space Agency,Earth Observation,LEO,1.65,99.2,264
+2501,Vens,2017-08-01,France/Israel,Guiana Space Center,Centre National d'Etudes Spatiales (CNES)/Israel Space Agency,Earth Observation,LEO,1.65,99.2,264
 2502,Venta-1,2017-06-23,Latvia,Satish Dhawan Space Centre,Ventspils University College,Technology Development,LEO,1.58,94.7,5
 2503,Beidou DW 46,2019-06-24,China,Xichang Satellite Launch Center,Chinese Defense Ministry,Navigation/Global Positioning,GEO,23.94,1436.2,800
 2504,ARMADILLO (Attitude Related Maneuvers and Debris Instrument in Low (L) Orbit),2019-06-25,USA,Cape Canaveral,Satellite Design Laboratory UT Austin/Baylor University,Technology Development,Elliptical,1.6,96.2,4
 2505,"BRICSat-2 (Ballistically Reinforced Communication Satellite, Navy-Oscar-103)",2019-06-25,USA,Cape Canaveral,US Naval Academy Satellite Laboratory,Technology Development,Elliptical,1.6,96.1,6
 2506,DSX (Demonstration and Science Experiments),2019-06-25,USA,Cape Canaveral,Air Force Research Laboratory,Technology Development,MEO,5.28,316.9,600
-2507,VNREDSat 1A  (Vietnam Natural Resources Environment and Disaster monitoring small Satellite),2013-05-07,Vietnam,Guiana Space Center,Space Technology Institute-Vietnam Academy of Science and Technology (STI-VAST),Earth Observation,LEO,1.64,98.43,115
+2507,VNREDSat 1A(Vietnam Natural Resources Environment and Disaster monitoring small Satellite),2013-05-07,Vietnam,Guiana Space Center,Space Technology Institute-Vietnam Academy of Science and Technology (STI-VAST),Earth Observation,LEO,1.64,98.43,115
 2508,"VRSS-1 (Venezuelan Remote Sensing Satellite, Francisco Miranda)",2012-09-28,Venezuela,Jiuquan Satellite Launch Center,Bolivarian Agency for Space Activities,Earth Observation,LEO,1.62,97.48,880
 2509,VRSS-2 (Antonio Jose de Sucre),2017-10-09,Venezuela,Jiuquan Satellite Launch Center,Bolivarian Agency for Space Activities,Earth Observation ,LEO,1.63,97.55,"1,000"
 2510,VZLUSat-1 (QB50 CZ02),2017-06-23,Czech Republic,Satish Dhawan Space Centre,Czech Aerospace Research Center (VZLU),Technology Development,LEO,1.58,94.7,3
