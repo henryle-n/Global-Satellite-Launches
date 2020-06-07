@@ -16,11 +16,12 @@ class SatLauch():
         self.tables = self.inspector.get_table_names()
         self.Base = automap_base()
         self.Base.prepare(self.engine, reflect=True)
+        self.meta = MetaData()
         self.MasterRecord = self.Base.classes['UCS_Satellite_Master']
         self.DemoGData = self.Base.classes['demoGData']
         self.LaunchDate = self.Base.classes['lauchDate']
         self.SatCount40yr = self.Base.classes['satCount40yr']
-        self.meta = MetaData()
+        
         
     def display_db_info(self):
         inspector = inspect(self.engine)
@@ -32,7 +33,7 @@ class SatLauch():
             print('-' * 12)
             for column in self.inspector.get_columns(table):
                 print(f"name: {column['name']}   column type: {column['type']}")
-    
+        
     # return all satellite names
     def get_satellite_names(self):
         session = Session(self.engine)
@@ -45,13 +46,13 @@ class SatLauch():
         return list(df.Satellite_Names)
     
     # get all demo data based on chosen satellite name
-    def get_demographic_data(self, sat_name=0):
+    def get_demographic_data(self, sat_name=""):
         session = Session(self.engine)
 
-        if sat_name == 0:
+        if sat_name == "":
             results = session.query(self.DemoGData)
         else:
-            results = session.query(self.DemoGData).filter_by(self.DemoGData.Satellite_Names == sat_name)    
+            results = session.query(self.DemoGData).filter(self.DemoGData.Satellite_Names == sat_name)    
             
         df = pd.read_sql(results.statement, session.connection())
 
@@ -81,7 +82,7 @@ class SatLauch():
         return df.to_dict(orient="records")
                       
      # 40 years of satellite launch - master records 
-    def get_40yr_sat_lauch(self):
+    def get_40yr_master_record(self):
         session = Session(self.engine)
 
         results = session.query(self.MasterRecord)
@@ -94,7 +95,7 @@ class SatLauch():
 if __name__ == '__main__':
     info = SatLauch("sqlite:///Data/UCS_Satellite.sqlite")
     info.display_db_info()
-    print("\nSubject IDs\n", info.get_subject_ids())
-    print("\nsubject 1286:\n", info.get_subjects(1286))
-    print("\nResults 1286:\n", info.get_test_results(1286))
-    print("\nData for user 1286:\n", info.get_data_by_user(1286))
+    print("\nAll Satellite Names:\n", info.get_satellite_names())
+    print("\nSatellite 1HOPSAT-TD:\n", info.get_demographic_data("1HOPSAT-TD (1st-generation High Optical Performance Satellite)"))
+    print("\nAll Satellite-Owned Countries\n", info.get_40yr_sat_lauch_by_country())
+    print("\nData for user 1286:\n", info.get_40yr_master_record())

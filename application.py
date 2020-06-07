@@ -1,5 +1,5 @@
 # dependencies
-from  Satellite_Class import SatLauch 
+from  SatelliteClass import SatLauch 
 from flask import Flask, jsonify, render_template
 
 #################################################
@@ -19,21 +19,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def homePage():
-    # users = data.get_subject_ids()
-    return render_template("index.html", user_ids=users)
+    ''' Home Page Access Route'''
+    return render_template("index.html")
 
-@app.route("/api/v1.0")
-def show_apis():
-    """List all available api routes."""
-    return (
-        f"<h4>Available Routes:</h4>"
-        f'<a href="/api/v1.0/ids">/api/v1.0/ids</a><br/>'       
-        f'<a href="/api/v1.0/info/1286">/api/v1.0/info/subject_id</a><br/>' 
-        f'<a href="/api/v1.0/subjects">/api/v1.0/subjects</a><br/>' 
-        f'<a href="/api/v1.0/subjects/1286">/api/v1.0/subjects/subject_id</a><br/>' 
-        f'<a href="/api/v1.0/otu">/api/v1.0/otu</a><br/>' 
-        f'<a href="/"><h4>Back</h4></a><br/>' 
-    )    
+@app.route("/api")
+def get_all_APIs():
+    """List all available API routes."""
+    return render_template("api.html")
 
 @app.route("/api/v1.0/ids")
 def get_all_ids():
