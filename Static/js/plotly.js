@@ -21,7 +21,7 @@ function buildMetadata(userData) {
     
   
     var userInfo;
-    d3.csv("Data/launchDate.csv").function((Data) => {
+    d3.csv("Data\launchDate.csv").function((Data) => {
   
       var resultArray = data.results;
       userInfo = data.user;
@@ -85,7 +85,7 @@ function buildMetadata(userData) {
     var selector = d3.select("#selDataset");
   
     // Use the list of sample names to populate the select options
-    d3.csv("UCS-Satellite_Trimmed_ekinplaying.csv").then((Data) => {
+    d3.csv("Data\launchDate.csv.csv").then((Data) => {
       var sampleNames = Data;
   
       // Use the first sample from the list to build the initial plots
