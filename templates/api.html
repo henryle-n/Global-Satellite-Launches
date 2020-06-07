@@ -7,15 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="APIs List">
   <meta name="author" content="Henry Le">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="Bakery, Cake, Bread, Sweet, Yummy">Define a description of your web page:
-  <meta name="description" content="Best online bakery service and quick delivery">Define the author of a page:
-  <meta name="author" content="Rice Data Analytics Students">Refresh document every 30 seconds:
-  <meta http-equiv="refresh" content="30">Setting the viewport to make your website look good on all devices:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
   <title>Satellite Launch APIs</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -24,39 +16,39 @@
 
 <body>
     <div class="bg-cover">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 jumbotron text-center">
-                <h1>Available APIs</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 jumbotron text-center">
+                    <h1>Available APIs</h1>
+                </div>
             </div>
-        </div>
-    
-        <div class="row">
-            <div class="col-md-12">
-                <div class="api-list">
-                    <p id="heading-1">Click a link below</p><hr>
-                    <ul>
-                        <li><a class = "api-link" href="/api/satellite-directory">All Satellite Name Records</a></li><br>     
-                        <li><a class = "api-link" href="/api/launch-date">Launch Date Records</a></li><br>
-                        <li><a class = "api-link" href="/api/metadata">Database Descriptions (Metadata)</a></li><br>
-                        <li><a class = "api-link" href="/api/demographic">Satellite Demographic Data (All Records)</a>
-                            <ul>                        
-                                <li><a class = "api-link" href="/api/demographic/1HOPSAT-TD (1st-generation High Optical Performance Satellite)">Example :: "1HOPSAT-TD" Record</a></li>
-                            </ul>
-                        </li><br>
-                        <li><a class = "api-link" href="/api/lauch-history-by-country">Total Satellite Launch Counts by Country</a>
-                            <ul>
-                                <li><a class = "api-link" href="/api/lauch-history-by-country/USA">Example :: Total Satellite Launch Counts by USA</a></li>
+        
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="api-list">
+                        <p id="heading-1">Click a link below</p><hr>
+                        <ul>
+                            <li><a class = "api-link" href="/api/satellite-directory">All Satellite Name Records</a></li><br>     
+                            <li><a class = "api-link" href="/api/launch-date">Launch Date Records</a></li><br>
+                            <li><a class = "api-link" href="/api/metadata">Database Descriptions (Metadata)</a></li><br>
+                            <li><a class = "api-link" href="/api/demographic">Satellite Demographic Data (All Records)</a>
+                                <ul>                        
+                                    <li><a class = "api-link" href="/api/demographic/1HOPSAT-TD (1st-generation High Optical Performance Satellite)">Example :: "1HOPSAT-TD" Record</a></li>
+                                </ul>
+                            </li><br>
+                            <li><a class = "api-link" href="/api/lauch-history-by-country">Total Satellite Launch Counts by Country</a>
+                                <ul>
+                                    <li><a class = "api-link" href="/api/lauch-history-by-country/USA">Example :: Total Satellite Launch Counts by USA</a></li>
 
-                            </ul>
-                        </li><br>
-                        <li><a class = "api-link" href="/api/master-record">46 years of Satellite Launch Master Data</a></li>
-                        <a class="btn btn-primary" id="btn-back" href="/H.O.E">Back to Main Page</a><br/>
-                    </ul>
+                                </ul>
+                            </li><br>
+                            <li><a class = "api-link" href="/api/master-record">46 years of Satellite Launch Master Data</a></li>
+                            <a class="btn btn-primary" id="btn-back" href="/H.O.E">Back to Main Page</a><br/>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </body>
 

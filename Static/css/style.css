@@ -40,9 +40,7 @@ a:hover {
 
 body {
     height: 100%;
-    margin: 0;
     background-color: #C6BCC7;
-    
 }
 
 html {
@@ -53,7 +51,8 @@ html {
 
 .jumbotron {
     background-color: #F0DACC;
-    border-radius: 2rem;
+    position: relative;
+    margin-top: 0;
 }
 
 .bg-cover {
@@ -62,6 +61,7 @@ html {
   
     /* Full height */
     height: 100%; 
+    margin: 0px;
   
     /* Center and scale the image nicely */
     background-position: center;
