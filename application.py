@@ -1,11 +1,11 @@
 # dependencies
-from BellyButtonData import BellyButtonData
+from  Satellite_Class import SatLauch 
 from flask import Flask, jsonify, render_template
 
 #################################################
 # Database Setup
 #################################################
-data = BellyButtonData("sqlite:///Data/UCS_Satellite.sqlite.db")
+data = SatLauch("sqlite:///Data/UCS_Satellite.sqlite")
 
 #################################################
 # Flask Setup
@@ -18,8 +18,8 @@ app = Flask(__name__)
 #################################################
 
 @app.route("/")
-def welcome():
-    users = data.get_subject_ids()
+def homePage():
+    # users = data.get_subject_ids()
     return render_template("index.html", user_ids=users)
 
 @app.route("/api/v1.0")
