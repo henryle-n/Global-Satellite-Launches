@@ -24,10 +24,15 @@ def home_page():
     ''' Home Page Access Route'''
     return render_template("index.html")
 
-@app.route("/H.O.E")
+@app.route("/data-filterable")
 def main_page():
-    ''' Main Page Access Route'''
-    return render_template("hoe.html")
+    ''' Data Table with filters '''
+    return render_template("data-filterable.html")
+
+@app.route("/visualization")
+def data_viz():
+    ''' Run data visualization '''
+    return render_template("visualization.html")
 
 # route to static HTML of APIs route
 @app.route("/api")
@@ -63,14 +68,14 @@ def get_metadata():
     return jsonify(data.meta_info())   
 
 # route to demographic data 
-@app.route("/api/demographic")
+@app.route("/api/satellite-bio")
 def get_all_demoG_data():
-    return jsonify(data.get_demographic_data())
+    return jsonify(data.get_satbio_data())
 
 # filterable by satellite name
-@app.route("/api/demographic/<satellite_name>")
+@app.route("/api/satellite-bio/<satellite_name>")
 def get_selected_demoG_data(satellite_name):
-    return jsonify(data.get_demographic_data(satellite_name))
+    return jsonify(data.get_satbio_data(satellite_name))
 
 # route to 46 years satellite launch by country, and counts
 @app.route("/api/lauch-history-by-country")

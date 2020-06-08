@@ -39,8 +39,4 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-  $('.database-box').magnificPopup({
-    type: 'ajax'
-  });
-
 })(jQuery); // End of use strict

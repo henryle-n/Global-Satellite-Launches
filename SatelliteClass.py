@@ -68,7 +68,7 @@ class SatLaunch():
         return list(df.Satellite_Names)
     
     # get all demo data based on chosen satellite name
-    def get_demographic_data(self, sat_name=""):
+    def get_satbio_data(self, sat_name=""):
         session = Session(self.engine)
 
         if sat_name == "":

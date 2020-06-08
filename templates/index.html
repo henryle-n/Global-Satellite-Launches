@@ -20,16 +20,25 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="/static/css/styles.css" rel="stylesheet" />
     </head>
-    <body id="page-top">
+    <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Satellite History</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <a class="navbar-brand js-scroll-trigger" href="/">Satellite History</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About Our Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#proj-desciption">Project Description</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#database">Database</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/visualization">Visualization</a></li>
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Database</a>        
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <a class="dropdown-item" href="#database">API Access</a>
+                              <a class="dropdown-item" href="/api">API List</a>
+                              <a class="dropdown-item" href="/data-filterable">Filterable Data Table</a>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -44,7 +53,7 @@
                         <hr class="divider my-4" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 font-weight-light mb-5">In the last 46 years, </p>
+                        <p class="text-white-75 font-weight-light mb-5">In the last 46 years, there are over 2,600 Satellites and counting have been successfully lauched! </p>
                         <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
                     </div>
                 </div>
@@ -70,21 +79,21 @@
                 </div>
                 <ul class="row">
                   <li class="col-12 col-md-4">
-                      <div class="team-tile" style="height: 349px;">
+                      <div class="team-tile"> <!--style="height: 349px;"-->
                         <figure><img src="/static/assets/img/portfolio/team/HNL.jpg" class="img-responsive" alt=""></figure>
                         <h3>Henry Le</h3>
                         <p>Project Team Lead<br>-----<br>Front/Back-End Developer</p>
                       </div>
                   </li>
                   <li class="col-12 col-md-4">
-                      <div class="team-tile" style="height: 349px;">
+                      <div class="team-tile">
                         <figure><img src="/static/assets/img/portfolio/team/EK.jpg" class="img-responsive" alt=""></figure>
                         <h3><a href="#">Ekin Kaplan </a></h3>
                         <p>JavaScript Developer</p>
                       </div>
                   </li>
                   <li class="col-12 col-md-4">
-                      <div class="team-tile" style="height: 349px;">
+                      <div class="team-tile">
                         <figure><img src="/static/assets/img/portfolio/team/OJN.jpg" class="img-responsive" alt=""></figure>
                         <h3>O.J. Ndebbio</h3>
                         <p>JavaScript Developer</p>
@@ -110,55 +119,55 @@
                 <div class="row no-gutters">
                     <div class="col-lg-4 col-sm-6">
                         <a class="database-box" href="/api/master-record">
-                            <img class="img-fluid" src="/static/assets/img/portfolio/thumbnails/1.jpg" alt="" />
+                            <img class="img-fluid" src="/static/assets/img/portfolio/thumbnails/master-record.jpg" alt="" />
                             <div class="database-box-caption">
-                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-category text-white-50">Data Type</div>
                                 <div class="project-name">Master Database</div>
-                            </div></a
-                        >
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a class="database-box" href="/api/satellite-directory"
-                            ><img class="img-fluid" src="/static/assets/img/portfolio/thumbnails/2.jpg" alt="" />
+                            ><img class="img-fluid" src="/static/assets/img/portfolio/thumbnails/satellite-directory.jpg" alt="" />
                             <div class="database-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div></a
-                        >
+                                <div class="project-category text-white-50">data type</div>
+                                <div class="project-name">Satellite Name Directory</div>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="database-box" href="/static/assets/img/portfolio/fullsize/3.jpg"
-                            ><img class="img-fluid" src="/static/assets/img/portfolio/thumbnails/3.jpg" alt="" />
+                        <a class="database-box" href="/api/metadata"
+                            ><img class="img-fluid" src="/static/assets/img/portfolio/thumbnails/metadata.jpg" alt="" />
                             <div class="database-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div></a
-                        >
+                                <div class="project-category text-white-50">data type</div>
+                                <div class="project-name">Metadata</div>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="database-box" href="/static/assets/img/portfolio/fullsize/4.jpg"
-                            ><img class="img-fluid" src="/static/assets/img/portfolio/thumbnails/4.jpg" alt="" />
+                        <a class="database-box" href="/api/launch-date"
+                            ><img class="img-fluid" src="/static/assets/img/portfolio/thumbnails/launch-date.jpg" alt="" />
                             <div class="database-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div></a
-                        >
+                                <div class="project-category text-white-50">data type</div>
+                                <div class="project-name">Launch Date Database</div>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="database-box" href="/static/assets/img/portfolio/fullsize/5.jpg"
-                            ><img class="img-fluid" src="/static/assets/img/portfolio/thumbnails/5.jpg" alt="" />
+                        <a class="database-box" href="/api/satellite-bio"
+                            ><img class="img-fluid" src="/static/assets/img/portfolio/thumbnails/satellite-bio.jpg" alt="" />
                             <div class="database-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div></a
-                        >
+                                <div class="project-category text-white-50">data type</div>
+                                <div class="project-name">Satellite Biography Database</div>
+                            </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="database-box" href="/static/assets/img/portfolio/fullsize/6.jpg"
-                            ><img class="img-fluid" src="/static/assets/img/portfolio/thumbnails/6.jpg" alt="" />
+                        <a class="database-box" href="/api/lauch-history-by-country"
+                            ><img class="img-fluid" src="/static/assets/img/portfolio/thumbnails/launch-history.jpg" alt="" />
                             <div class="database-box-caption p-3">
                                 <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-name">Launch History by Country</div>
                             </div>
                         </a>
                     </div>
@@ -179,7 +188,9 @@
                     <div class="col-lg-8 text-center">
                         <h2 class="mt-0">Let's Get In Touch!</h2>
                         <hr class="divider my-4" />
-                        <p class="text-muted mb-5">If you like our design and visualization and if we can be of any service to you, please feel free to reach out!</p>
+                        <p class="text-muted mb-5">
+                        <img src="" alt="">    
+                            If you like our design and visualization and if we can be of any service to you, please feel free to reach out!</p>
                     </div>
                 </div>
                 <div class="row">
