@@ -1,0 +1,414 @@
+[
+  {
+    "Country_of_Operator_Owner": "USA",
+    "Value_Counts": 1308
+  },
+  {
+    "Country_of_Operator_Owner": "China",
+    "Value_Counts": 356
+  },
+  {
+    "Country_of_Operator_Owner": "Russia",
+    "Value_Counts": 167
+  },
+  {
+    "Country_of_Operator_Owner": "United Kingdom",
+    "Value_Counts": 130
+  },
+  {
+    "Country_of_Operator_Owner": "Japan",
+    "Value_Counts": 78
+  },
+  {
+    "Country_of_Operator_Owner": "Multinational",
+    "Value_Counts": 64
+  },
+  {
+    "Country_of_Operator_Owner": "India",
+    "Value_Counts": 58
+  },
+  {
+    "Country_of_Operator_Owner": "ESA",
+    "Value_Counts": 53
+  },
+  {
+    "Country_of_Operator_Owner": "Canada",
+    "Value_Counts": 39
+  },
+  {
+    "Country_of_Operator_Owner": "Germany",
+    "Value_Counts": 37
+  },
+  {
+    "Country_of_Operator_Owner": "Luxembourg",
+    "Value_Counts": 32
+  },
+  {
+    "Country_of_Operator_Owner": "Spain",
+    "Value_Counts": 21
+  },
+  {
+    "Country_of_Operator_Owner": "South Korea",
+    "Value_Counts": 16
+  },
+  {
+    "Country_of_Operator_Owner": "Argentina",
+    "Value_Counts": 16
+  },
+  {
+    "Country_of_Operator_Owner": "Israel",
+    "Value_Counts": 15
+  },
+  {
+    "Country_of_Operator_Owner": "Saudi Arabia",
+    "Value_Counts": 13
+  },
+  {
+    "Country_of_Operator_Owner": "Italy",
+    "Value_Counts": 12
+  },
+  {
+    "Country_of_Operator_Owner": "Netherlands",
+    "Value_Counts": 12
+  },
+  {
+    "Country_of_Operator_Owner": "Australia",
+    "Value_Counts": 12
+  },
+  {
+    "Country_of_Operator_Owner": "France",
+    "Value_Counts": 12
+  },
+  {
+    "Country_of_Operator_Owner": "Brazil",
+    "Value_Counts": 11
+  },
+  {
+    "Country_of_Operator_Owner": "Taiwan/USA",
+    "Value_Counts": 11
+  },
+  {
+    "Country_of_Operator_Owner": "Indonesia",
+    "Value_Counts": 9
+  },
+  {
+    "Country_of_Operator_Owner": "Singapore",
+    "Value_Counts": 8
+  },
+  {
+    "Country_of_Operator_Owner": "United Arab Emirates",
+    "Value_Counts": 8
+  },
+  {
+    "Country_of_Operator_Owner": "Kazakhstan",
+    "Value_Counts": 7
+  },
+  {
+    "Country_of_Operator_Owner": "Finland",
+    "Value_Counts": 7
+  },
+  {
+    "Country_of_Operator_Owner": "Norway",
+    "Value_Counts": 7
+  },
+  {
+    "Country_of_Operator_Owner": "Turkey",
+    "Value_Counts": 7
+  },
+  {
+    "Country_of_Operator_Owner": "South Africa",
+    "Value_Counts": 5
+  },
+  {
+    "Country_of_Operator_Owner": "Malaysia",
+    "Value_Counts": 5
+  },
+  {
+    "Country_of_Operator_Owner": "Thailand",
+    "Value_Counts": 5
+  },
+  {
+    "Country_of_Operator_Owner": "USA/Japan",
+    "Value_Counts": 5
+  },
+  {
+    "Country_of_Operator_Owner": "Denmark",
+    "Value_Counts": 5
+  },
+  {
+    "Country_of_Operator_Owner": "Algeria",
+    "Value_Counts": 5
+  },
+  {
+    "Country_of_Operator_Owner": "Vietnam",
+    "Value_Counts": 4
+  },
+  {
+    "Country_of_Operator_Owner": "Switzerland",
+    "Value_Counts": 4
+  },
+  {
+    "Country_of_Operator_Owner": "Mexico",
+    "Value_Counts": 4
+  },
+  {
+    "Country_of_Operator_Owner": "USA/Argentina",
+    "Value_Counts": 4
+  },
+  {
+    "Country_of_Operator_Owner": "Nigeria",
+    "Value_Counts": 3
+  },
+  {
+    "Country_of_Operator_Owner": "Czech Republic",
+    "Value_Counts": 3
+  },
+  {
+    "Country_of_Operator_Owner": "France/Italy",
+    "Value_Counts": 3
+  },
+  {
+    "Country_of_Operator_Owner": "Pakistan",
+    "Value_Counts": 3
+  },
+  {
+    "Country_of_Operator_Owner": "Egypt",
+    "Value_Counts": 3
+  },
+  {
+    "Country_of_Operator_Owner": "Poland",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "USA/Germany",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "Lithuania",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "France/Belgium/Sweden",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "Venezuela",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "USA/Canada",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "Greece",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "Azerbaijan",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "Sweden",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "France/Italy/Belgium/Spain/Greece",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "Russia/USA",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "Belarus",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "India/France",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "Japan/Singapore",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "Philippines",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "China/France",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "China/Germany",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "Morocco",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "Hungary",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "China/Brazil",
+    "Value_Counts": 2
+  },
+  {
+    "Country_of_Operator_Owner": "Singapore/Taiwan",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Qatar",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "India/Canada",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "ESA/USA",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Turkmenistan/Monaco",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "USA/Canada/Japan",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Laos",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "United Kingdom/ESA",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "ESA/USA/Russia",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Bhutan",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Bulgaria",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "China/Italy",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "USA/United Kingdom/Italy",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Bangladesh",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Jordan",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Morocco/Germany",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "USA/France",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Nepal",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Austria",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Sri Lanka",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Colombia",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Peru",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Chile",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "France/Israel",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Belgium",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Sudan",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "France/USA",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "USA/Mexico",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Greece/United Kingdom",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Bolivia",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "USA/Japan/Brazil",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Ethiopia",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Taiwan",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Ecuador",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "USA/Sweden",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Iran",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Iraq",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Ukraine",
+    "Value_Counts": 1
+  },
+  {
+    "Country_of_Operator_Owner": "Latvia",
+    "Value_Counts": 1
+  }
+]
