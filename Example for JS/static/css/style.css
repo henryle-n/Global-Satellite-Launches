@@ -1,0 +1,37 @@
+.api-list {
+    padding: 2rem;
+    background-color: rgba(247, 239, 239, 0.747);
+    font-size: 2.0rem;
+    border: lightblue;
+    border-radius: 2rem;
+}
+
+
+#heading-1 {
+    color: rgb(45, 34, 148);
+    text-align: left;
+    padding: 0px;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    padding: 10px;
+
+}
+
+#btn-back {
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: rgb(184, 129, 181);
+    color: rgb(241, 237, 237);
+}
+
+#btn-back:hover {
+    background-color: rgb(226, 198, 147);
+    color: rgb(42, 35, 141);
+
+}
+
+body {
+    background-color: rgba(111, 166, 170, 0.678);
+}
