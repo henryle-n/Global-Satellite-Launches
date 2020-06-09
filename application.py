@@ -92,6 +92,11 @@ def get_selected_country_counts(country_name):
 def get_master_recs():
     return jsonify(data.get_40yr_master_record())
 
+
+@app.route("/choropleth")
+def get_choropleth():
+    return render_template("choropleth.html")
+
 # exe program
 if __name__ == '__main__':
     app.run(debug=True)
