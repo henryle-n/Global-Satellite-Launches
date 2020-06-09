@@ -337,7 +337,7 @@ d3.json(dataUrl).then((data) => {
                 // call back to create svg canvas
                 createSVG();
 
-                d3.csv("assets/data/data.csv").then(function(demoData, err) {
+                d3.csv("data/Launch_Date.csv").then(function(demoData, err) {
                     if (err) throw err;
 
                     // parse data
