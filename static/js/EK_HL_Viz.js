@@ -78,6 +78,8 @@ d3.json(dataUrl).then((data) => {
 
             // =========== Ekin's Visualization - version 0 ============
             // / Grab the width of the containing box
+            // ========== DECLARE VARIABLES =================
+
             var svgWidth;
             var svgHeight;
             var margin;
@@ -98,12 +100,11 @@ d3.json(dataUrl).then((data) => {
             var circleRadius = 12;
 
             // default axes upon page loading
-            var chosenXaxis = "Launch_Date";
+            var chosenXaxis = "Launch_Day";
             var chosenYaxis = "numCount";
 
             var body = document.body,
                 html = document.documentElement;
-
 
             // ============== SVG CREATTION ==================
             function refreshExistElemt(element) {
@@ -120,7 +121,7 @@ d3.json(dataUrl).then((data) => {
                     d3.select("#scatter").node().getBoundingClientRect().width
                 );
 
-                // HENRY ;) I love golden ratio = 1.618
+                // I love golden ratio = 1.618
                 if (svgWidth >= 768) { // screen size in pixels
                     svgHeight = window.innerHeight / ((1 + Math.sqrt(5)) / 2);
                 } else
@@ -180,6 +181,7 @@ d3.json(dataUrl).then((data) => {
                     .range([height, 0]);
                 return yLinearScale;
             }
+
             // =============== UPDATING CURRENT AXES =================
             function renderXaxis(newXscale, xAxis) {
                 var bottomAxis = d3.axisBottom(newXscale);
@@ -196,6 +198,7 @@ d3.json(dataUrl).then((data) => {
                     .call(leftAxis);
                 return yAxis;
             }
+
             // ================= RENDERING CIRCLES ===================
 
             // create/ update circular data points on graph
@@ -231,41 +234,35 @@ d3.json(dataUrl).then((data) => {
                 // define label(key) for tooltip content box
                 var labelX;
                 var labelY;
+
                 // these switch will help build the keys for tooltip box when hovering over the data and tag
                 switch (chosenXaxis) {
                     case "Launch_Day":
-                        labelX = "Launch Day";
+                        labelX = "Launch_Day";
                         break;
 
                     case "Launch_Month":
-                        labelX = "Launch Month";
+                        labelX = "Launch_Month";
                         break;
 
                     case "Launch_Year":
-                        labelX = "Launch Year";
+                        labelX = "Launch_Year";
                         break;
                 }
 
                 switch (chosenYaxis) {
                     case "numCount":
-                        labelY = "number Count";
-                        break;
-
-                    case "numCount":
-                        labelY = "numCount";
-                        break;
-
-                    case "numCount":
-                        labelY = "numCount";
+                        labelY = "Lacks numCount";
                         break;
                 }
+
                 // use d3.tip to construct tooltips
                 toolTip = d3.tip()
                     .attr("class", "tooltip")
                     .offset([-10, 0])
                     .html(function(row) {
-                        // Launch_Month has different unit
-                        if (chosenXaxis === "Launch_Month") {
+                        // Launch_Year has different unit
+                        if (chosenXaxis === "Launch_Year") {
                             return (`
           ${row['state']}<br>
           -------------------------<br>
@@ -274,6 +271,7 @@ d3.json(dataUrl).then((data) => {
               $${Math.max(Math.round(row[chosenXaxis] * 100)/100).toFixed(2)}K
             </span>
             <br>
+
           ${labelY}: 
             <span style='color:#59DCE5'>
               ${row[chosenYaxis]}%
@@ -281,8 +279,8 @@ d3.json(dataUrl).then((data) => {
         `);
                         }
 
-                        // Launch_Day has different unit
-                        else if (chosenXaxis === "Launch_Day") {
+                        // Launch_Month has different unit
+                        else if (chosenXaxis === "Launch_Month") {
                             return (`
           ${row['state']}<br>
           -------------------------<br>
@@ -291,6 +289,7 @@ d3.json(dataUrl).then((data) => {
             ${row[chosenXaxis]} yrs
           </span>  
           <br>
+
           ${labelY}: 
           <span style="color:#59DCE5">
             ${row[chosenYaxis]}%
@@ -308,6 +307,7 @@ d3.json(dataUrl).then((data) => {
             ${row[chosenXaxis]}%
           </span>  
           <br>
+
           ${labelY}: 
           <span style="color:#59DCE5">
             ${row[chosenYaxis]}%
@@ -337,15 +337,17 @@ d3.json(dataUrl).then((data) => {
                 // call back to create svg canvas
                 createSVG();
 
-                d3.csv("Data/Launch_Date.csv").then(function(demoData, err) {
+                d3.csv("assets/data/data.csv").then(function(demoData, err) {
                     if (err) throw err;
 
                     // parse data
                     demoData.forEach(row => {
-                        row.Launch_Year = +row.Launch_Year;
-                        row.Launch_Month = +row.Launch_Month;
-                        row.numCount = +row.numCount;
                         row.Launch_Day = +row.Launch_Day;
+                        row.Launch_Year = +row.Launch_Year; // convert to $1K unit
+                        row.numCount = +row.numCount;
+                        row.numCount = +row.numCount;
+                        row.numCount = +row.numCount;
+                        row.Launch_Month = +row.Launch_Month;
                     });
 
                     //  x & y linear scale function 
@@ -394,23 +396,23 @@ d3.json(dataUrl).then((data) => {
                         .attr("transform", `translate(${width / 2}, ${height})`);
 
                     // add text label to the labelsGroup
-                    var Launch_YearLabel = labelsGroupX.append("text")
-                        .attr("y", `${labelStartPos}rem`)
-                        .attr("value", "Launch_Year") // value to grab for event listener
-                        .classed("active", true)
-                        .text("In Launch Year ");
-
                     var Launch_DayLabel = labelsGroupX.append("text")
-                        .attr("y", `${labelStartPos + labelSpacing}rem`)
+                        .attr("y", `${labelStartPos}rem`)
                         .attr("value", "Launch_Day") // value to grab for event listener
-                        .classed("inactive", true)
-                        .text("Launch Day");
+                        .classed("active", true)
+                        .text("Launch_Day ");
 
                     var Launch_MonthLabel = labelsGroupX.append("text")
-                        .attr("y", `${labelStartPos + 2*labelSpacing}rem`)
+                        .attr("y", `${labelStartPos + labelSpacing}rem`)
                         .attr("value", "Launch_Month") // value to grab for event listener
                         .classed("inactive", true)
-                        .text("Launch Month");
+                        .text("Launch_Month");
+
+                    var Launch_YearLabel = labelsGroupX.append("text")
+                        .attr("y", `${labelStartPos + 2*labelSpacing}rem`)
+                        .attr("value", "Launch_Year") // value to grab for event listener
+                        .classed("inactive", true)
+                        .text(" Launch_Year");
 
                     // --------- Create group for 3 y-axis labels ------------
                     var labelsGroupY = chartGroup.append("g")
@@ -418,13 +420,184 @@ d3.json(dataUrl).then((data) => {
                         .attr("transform", `rotate(-90) translate(${-height/2}, 0)`);
 
                     // add text labels to the labelsGroup
-                    var healthCareLabel = labelsGroupY.append("text")
+                    var numCountLabel = labelsGroupY.append("text")
                         .attr("y", `${-labelStartPos}rem`)
                         .attr("value", "numCount")
                         // value to grab for event listener
                         .classed("active", true)
-                        .text("NUMBER of Count (%)")
+                        .text("Lacks numCount (%)");
+
+                    var numCountsLabel = labelsGroupY.append("text")
+                        .attr("y", `${-labelStartPos - labelSpacing}rem`)
+                        .attr("value", "numCount")
+                        // value to grab for event listener
+                        .classed("inactive", true)
+                        .text("numCount ");
+
+                    var numCountLabel = labelsGroupY.append("text")
+                        .attr("y", `${-labelStartPos - 2*labelSpacing}rem`)
+                        .attr("value", "numCount")
+                        // value to grab for event listener
+                        .classed("inactive", true)
+                        .text("numCount (%)");
 
 
+                    // updateToolTip function above csv import
+                    var circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
+
+                    // updateToolTipState function above csv import
+                    var circLabelGroup = updateToolTip(chosenXaxis, chosenYaxis, circLabelGroup);
+
+                    // call back function to show analysis of the chosen X & Y catergories
+                    getAnalysis(chosenXaxis, chosenYaxis);
+
+
+                    // x axis labels event listener
+                    labelsGroupX.selectAll("text")
+                        .on("click", function() {
+                            // get value of selection
+                            var value = d3.select(this).attr("value");
+                            if (value !== chosenXaxis) {
+
+                                // replaces chosenXaxis with value
+                                chosenXaxis = value;
+
+                                // updates x & y scale for new data
+                                xLinearScale = xScale(demoData, chosenXaxis);
+                                yLinearScale = yScale(demoData, chosenYaxis);
+
+                                // updates x axis with transition
+                                xAxis = renderXaxis(xLinearScale, xAxis);
+                                yAxis = renderYaxis(yLinearScale, yAxis);
+
+                                // updates circle labels with new x values
+                                circlesGroup = renderCircles(circlesGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
+
+                                circLabelGroup = renderCirLabel(circLabelGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
+
+                                // updates tooltips with new info
+                                circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
+
+                                circLabelGroup = updateToolTip(chosenXaxis, chosenYaxis, circLabelGroup);
+
+                                // changes classes to change css format for active and inactive xAxis labels
+                                switch (chosenXaxis) {
+                                    case "Launch_Day":
+                                        Launch_MonthLabel
+                                            .classed("active", false)
+                                            .classed("inactive", true);
+                                        Launch_YearLabel
+                                            .classed("active", false)
+                                            .classed("inactive", true);
+                                        Launch_DayLabel
+                                            .classed("active", true)
+                                            .classed("inactive", false);
+                                        break;
+
+                                    case "Launch_Month":
+                                        Launch_DayLabel
+                                            .classed("active", false)
+                                            .classed("inactive", true);
+                                        Launch_YearLabel
+                                            .classed("active", false)
+                                            .classed("inactive", true);
+                                        Launch_MonthLabel
+                                            .classed("active", true)
+                                            .classed("inactive", false);
+                                        break;
+
+                                    default:
+                                        Launch_DayLabel
+                                            .classed("active", false)
+                                            .classed("inactive", true);
+                                        Launch_YearLabel
+                                            .classed("active", true)
+                                            .classed("inactive", false);
+                                        Launch_MonthLabel
+                                            .classed("active", false)
+                                            .classed("inactive", true);
+                                        break;
+                                }
+
+                                getAnalysis(chosenXaxis, chosenYaxis);
+                            }
+                        });
+
+                    labelsGroupY.selectAll("text")
+                        .on("click", function() {
+                            // get value of selection
+                            var value = d3.select(this).attr("value");
+                            if (value !== chosenYaxis) {
+
+                                // replaces chosenXaxis with value
+                                chosenYaxis = value;
+
+                                // updates x & y scale for new data
+                                xLinearScale = xScale(demoData, chosenXaxis);
+                                yLinearScale = yScale(demoData, chosenYaxis);
+
+                                // updates x axis with transition
+                                xAxis = renderXaxis(xLinearScale, xAxis);
+                                yAxis = renderYaxis(yLinearScale, yAxis);
+
+                                // updates circles with new y values
+                                circlesGroup = renderCircles(circlesGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
+
+                                // updates circle labels with new y values
+                                circLabelGroup = renderCirLabel(circLabelGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
+
+                                // updates tooltips with new info
+                                circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
+
+                                circLabelGroup = updateToolTip(chosenXaxis, chosenYaxis, circLabelGroup);
+
+                                // changes classes to change bold text
+                                switch (chosenYaxis) {
+                                    case "numCount":
+                                        numCountLabel
+                                            .classed("active", true)
+                                            .classed("inactive", false);
+                                        numCountLabel
+                                            .classed("active", false)
+                                            .classed("inactive", true);
+                                        numCountLabel
+                                            .classed("active", false)
+                                            .classed("inactive", true);
+                                        break;
+
+                                    case "numCount":
+                                        numCountLabel
+                                            .classed("active", false)
+                                            .classed("inactive", true);
+                                        numCountLabel
+                                            .classed("active", false)
+                                            .classed("inactive", true);
+                                        numCountLabel
+                                            .classed("active", true)
+                                            .classed("inactive", false);
+                                        break;
+
+                                    default:
+                                        numCountLabel
+                                            .classed("active", false)
+                                            .classed("inactive", true);
+                                        numCountLabel
+                                            .classed("active", false)
+                                            .classed("inactive", true);
+                                        numCountLabel
+                                            .classed("active", true)
+                                            .classed("inactive", false);
+                                        break;
+                                }
+                                // call back function to show analysis of the chosen X & Y catergories
+                                getAnalysis(chosenXaxis, chosenYaxis);
+
+                            }
+                        });
+                })
+
+                // log any error while pulling promises
+                .catch(function(err) {
+                    console.log("Error(s) while running Promise :: ", err);
                 })
             }
