@@ -192,8 +192,9 @@ function renderCircles(circlesGroup, newXscale, newYscale, chosenXaxis, chosenYa
 
     circlesGroup.transition()
         .duration(transDura)
-        .attr("cx", d => newXscale(d[chosenXaxis]))
-        .attr("cy", d => newYscale(d[chosenYaxis]));
+        .attr("cx", data => newXscale(data[chosenXaxis]))
+        .attr("cy", data => newYscale(data[chosenXaxis]));
+
     return circlesGroup;
 }
 
@@ -202,7 +203,7 @@ function renderCircles(circlesGroup, newXscale, newYscale, chosenXaxis, chosenYa
 // ================= UPDATE TOOLTIPS ===================
 function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
     toolTipArea = d3.selectAll("div.tooltip");
-    console.log("204 toolTip", elementGroup, chosenXaxis, chosenYaxis);
+    // console.log("204 toolTip", elementGroup, chosenXaxis, chosenYaxis);
     // delete existing tootip and update to new tooltip
     refreshExistElemt(toolTipArea);
 
@@ -286,22 +287,21 @@ function initChart() {
         console.log(" this is yearCountArr :: ", yearCountArr);
 
 
-        demoData = dayCountArr;
 
-        // switch (chosenXaxis) {
-        //     case "day":
-        //         chosenYaxis = "dayCounts";
-        //         demoData = dayCountArr;
-        //         break;
-        //     case "month":
-        //         chosenYaxis = "monthCounts";
-        //         demoData = monthCountArr;
-        //         break;
-        //     default:
-        //         chosenYaxis = "yearCounts";
-        //         demoData = yearCountArr;
-        //         break;
-        // }
+        switch (chosenXaxis) {
+            case "day":
+                chosenYaxis = "dayCounts";
+                demoData = dayCountArr;
+                break;
+            case "month":
+                chosenYaxis = "monthCounts";
+                demoData = monthCountArr;
+                break;
+            default:
+                chosenYaxis = "yearCounts";
+                demoData = yearCountArr;
+                break;
+        }
 
         console.log(" the chosen XY :: ", chosenXaxis, chosenYaxis, "demodata", demoData);
 
@@ -392,8 +392,8 @@ function initChart() {
 
 
                     switch (chosenXaxis) {
-                        case "day":
-                            chosenYaxis = "dayCounts";
+                        case "year":
+                            chosenYaxis = "yearCounts";
                             demoData = dayCountArr;
                             break;
                         case "month":
@@ -401,7 +401,7 @@ function initChart() {
                             demoData = monthCountArr;
                             break;
                         default:
-                            chosenYaxis = "yearCounts";
+                            chosenYaxis = "dayCounts";
                             demoData = yearCountArr;
                             break;
                     }
@@ -425,7 +425,7 @@ function initChart() {
 
 
                     // updates tooltips with new info
-                    circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
+                    // circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
 
                 
                     // changes classes to change css format for active and inactive xAxis labels
