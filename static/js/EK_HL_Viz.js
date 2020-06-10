@@ -128,12 +128,22 @@ function xScale(data, chosenXaxis) {
         // scale so that min of the axis is 20% extended beyond original data
         // max is 20% more than original
         .domain([
-            d3.min(data, d => d[chosenXaxis]) * (1 - scaleMin / 100),
-            d3.max(data, d => d[chosenXaxis]) * (1 + scaleMax / 100)
-        ])
+            d3.min(data, d => d[chosenXaxis],
+            d3.max(data, d => d[chosenXaxis])
         .range([0, width]);
     return xLinearScale;
 }
+
+function xYearScale(data, chosenXaxis) {
+    // create scales
+    var xLinearScale = d3.time.scale().range([0, width]);
+        // scale so that min of the axis is 20% extended beyond original data
+        // max is 20% more than original
+        xLinearScale.domain(d3.extent(data, function (d) { return new Date(parseInt(d.Year),0); }));
+    return xLinearScale;
+}
+
+
 
 // function used for updating y-scale var upon click on yAxis label
 function yScale(data, chosenYaxis) {
