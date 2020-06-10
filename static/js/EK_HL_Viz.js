@@ -232,7 +232,7 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
                 ${row[chosenYaxis]}
                 </span>
             `);
-            }            
+        }
         );
 
     // add tooltip to chart circles and state text
@@ -278,11 +278,11 @@ function initChart() {
             case "day":
                 chosenYaxis = "dayCounts";
                 demoData = dayCounts;
-            
+
             case "month":
                 chosenYaxis = "monthCounts";
                 demoData = monthCounts;
-        
+
             case "year":
                 chosenYaxis = "yearCounts";
                 demoData = yearCounts;
@@ -339,7 +339,7 @@ function initChart() {
             .attr("y", `${labelStartPos}rem`)
             .attr("value", "day") // value to grab for event listener
             .classed("active", true)
-            .text("Lauch Day");
+            .text("Launch Day");
 
         var monthLabel = labelsGroupX.append("text")
             .attr("y", `${labelStartPos + labelSpacing}rem`)
@@ -351,7 +351,7 @@ function initChart() {
             .attr("y", `${labelStartPos + 2 * labelSpacing}rem`)
             .attr("value", "year") // value to grab for event listener
             .classed("inactive", true)
-            .text("Lauch Year");
+            .text("Launch Year");
 
         // --------- Create group for 3 y-axis labels ------------
         var labelsGroupY = chartGroup.append("g")
@@ -359,23 +359,9 @@ function initChart() {
             .attr("transform", `rotate(-90) translate(${-height / 2}, 0)`);
 
         // add text labels to the labelsGroup
-        var healthCareLabel = labelsGroupY.append("text")
+        var launchCountsLabel = labelsGroupY.append("text")
             .attr("y", `${-labelStartPos}rem`)
             .text("Satellite Launch Counts");
-
-        var smokesLabel = labelsGroupY.append("text")
-            .attr("y", `${-labelStartPos - labelSpacing}rem`)
-            .attr("value", "smokes")
-            // value to grab for event listener
-            .classed("inactive", true)
-            .text("Smokes (%)");
-
-        var obesityLabel = labelsGroupY.append("text")
-            .attr("y", `${-labelStartPos - 2 * labelSpacing}rem`)
-            .attr("value", "obesity")
-            // value to grab for event listener
-            .classed("inactive", true)
-            .text("Obesity (%)");
 
 
         // updateToolTip function above csv import
@@ -383,9 +369,6 @@ function initChart() {
 
         // updateToolTipState function above csv import
         var circLabelGroup = updateToolTip(chosenXaxis, chosenYaxis, circLabelGroup);
-
-        // call back function to show analysis of the chosen X & Y catergories
-        getAnalysis(chosenXaxis, chosenYaxis);
 
 
         // x axis labels event listener
@@ -418,38 +401,38 @@ function initChart() {
 
                     // changes classes to change css format for active and inactive xAxis labels
                     switch (chosenXaxis) {
-                        case "poverty":
-                            ageLabel
+                        case "day":
+                            dayLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            incomeLabel
+                            monthLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            povertyLabel
+                            yearLabel
                                 .classed("active", true)
                                 .classed("inactive", false);
                             break;
 
-                        case "age":
-                            povertyLabel
+                        case "month":
+                            dayLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            incomeLabel
+                            monthLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            ageLabel
+                            yearLabel
                                 .classed("active", true)
                                 .classed("inactive", false);
                             break;
 
                         default:
-                            povertyLabel
+                            dayLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            incomeLabel
+                            monthLabel
                                 .classed("active", true)
                                 .classed("inactive", false);
-                            ageLabel
+                            yearLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
                             break;
@@ -459,81 +442,10 @@ function initChart() {
                 }
             });
 
-        labelsGroupY.selectAll("text")
-            .on("click", function () {
-                // get value of selection
-                var value = d3.select(this).attr("value");
-                if (value !== chosenYaxis) {
-
-                    // replaces chosenXaxis with value
-                    chosenYaxis = value;
-
-                    // updates x & y scale for new data
-                    xLinearScale = xScale(demoData, chosenXaxis);
-                    yLinearScale = yScale(demoData, chosenYaxis);
-
-                    // updates x axis with transition
-                    xAxis = renderXaxis(xLinearScale, xAxis);
-                    yAxis = renderYaxis(yLinearScale, yAxis);
-
-                    // updates circles with new y values
-                    circlesGroup = renderCircles(circlesGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
-
-                    // updates circle labels with new y values
-                    circLabelGroup = renderCirLabel(circLabelGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
-
-                    // updates tooltips with new info
-                    circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
-
-                    circLabelGroup = updateToolTip(chosenXaxis, chosenYaxis, circLabelGroup);
-
-                    // changes classes to change bold text
-                    switch (chosenYaxis) {
-                        case "healthcare":
-                            healthCareLabel
-                                .classed("active", true)
-                                .classed("inactive", false);
-                            smokesLabel
-                                .classed("active", false)
-                                .classed("inactive", true);
-                            obesityLabel
-                                .classed("active", false)
-                                .classed("inactive", true);
-                            break;
-
-                        case "smokes":
-                            healthCareLabel
-                                .classed("active", false)
-                                .classed("inactive", true);
-                            obesityLabel
-                                .classed("active", false)
-                                .classed("inactive", true);
-                            smokesLabel
-                                .classed("active", true)
-                                .classed("inactive", false);
-                            break;
-
-                        default:
-                            healthCareLabel
-                                .classed("active", false)
-                                .classed("inactive", true);
-                            smokesLabel
-                                .classed("active", false)
-                                .classed("inactive", true);
-                            obesityLabel
-                                .classed("active", true)
-                                .classed("inactive", false);
-                            break;
-                    }
-                    // call back function to show analysis of the chosen X & Y catergories
-                    getAnalysis(chosenXaxis, chosenYaxis);
-
-                }
-            });
-    })
-
+        }
+    )
         // log any error while pulling promises
-        .catch(function (err) {
-            console.log("Error(s) while running Promise :: ", err);
-        })
+    .catch(function (err) {
+        console.log("Error(s) while running Promise :: ", err);
+    })
 }
