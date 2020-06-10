@@ -92,6 +92,12 @@ def get_selected_country_counts(country_name):
 def get_master_recs():
     return jsonify(data.get_40yr_master_record())
 
+
+# top 10 launch year, month, and day counts
+@app.route("/api/top10-launch-dates")
+def get_top10_LaunchDates_recs():
+    return jsonify(data.get_top10_launch_dates())
+
 # exe program
 if __name__ == '__main__':
     app.run(debug=True)

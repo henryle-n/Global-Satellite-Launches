@@ -21,6 +21,7 @@ class SatLaunch():
         self.DemoGData = self.Base.classes['Demographic_Data']
         self.LaunchDate = self.Base.classes['Launch_Date']
         self.SatCount40yr = self.Base.classes['Launch_by_Country_46yr']
+        self.Top10LaunchDates = self.Base.classes['Top10_Launch_Dates']
         
         
     def display_db_info(self):
@@ -116,6 +117,18 @@ class SatLaunch():
 
         session.close()  
         return df.to_dict(orient="records")
+
+    # top 10 launch year, month, and day counts
+    def get_top10_launch_dates(self):
+        session = Session(self.engine)
+
+        results = session.query(self.Top10LaunchDates)
+            
+        df = pd.read_sql(results.statement, session.connection())
+
+        session.close()  
+        return df.to_dict(orient="records")
+
                       
 if __name__ == '__main__':
     info = SatLaunch("sqlite:///Data/UCS_Satellite.db")
@@ -128,6 +141,7 @@ if __name__ == '__main__':
     # print("\nAll Satellite-Owned Countries\n", info.get_40yr_sat_lauch_by_country("USA"))
     # print("\nEntire Database:\n", info.get_40yr_master_record())
     # print("\nAll Satellite-Owned Countries\n", info.get_launch_date())
+    print("\nTop 10 Launch Dates\n", info.get_top10_launch_dates())
 
 
 
