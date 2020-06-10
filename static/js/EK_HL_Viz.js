@@ -38,7 +38,7 @@ function numFreqCount(numArr, category) {
     var CountArr = [];
     Object.entries(numCount).forEach(([k, v]) => {
         var CountObj = {}
-        CountObj[category] = k.toString();
+        CountObj[category] = +k;
         CountObj[`${category}Counts`] = +v;
         CountArr.push(CountObj);
     });
@@ -84,7 +84,7 @@ function createSVG() {
 
     // find svgHeight & Width upon loading based on container current size
     svgWidth = Math.min(
-        d3.select("#scatter").node().getBoundingClientRect().width
+        d3.select("#ekHenryLauchBar").node().getBoundingClientRect().width
     );
 
     // I love golden ratio = 1.618
@@ -103,7 +103,7 @@ function createSVG() {
     width = svgWidth - margin.left - margin.right;
     height = svgHeight - margin.top - margin.bottom;
 
-    var scatter = d3.select("body").select("#ekLauchBar");
+    var scatter = d3.select("body").select("#ekHenryLauchBar");
 
     svgArea = scatter
         .append("div")
@@ -265,9 +265,9 @@ function initChart() {
             yearArr.push(row['Launch_Year']);
         });
 
-        dayCounts = numFreqCount(dayArr);
-        monthCounts = numFreqCount(monthArr);
-        yearCounts = numFreqCount(yearArr);
+        dayCounts = numFreqCount(dayArr, "day");
+        monthCounts = numFreqCount(monthArr, "month");
+        yearCounts = numFreqCount(yearArr,"year");
 
         console.log(" this is dayCounts :: ", dayCounts);
         console.log(" this is monthCounts :: ", monthCounts);
