@@ -4,11 +4,11 @@
 var dataUrl = "/api/launch-date";
 
 var dayArr = []; // the master list of all days including duplications
-var dayCounts = {}; // {day1: counts, day2: counts, etc..}
+var dayCountObj = []; // {day1: counts, day2: counts, etc..}
 var monthArr = []; // the master list of all days including duplications
-var monthCounts = {}; // {day1: counts, day2: counts, etc..}
+var monthCountArr = []; // {day1: counts, day2: counts, etc..}
 var yearArr = []; // the master list of all days including duplications
-var yearCounts = {}; // {day1: counts, day2: counts, etc..}
+var yearCountArr = [] // {day1: counts, day2: counts, etc..}
 
 // for the plot, x and y axes
 var xDay = [];
@@ -18,7 +18,7 @@ var yMonth = [];
 var xYear = [];
 var yYear = [];
 
-function numFreqCount(numArr) {
+function numFreqCount(numArr, category) {
 
     // An object to hold word frequency
     var numCount = {};
@@ -35,321 +35,259 @@ function numFreqCount(numArr) {
             numCount[currNum] = 1;
         }
     }
-    return numCount;
+    var CountArr = [];
+    Object.entries(numCount).forEach(([k, v]) => {
+        var CountObj = {}
+        CountObj[category] = k.toString();
+        CountObj[`${category}Counts`] = +v;
+        CountArr.push(CountObj);
+    });
+    return CountArr;
 }
 
-//   ====== use d3 promise to retrieve data =====
-d3.json(dataUrl).then((data) => {
-    data.forEach(row => {
-        // ====== This is for day ======
-        dayArr.push(row['Launch_Day']);
-        monthArr.push(row['Launch_Month']);
-        yearArr.push(row['Launch_Year']);
-    });
 
-    dayCounts = numFreqCount(dayArr);
-    monthCounts = numFreqCount(monthArr);
-    yearCounts = numFreqCount(yearArr);
+var svgWidth;
+var svgHeight;
+var margin;
+var width;
+var height;
+var svgArea;
+var chartGroup;
+var transDura = 800; // unit = ms :: transition Time between new data
+var scaleMin = 15; // percentage ::  axis value extension beyond dataset min value 
+var scaleMax = 10; // percentage ::  axis value extension beyond dataset max value
+var toolTip;
+var toolTipArea;
+// specify label starting position relative to origin and spacing out between labels of the same axis
+var labelStartPos = 3; // rem unit
+var labelSpacing = 1.3; // rem unit
 
-    console.log(" this is dayCounts :: ", dayCounts);
-    console.log(" this is monthCounts :: ", monthCounts);
-    console.log(" this is yearCounts :: ", yearCounts);
+// circular datapoint radius
+var circleRadius = 12;
+
+// default axes upon page loading
+var chosenXaxis = "day";
+var chosenYaxis = "dayCounts";
+
+var body = document.body,
+    html = document.documentElement;
+
+// ============== SVG CREATTION ==================
+function refreshExistElemt(element) {
+    if (element && !element.empty()) {
+        element.remove();
+    }
+}
+
+function createSVG() {
+    refreshExistElemt(svgArea);
+
+    // find svgHeight & Width upon loading based on container current size
+    svgWidth = Math.min(
+        d3.select("#scatter").node().getBoundingClientRect().width
+    );
+
+    // I love golden ratio = 1.618
+    if (svgWidth >= 768) { // screen size in pixels
+        svgHeight = window.innerHeight / ((1 + Math.sqrt(5)) / 2);
+    } else
+        svgHeight = svgWidth;
+
+    margin = {
+        top: 20,
+        right: 50,
+        bottom: 100,
+        left: 130
+    };
+
+    width = svgWidth - margin.left - margin.right;
+    height = svgHeight - margin.top - margin.bottom;
+
+    var scatter = d3.select("body").select("#ekLauchBar");
+
+    svgArea = scatter
+        .append("div")
+        .classed("svg-container", true)
+        .append("svg")
+        // Responsive SVG needs these 2 attributes and no width and height attr.
+        .attr("preserveAspectRatio", "xMinYMin meet")
+        .attr("viewBox", `0 0 ${svgWidth} ${svgHeight}`)
+        // Class to make it responsive.
+        .classed("svg-content-responsive", true)
+
+    // shift the svg area to specified parameters
+    chartGroup = d3.select("svg").append("g")
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+}
 
 
-    Object.entries(dayCounts).forEach(([k, v]) => {
-        xDay.push(k);
-        yDay.push(v);
-    });
+// =============== SCALING AXES =================
+function xScale(data, chosenXaxis) {
+    // create scales
+    var xLinearScale = d3.scaleLinear()
+        // scale so that min of the axis is 20% extended beyond original data
+        // max is 20% more than original
+        .domain([
+            d3.min(data, d => d[chosenXaxis]) * (1 - scaleMin / 100),
+            d3.max(data, d => d[chosenXaxis]) * (1 + scaleMax / 100)
+        ])
+        .range([0, width]);
+    return xLinearScale;
+}
 
-    Object.entries(monthCounts).forEach(([k, v]) => {
-        xMonth.push(k);
-        yMonth.push(v);
-    });
+// function used for updating y-scale var upon click on yAxis label
+function yScale(data, chosenYaxis) {
+    // create scales
+    var yLinearScale = d3.scaleLinear()
+        .domain([
+            d3.min(data, d => d[chosenYaxis]) * (1 - scaleMin / 100),
+            d3.max(data, d => d[chosenYaxis]) * (1 + scaleMax / 100)
+        ])
+        .range([height, 0]);
+    return yLinearScale;
+}
 
-    Object.entries(yearCounts).forEach(([k, v]) => {
-        xYear.push(k);
-        yYear.push(v);
-    });
+// =============== UPDATING CURRENT AXES =================
+function renderXaxis(newXscale, xAxis) {
+    var bottomAxis = d3.axisBottom(newXscale);
+    xAxis.transition()
+        .duration(transDura)
+        .call(bottomAxis);
+    return xAxis;
+}
 
-    console.log("this is xDay", xDay, "this is yDay", yDay);
-    console.log("this is xMonth", xMonth, "this is yMonth", yMonth);
-    console.log("this is xYear", xYear, "this is yYear", yYear);
+function renderYaxis(newYscale, yAxis) {
+    var leftAxis = d3.axisLeft(newYscale);
+    yAxis.transition()
+        .duration(transDura)
+        .call(leftAxis);
+    return yAxis;
+}
+
+// ================= RENDERING CIRCLES ===================
+
+// create/ update circular data points on graph
+function renderCircles(circlesGroup, newXscale, newYscale, chosenXaxis, chosenYaxis) {
+
+    circlesGroup.transition()
+        .duration(transDura)
+        .attr("cx", d => newXscale(d[chosenXaxis]))
+        .attr("cy", d => newYscale(d[chosenYaxis]));
+    return circlesGroup;
+}
+
+// ================= RENDERING CIRC LABELS ===================
+
+// create/ update circular data points on graph
+function renderCirLabel(circLabelGroup, newXscale, newYscale, chosenXaxis, chosenYaxis) {
+
+    circLabelGroup.transition()
+        .duration(transDura)
+        .attr("x", d => newXscale(d[chosenXaxis]))
+        .attr("y", d => newYscale(d[chosenYaxis]));
+    return circLabelGroup;
+}
 
 
-    // =========== Ekin's Visualization - version 0 ============
-    // / Grab the width of the containing box
-    // ========== DECLARE VARIABLES =================
+// ================= UPDATE TOOLTIPS ===================
+function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
+    toolTipArea = d3.selectAll("div.tooltip");
 
-    // ========== DECLARE VARIABLES =================
+    // delete existing tootip and update to new tooltip
+    refreshExistElemt(toolTipArea);
 
-    var svgWidth;
-    var svgHeight;
-    var margin;
-    var width;
-    var height;
-    var svgArea;
-    var chartGroup;
-    var transDura = 800; // unit = ms :: transition Time between new data
-    var scaleMin = 15; // percentage ::  axis value extension beyond dataset min value 
-    var scaleMax = 10; // percentage ::  axis value extension beyond dataset max value
-    var toolTip;
-    var toolTipArea;
-    // specify label starting position relative to origin and spacing out between labels of the same axis
-    var labelStartPos = 3; // rem unit
-    var labelSpacing = 1.3; // rem unit
+    // define label(key) for tooltip content box
+    var labelX;
+    var labelY;
 
-    // circular datapoint radius
-    var circleRadius = 12;
+    // these switch will help build the keys for tooltip box when hovering over the data and tag
+    switch (chosenXaxis) {
+        case "day":
+            labelX = "Day";
+            break;
 
-    // default axes upon page loading
-    var chosenXaxis = "dayArr";
-    var chosenYaxis = "numCount";
+        case "month":
+            labelX = "Year";
+            break;
 
-    var body = document.body,
-        html = document.documentElement;
-
-    // ============== SVG CREATTION ==================
-    function refreshExistElemt(element) {
-        if (element && !element.empty()) {
-            element.remove();
-        }
+        case "year":
+            labelX = "Year";
+            break;
     }
 
-    function createSVG() {
-        refreshExistElemt(svgArea);
-
-        // find svgHeight & Width upon loading based on container current size
-        svgWidth = Math.min(
-            d3.select("#scatter").node().getBoundingClientRect().width
+    labelY = "Counts";
+    // use d3.tip to construct tooltips
+    toolTip = d3.tip()
+        .attr("class", "tooltip")
+        .offset([-10, 0])
+        .html(function (row) {
+            // income has different unit
+            return (`
+            ${labelX}
+            -------------------------<br>
+            ${labelY} : 
+                </span>
+                <br>
+                <span style='color:#59DCE5'>
+                ${row[chosenYaxis]}
+                </span>
+            `);
+            }            
         );
 
-        // I love golden ratio = 1.618
-        if (svgWidth >= 768) { // screen size in pixels
-            svgHeight = window.innerHeight / ((1 + Math.sqrt(5)) / 2);
-        } else
-            svgHeight = svgWidth;
+    // add tooltip to chart circles and state text
+    elementGroup.call(toolTip);
 
-        margin = {
-            top: 20,
-            right: 50,
-            bottom: 100,
-            left: 130
-        };
-
-        width = svgWidth - margin.left - margin.right;
-        height = svgHeight - margin.top - margin.bottom;
-
-        // create svg wrapper 
-        var scatter = d3.select("body").select("#scatter");
-
-        svgArea = scatter
-            .append("div")
-            .classed("svg-container", true)
-            .append("svg")
-            // Responsive SVG needs these 2 attributes and no width and height attr.
-            .attr("preserveAspectRatio", "xMinYMin meet")
-            .attr("viewBox", `0 0 ${svgWidth} ${svgHeight}`)
-            // Class to make it responsive.
-            .classed("svg-content-responsive", true)
-
-        // shift the svg area to specified parameters
-        chartGroup = d3.select("svg").append("g")
-            .attr("transform", `translate(${margin.left}, ${margin.top})`);
-    }
-
-
-    // =============== SCALING AXES =================
-    function xScale(demoData, chosenXaxis) {
-        // create scales
-        var xLinearScale = d3.scaleLinear()
-            // scale so that min of the axis is 20% extended beyond original data
-            // max is 20% more than original
-            .domain([
-                d3.min(demoData, data => data[chosenXaxis]) * (1 - scaleMin / 100),
-                d3.max(demoData, data => data[chosenXaxis]) * (1 + scaleMax / 100)
-            ])
-            .range([0, width]);
-        return xLinearScale;
-    }
-
-    // function used for updating y-scale var upon click on yAxis label
-    function yScale(demoData, chosenYaxis) {
-        // create scales
-        var yLinearScale = d3.scaleLinear()
-            .domain([
-                d3.min(demoData, data => data[chosenYaxis]) * (1 - scaleMin / 100),
-                d3.max(demoData, data => data[chosenYaxis]) * (1 + scaleMax / 100)
-            ])
-            .range([height, 0]);
-        return yLinearScale;
-    }
-
-    // =============== UPDATING CURRENT AXES =================
-    function renderXaxis(newXscale, xAxis) {
-        var bottomAxis = d3.axisBottom(newXscale);
-        xAxis.transition()
-            .duration(transDura)
-            .call(bottomAxis);
-        return xAxis;
-    }
-
-    function renderYaxis(newYscale, yAxis) {
-        var leftAxis = d3.axisLeft(newYscale);
-        yAxis.transition()
-            .duration(transDura)
-            .call(leftAxis);
-        return yAxis;
-    }
-
-    // ================= RENDERING CIRCLES ===================
-
-    // create/ update circular data points on graph
-    function renderCircles(circlesGroup, newXscale, newYscale, chosenXaxis, chosenYaxis) {
-
-        circlesGroup.transition()
-            .duration(transDura)
-            .attr("cx", data => newXscale(data[chosenXaxis]))
-            .attr("cy", data => newYscale(data[chosenYaxis]));
-        return circlesGroup;
-    }
-
-    // ================= RENDERING CIRC LABELS ===================
-
-    // create/ update circular data points on graph
-    function renderCirLabel(circLabelGroup, newXscale, newYscale, chosenXaxis, chosenYaxis) {
-
-        circLabelGroup.transition()
-            .duration(transDura)
-            .attr("x", data => newXscale(data[chosenXaxis]))
-            .attr("y", data => newYscale(data[chosenYaxis]));
-        return circLabelGroup;
-    }
-
-
-    // ================= UPDATE TOOLTIPS ===================
-    function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
-        toolTipArea = d3.selectAll("div.tooltip");
-
-        // delete existing tootip and update to new tooltip
-        refreshExistElemt(toolTipArea);
-
-        // define label(key) for tooltip content box
-        var labelX;
-        var labelY;
-
-        // these switch will help build the keys for tooltip box when hovering over the data and tag
-        switch (chosenXaxis) {
-            case "dayArr":
-                labelX = "dayArr";
-                break;
-
-            case "monthArr":
-                labelX = "monthArr";
-                break;
-
-            case "yearArr":
-                labelX = "yearArr";
-                break;
-        }
-
-        switch (chosenYaxis) {
-            case "numCount":
-                labelY = "Lacks numCount";
-                break;
-        }
-
-        // use d3.tip to construct tooltips
-        toolTip = d3.tip()
-            .attr("class", "tooltip")
-            .offset([-10, 0])
-            .html(function(row) {
-                // yearArr has different unit
-                if (chosenXaxis === "yearArr") {
-                    return (`
-          ${row['state']}<br>
-          -------------------------<br>
-          ${labelX}: 
-            <span style='color:#59DCE5'>
-              $${Math.max(Math.round(row[chosenXaxis] * 100)/100).toFixed(2)}K
-            </span>
-            <br>
-
-          ${labelY}: 
-            <span style='color:#59DCE5'>
-              ${row[chosenYaxis]}%
-            </span>
-        `);
-                }
-
-                // monthArr has different unit
-                else if (chosenXaxis === "monthArr") {
-                    return (`
-          ${row['state']}<br>
-          -------------------------<br>
-          ${labelX}:
-          <span style="color:#59DCE5">
-            ${row[chosenXaxis]} yrs
-          </span>  
-          <br>
-
-          ${labelY}: 
-          <span style="color:#59DCE5">
-            ${row[chosenYaxis]}%
-          </span>
-        `);
-                }
-
-                // all other have % unit
-                else
-                    return (`
-          ${row['state']}<br>
-          -------------------------<br>
-          ${labelX}:
-          <span style="color:#59DCE5">
-            ${row[chosenXaxis]}%
-          </span>  
-          <br>
-
-          ${labelY}: 
-          <span style="color:#59DCE5">
-            ${row[chosenYaxis]}%
-          </span>
-        `);
-            });
-
-        // add tooltip to chart circles and state text
-        elementGroup.call(toolTip);
-
-        // mouse event listener to show tooltip when hovering mouse over the circles or state text
-        elementGroup.on("mouseover", function(tTip) {
-                toolTip.show(tTip);
-            })
-            // onmouseout event
-            .on("mouseout", function(tTip, index) {
-                toolTip.hide(tTip);
-            });
-
-        return elementGroup;
-    }
-
-    // ================== MAKE THE CHART ========================
-    // Retrieve data from the CSV file and execute everything below
-    function initChart() {
-
-        // call back to create svg canvas
-        createSVG();
-
-
-
-        // parse data
-        demoData.forEach(row => {
-            row.dayArr = +row.dayArr;
-            row.yearArr = +row.yearArr; // 
-            row.dayCounts = +row.dayCounts;
-            row.yearCounts = +row.yearCounts;
-            row.monthCounts = +row.monthCounts;
-            row.monthArr = +row.monthArr;
+    // mouse event listener to show tooltip when hovering mouse over the circles or state text
+    elementGroup.on("mouseover", function (tTip) {
+        toolTip.show(tTip);
+    })
+        // onmouseout event
+        .on("mouseout", function (tTip, i) {
+            toolTip.hide(tTip);
         });
+
+    return elementGroup;
+}
+
+
+function initChart() {
+
+    // call back to create svg canvas
+    createSVG();
+    d3.json(dataUrl).then((data, err) => {
+        if (err) throw err;
+
+        data.forEach(row => {
+            // ====== This is for day ======
+            dayArr.push(row['Launch_Day']);
+            monthArr.push(row['Launch_Month']);
+            yearArr.push(row['Launch_Year']);
+        });
+
+        dayCounts = numFreqCount(dayArr);
+        monthCounts = numFreqCount(monthArr);
+        yearCounts = numFreqCount(yearArr);
+
+        console.log(" this is dayCounts :: ", dayCounts);
+        console.log(" this is monthCounts :: ", monthCounts);
+        console.log(" this is yearCounts :: ", yearCounts);
+
+
+        switch (chosenXaxis) {
+            case "day":
+                chosenYaxis = "dayCounts";
+                demoData = dayCounts;
+            
+            case "month":
+                chosenYaxis = "monthCounts";
+                demoData = monthCounts;
+        
+            case "year":
+                chosenYaxis = "yearCounts";
+                demoData = yearCounts;
+        }
+
 
         //  x & y linear scale function 
         var xLinearScale = xScale(demoData, chosenXaxis);
@@ -397,52 +335,54 @@ d3.json(dataUrl).then((data) => {
             .attr("transform", `translate(${width / 2}, ${height})`);
 
         // add text label to the labelsGroup
-        var dayArrLabel = labelsGroupX.append("text")
+        var dayLabel = labelsGroupX.append("text")
             .attr("y", `${labelStartPos}rem`)
-            .attr("value", "dayArr") // value to grab for event listener
+            .attr("value", "day") // value to grab for event listener
             .classed("active", true)
-            .text("dayArr ");
+            .text("Lauch Day");
 
-        var monthArrLabel = labelsGroupX.append("text")
+        var monthLabel = labelsGroupX.append("text")
             .attr("y", `${labelStartPos + labelSpacing}rem`)
-            .attr("value", "monthArr") // value to grab for event listener
+            .attr("value", "month") // value to grab for event listener
             .classed("inactive", true)
-            .text("monthArr");
+            .text("Launch Month");
 
-        var yearArrLabel = labelsGroupX.append("text")
-            .attr("y", `${labelStartPos + 2*labelSpacing}rem`)
-            .attr("value", "yearArr") // value to grab for event listener
+        var yearLabel = labelsGroupX.append("text")
+            .attr("y", `${labelStartPos + 2 * labelSpacing}rem`)
+            .attr("value", "year") // value to grab for event listener
             .classed("inactive", true)
-            .text(" yearArr");
+            .text("Lauch Year");
 
         // --------- Create group for 3 y-axis labels ------------
         var labelsGroupY = chartGroup.append("g")
             // rotate yAxis label CCW 90-deg and move the label origin to mid yAxis  
-            .attr("transform", `rotate(-90) translate(${-height/2}, 0)`);
+            .attr("transform", `rotate(-90) translate(${-height / 2}, 0)`);
 
         // add text labels to the labelsGroup
-        var numCountLabel = labelsGroupY.append("text")
+        var healthCareLabel = labelsGroupY.append("text")
             .attr("y", `${-labelStartPos}rem`)
-            .attr("value", "dayCounts")
-            // value to grab for event listener
-            .classed("active", true)
-            .text("Lacks numCount ");
+            .text("Satellite Launch Counts");
 
-        var numCountsLabel = labelsGroupY.append("text")
+        var smokesLabel = labelsGroupY.append("text")
             .attr("y", `${-labelStartPos - labelSpacing}rem`)
-            .attr("value", "monthCounts")
+            .attr("value", "smokes")
             // value to grab for event listener
             .classed("inactive", true)
-            .text("numCount ");
+            .text("Smokes (%)");
 
-        var numCountLabel = labelsGroupY.append("text")
-            .attr("y", `${-labelStartPos - 2*labelSpacing}rem`)
-            .attr("value", "yearCounts")
+        var obesityLabel = labelsGroupY.append("text")
+            .attr("y", `${-labelStartPos - 2 * labelSpacing}rem`)
+            .attr("value", "obesity")
             // value to grab for event listener
             .classed("inactive", true)
-            .text("numCount");
+            .text("Obesity (%)");
 
 
+        // updateToolTip function above csv import
+        var circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
+
+        // updateToolTipState function above csv import
+        var circLabelGroup = updateToolTip(chosenXaxis, chosenYaxis, circLabelGroup);
 
         // call back function to show analysis of the chosen X & Y catergories
         getAnalysis(chosenXaxis, chosenYaxis);
@@ -450,7 +390,7 @@ d3.json(dataUrl).then((data) => {
 
         // x axis labels event listener
         labelsGroupX.selectAll("text")
-            .on("click", function() {
+            .on("click", function () {
                 // get value of selection
                 var value = d3.select(this).attr("value");
                 if (value !== chosenXaxis) {
@@ -478,38 +418,38 @@ d3.json(dataUrl).then((data) => {
 
                     // changes classes to change css format for active and inactive xAxis labels
                     switch (chosenXaxis) {
-                        case "dayArr":
-                            monthArrLabel
+                        case "poverty":
+                            ageLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            yearArrLabel
+                            incomeLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            dayArrLabel
+                            povertyLabel
                                 .classed("active", true)
                                 .classed("inactive", false);
                             break;
 
-                        case "monthArr":
-                            dayArrLabel
+                        case "age":
+                            povertyLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            yearArrLabel
+                            incomeLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            monthArrLabel
+                            ageLabel
                                 .classed("active", true)
                                 .classed("inactive", false);
                             break;
 
                         default:
-                            dayArrLabel
+                            povertyLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            yearArrLabel
+                            incomeLabel
                                 .classed("active", true)
                                 .classed("inactive", false);
-                            monthArrLabel
+                            ageLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
                             break;
@@ -520,7 +460,7 @@ d3.json(dataUrl).then((data) => {
             });
 
         labelsGroupY.selectAll("text")
-            .on("click", function() {
+            .on("click", function () {
                 // get value of selection
                 var value = d3.select(this).attr("value");
                 if (value !== chosenYaxis) {
@@ -549,38 +489,38 @@ d3.json(dataUrl).then((data) => {
 
                     // changes classes to change bold text
                     switch (chosenYaxis) {
-                        case "numCount":
-                            numCountLabel
+                        case "healthcare":
+                            healthCareLabel
                                 .classed("active", true)
                                 .classed("inactive", false);
-                            numCountLabel
+                            smokesLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            numCountLabel
+                            obesityLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
                             break;
 
-                        case "numCount":
-                            numCountLabel
+                        case "smokes":
+                            healthCareLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            numCountLabel
+                            obesityLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            numCountLabel
+                            smokesLabel
                                 .classed("active", true)
                                 .classed("inactive", false);
                             break;
 
                         default:
-                            numCountLabel
+                            healthCareLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            numCountLabel
+                            smokesLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            numCountLabel
+                            obesityLabel
                                 .classed("active", true)
                                 .classed("inactive", false);
                             break;
@@ -589,10 +529,11 @@ d3.json(dataUrl).then((data) => {
                     getAnalysis(chosenXaxis, chosenYaxis);
 
                 }
-            })
-    }
-    // // log any error while pulling promises
-    // .catch(function(err) {
-    //     console.log("Error(s) while running Promise :: ", err);
-    // })
-})
+            });
+    })
+
+        // log any error while pulling promises
+        .catch(function (err) {
+            console.log("Error(s) while running Promise :: ", err);
+        })
+}
