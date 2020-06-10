@@ -6,9 +6,9 @@ var dataUrl = "/api/launch-date";
 var dayArr = []; // the master list of all days including duplications
 var dayCountObj = []; // {day1: counts, day2: counts, etc..}
 var monthArr = []; // the master list of all days including duplications
-var monthCountArr = []; // {day1: counts, day2: counts, etc..}
-var yearArr = []; // the master list of all days including duplications
-var yearCountArr = [] // {day1: counts, day2: counts, etc..}
+var monthCountArr = []; // {momht1: counts, month2: counts, etc..}
+var yearArr = []; // the master list of all years including duplications
+var yearCountArr = [] // {year1: counts, year2: counts, etc..}
 
 // for the plot, x and y axes
 var xDay = [];
@@ -112,14 +112,104 @@ d3.json(dataUrl).then((data, err) => {
 
         Plotly.newPlot('LaunchDayBar', dayBarData, dayBarLayout);
 
-// ========================= Ekin's Visualization ====================== 
+        // ========================= Ekin's Visualization ====================== 
+
+        var xAxisMonth = monthCountArr.map(row => row.month);
+        var yAxisMonth = monthCountArr.map(row => row.monthCounts);
+
+        var monthBarData = [{
+            x: xAxisMonth,
+            y: yAxisMonth,
+            type: 'bar',
+            marker: {
+                color: 'rgba(158, 55, 190, 0.35)'
+            }
+        }];
+        var monthBarLayout = {
+            title: 'Launch Month Counts',
+            font: {
+                family: 'Raleway, sans-serif'
+            },
+            showlegend: false,
+
+            xaxis: {
+                tickangle: -0,
+                title: 'Satellite Counts',
+                titlefont: {
+                    size: 16,
+                    color: 'rgb(107, 107, 107)'
+                }
+            },
+
+            yaxis: {
+                zeroline: false,
+                gridwidth: 2
+            },
+            bargap: 0.05,
+            yaxis: {
+                title: 'Satellite Counts',
+                titlefont: {
+                    size: 16,
+                    color: 'rgb(107, 107, 107)'
+                },
+            }
+
+        };
+
+        Plotly.newPlot('LaunchMonthBar', monthBarData, monthBarLayout);
 
 
+
+
+
+        var xAxisYear = yearCountArr.map(row => row.year);
+        var yAxisYear = yearCountArr.map(row => row.yearCounts);
+
+        var yearBarData = [{
+            x: xAxisYear,
+            y: yAxisYear,
+            type: 'bar',
+            marker: {
+                color: 'rgba(158, 55, 190, 0.35)'
+            }
+        }];
+        var yearBarLayout = {
+            title: 'Launch Year Counts',
+            font: {
+                family: 'Raleway, sans-serif'
+            },
+            showlegend: false,
+
+            xaxis: {
+                tickangle: -0,
+                title: 'Satellite Counts',
+                titlefont: {
+                    size: 16,
+                    color: 'rgb(107, 107, 107)'
+                }
+            },
+
+            yaxis: {
+                zeroline: false,
+                gridwidth: 2
+            },
+            bargap: 0.05,
+            yaxis: {
+                title: 'Satellite Counts',
+                titlefont: {
+                    size: 16,
+                    color: 'rgb(107, 107, 107)'
+                },
+            }
+
+        };
+
+        Plotly.newPlot('LaunchYearBar', yearBarData, yearBarLayout);
 
         // ================================================================
         console.log("end running :: ", getScriptName());
     })
     // log any error while pulling promises
-    .catch(function (err) {
+    .catch(function(err) {
         console.log("Error(s) while running Promise :: ", err);
     })
