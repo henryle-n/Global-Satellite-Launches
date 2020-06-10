@@ -1,3 +1,50 @@
+// =========== Henry's Data Retrieval- version 0 ============
+
+
+var dataUrl = "/api/launch-date";
+
+var dayArr = []; // the master list of all days including duplications
+var dayCountObj = []; // {day1: counts, day2: counts, etc..}
+var monthArr = []; // the master list of all days including duplications
+var monthCountArr = []; // {day1: counts, day2: counts, etc..}
+var yearArr = []; // the master list of all days including duplications
+var yearCountArr = [] // {day1: counts, day2: counts, etc..}
+
+// for the plot, x and y axes
+var xDay = [];
+var yDay = [];
+var xMonth = [];
+var yMonth = [];
+var xYear = [];
+var yYear = [];
+
+function numFreqCount(numArr, category) {
+
+    // An object to hold word frequency
+    var numCount = {};
+
+    // Iterate through the array
+    for (var i = 0; i < numArr.length; i++) {
+        var currNum = numArr[i];
+        // If the word has been seen before...
+        if (currNum in numCount) {
+            // Add one to the counter
+            numCount[currNum] += 1;
+        } else {
+            // Set the counter at 1
+            numCount[currNum] = 1;
+        }
+    }
+    var CountArr = [];
+    Object.entries(numCount).forEach(([k, v]) => {
+        var CountObj = {}
+        CountObj[category] = +k;
+        CountObj[`${category}Counts`] = +v;
+        CountArr.push(CountObj);
+    });
+    return CountArr;
+}
+
 // ========== DECLARE VARIABLES =================
 
 var svgWidth;
@@ -19,9 +66,9 @@ var labelSpacing = 1.3; // rem unit
 // circular datapoint radius
 var circleRadius = 12;
 
-// default axes upon pmonth loading
+// default axes upon page loading
 var chosenXaxis = "day";
-var chosenYaxis = "healthcare";
+var chosenYaxis = "dayCounts";
 
 var body = document.body,
     html = document.documentElement;
@@ -134,14 +181,14 @@ function renderCircles(circlesGroup, newXscale, newYscale, chosenXaxis, chosenYa
 // ================= RENDERING CIRC LABELS ===================
 
 // create/ update circular data points on graph
-function renderCirLabel(circLabelGroup, newXscale, newYscale, chosenXaxis, chosenYaxis) {
+// function renderCirLabel(circLabelGroup, newXscale, newYscale, chosenXaxis, chosenYaxis) {
 
-    circLabelGroup.transition()
-        .duration(transDura)
-        .attr("x", data => newXscale(data[chosenXaxis]))
-        .attr("y", data => newYscale(data[chosenYaxis]));
-    return circLabelGroup;
-}
+//     circLabelGroup.transition()
+//         .duration(transDura)
+//         .attr("x", data => newXscale(data[chosenXaxis]))
+//         .attr("y", data => newYscale(data[chosenYaxis]));
+//     return circLabelGroup;
+// }
 
 
 // ================= UPDATE TOOLTIPS ===================
@@ -262,8 +309,46 @@ function initChart() {
     // call back to create svg canvas
     createSVG();
 
-    d3.csv("assets/data/data.csv").then(function (demoData, err) {
+    d3.json(dataUrl).then((data, err) => {
         if (err) throw err;
+
+        data.forEach(row => {
+            // ====== This is for day ======
+            dayArr.push(row['Launch_Day']);
+            monthArr.push(row['Launch_Month']);
+            yearArr.push(row['Launch_Year']);
+        });
+
+        dayCountArr = numFreqCount(dayArr, "day").sort((a,b)=>b.dayCounts-a.dayCounts).slice(0,12).sort((a,b)=>a.day-b.day);
+
+        monthCountArr = numFreqCount(monthArr, "month").sort((a,b)=>b.monthCounts-a.monthCounts).slice(0,12).sort((a,b)=>a.month-b.month);
+
+        yearCountArr = numFreqCount(yearArr, "year").sort((a,b)=>b.yearCounts-a.yearCounts).slice(0,12).sort((a,b)=>a.year-b.year);;
+
+        console.log(" this is dayCountArr :: ", dayCountArr);
+        console.log(" this is monthCountArr :: ", monthCountArr);
+        console.log(" this is yearCountArr :: ", yearCountArr);
+
+
+
+        switch (chosenXaxis) {
+            case "day":
+                chosenYaxis = "dayCounts";
+                demoData = dayCountArr;
+                break;
+            case "month":
+                chosenYaxis = "monthCounts";
+                demoData = monthCountArr;
+                break;
+            case "year":
+                chosenYaxis = "yearCounts";
+                demoData = yearCountArr;
+                break;
+            default:
+                break;
+        }
+
+        console.log(" the chosen XY :: ", chosenXaxis, chosenYaxis, "demodata", demoData);
 
 
         //  x & y linear scale function 
@@ -294,17 +379,6 @@ function initChart() {
             .attr("cy", data => yLinearScale(data[chosenYaxis]))
             .attr("r", circleRadius);
 
-        // create initial circle labels === state abbr text
-        var circLabelGroup = chartGroup.selectAll(".circLabel")
-            .data(demoData)
-            .enter()
-            .append("text")
-            .classed("circLabel", true)
-            .attr("x", data => xLinearScale(data[chosenXaxis]))
-            .attr("y", data => yLinearScale(data[chosenYaxis]))
-            .attr("dy", 3.5)
-            .text(data => data.abbr);
-
 
         // --------- Create group for 3 x-axis labels ------------
         var labelsGroupX = chartGroup.append("g")
@@ -316,19 +390,19 @@ function initChart() {
             .attr("y", `${labelStartPos}rem`)
             .attr("value", "day") // value to grab for event listener
             .classed("active", true)
-            .text("In day (%)");
+            .text("Launch Day");
 
         var monthLabel = labelsGroupX.append("text")
             .attr("y", `${labelStartPos + labelSpacing}rem`)
             .attr("value", "month") // value to grab for event listener
             .classed("inactive", true)
-            .text("Age, yrs (Median)");
+            .text("Launch Month");
 
         var yearLabel = labelsGroupX.append("text")
             .attr("y", `${labelStartPos + 2 * labelSpacing}rem`)
             .attr("value", "year") // value to grab for event listener
             .classed("inactive", true)
-            .text("Household year, $1K (Median)");
+            .text("Launch Year");
 
         // --------- Create group for 3 y-axis labels ------------
         var labelsGroupY = chartGroup.append("g")
@@ -338,21 +412,13 @@ function initChart() {
         // add text labels to the labelsGroup
         var yAxisLabel = labelsGroupY.append("text")
             .attr("y", `${-labelStartPos}rem`)
-            .attr("value", "healthcare")
-            // value to grab for event listener
-            .classed("active", true)
             .text("Satellite Lauch Counts");
 
 
 
         // updateToolTip function above csv import
-        var circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
+        // var circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
 
-        // updateToolTipState function above csv import
-        var circLabelGroup = updateToolTip(chosenXaxis, chosenYaxis, circLabelGroup);
-
-        // call back function to show analysis of the chosen X & Y catergories
-        getAnalysis(chosenXaxis, chosenYaxis);
 
 
         // x axis labels event listener
@@ -360,11 +426,34 @@ function initChart() {
             .on("click", function () {
                 // get value of selection
                 var value = d3.select(this).attr("value");
-                if (value !== chosenXaxis) {
+                if (value !== chosenXaxis) { 
 
                     // replaces chosenXaxis with value
                     chosenXaxis = value;
 
+                    switch (chosenXaxis) {
+                        case "day":
+                            chosenYaxis = "dayCounts";
+                            demoData = dayCountArr;
+                            break;
+                        case "month":
+                            chosenYaxis = "monthCounts";
+                            demoData = monthCountArr;
+                            break;
+                        case "year":
+                            chosenYaxis = "yearCounts";
+                            demoData = yearCountArr;
+                            break;
+                        default:
+                            break;
+                    }
+
+                    console.log(" 449 this is the selected Xaxis :: ", chosenXaxis);
+                    console.log(" 450 this is the selected yAxis :: ", chosenYaxis);
+                    console.log(" 451 this is the selected db :: ", demoData);
+                    console.log("")
+                    console.log("circ count :: ", d3.selectAll("circle") );
+                    console.log("demo db length :: ", demoData.length )
                     // updates x & y scale for new data
                     xLinearScale = xScale(demoData, chosenXaxis);
                     yLinearScale = yScale(demoData, chosenYaxis);
@@ -376,12 +465,10 @@ function initChart() {
                     // updates circle labels with new x values
                     circlesGroup = renderCircles(circlesGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
 
-                    circLabelGroup = renderCirLabel(circLabelGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
 
                     // updates tooltips with new info
-                    circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
+                    // circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
 
-                    circLabelGroup = updateToolTip(chosenXaxis, chosenYaxis, circLabelGroup);
 
                     // changes classes to change css format for active and inactive xAxis labels
                     switch (chosenXaxis) {
