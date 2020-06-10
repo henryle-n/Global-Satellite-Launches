@@ -134,7 +134,7 @@ function xScale(demoData, chosenXaxis) {
             d3.max(demoData, d => d[chosenXaxis])
         ])
         .range([0, width]);
-console.log("this is width& min, max", width, d3.min(demoData, d => d[chosenXaxis]), d3.max(demoData, d => d[chosenXaxis]), "linear Scale :: ",xLinearScale);
+    console.log("this is width& min, max", width, d3.min(demoData, d => d[chosenXaxis]), d3.max(demoData, d => d[chosenXaxis]), "linear Scale :: ", xLinearScale);
 
     return xLinearScale;
 }
@@ -183,11 +183,11 @@ function renderYaxis(newYscale, yAxis) {
 
 // create/ update circular data points on graph
 function renderCircles(circlesGroup, newXscale, newYscale, chosenXaxis, chosenYaxis) {
-console.log(" 185 circ rend the chosen xAxis is :: ", chosenXaxis);
-console.log(" 186 circ rend the chosen yAxis is :: ", chosenYaxis);
-console.log(" 187 circlesGroup is :: ", circlesGroup);
-console.log(" 188 newYscale is :: ", newXscale);
-console.log(" 189 newXscale is :: ", newYscale);
+    console.log("186 rendCir", circlesGroup);
+    console.log("187 rendCir", newXscale);
+    console.log("188 rendCir", newYscale);
+    console.log("189 rendCir", chosenXaxis);
+    console.log("190 rendCir", chosenYaxis);
 
 
     circlesGroup.transition()
@@ -260,6 +260,7 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
 }
 
 
+
 function initChart() {
 
     // call back to create svg canvas
@@ -274,29 +275,33 @@ function initChart() {
             yearArr.push(row['Launch_Year']);
         });
 
-        dayCountArr = numFreqCount(dayArr, "day");
-        monthCountArr = numFreqCount(monthArr, "month");
-        yearCountArr = numFreqCount(yearArr,"year");
+        dayCountArr = numFreqCount(dayArr, "day").sort((a,b)=>b.dayCounts-a.dayCounts).slice(0,12).sort((a,b)=>a.day-b.day);
 
-        console.log(" this is day arr :: ", dayCountArr);
+        monthCountArr = numFreqCount(monthArr, "month").sort((a,b)=>b.monthCounts-a.monthCounts).slice(0,12).sort((a,b)=>a.month-b.month);
+
+        yearCountArr = numFreqCount(yearArr, "year").sort((a,b)=>b.yearCounts-a.yearCounts).slice(0,12).sort((a,b)=>a.year-b.year);;
+
+        console.log(" this is dayCountArr :: ", dayCountArr);
         console.log(" this is monthCountArr :: ", monthCountArr);
         console.log(" this is yearCountArr :: ", yearCountArr);
 
 
-        switch (chosenXaxis) {
-            case "day":
-                chosenYaxis = "dayCounts";
-                demoData = dayCountArr;
-                break;
-            case "month":
-                chosenYaxis = "monthCounts";
-                demoData = monthCountArr;
-                break;
-            default:
-                chosenYaxis = "yearCounts";
-                demoData = yearCountArr;
-                break;
-        }
+        demoData = dayCountArr;
+
+        // switch (chosenXaxis) {
+        //     case "day":
+        //         chosenYaxis = "dayCounts";
+        //         demoData = dayCountArr;
+        //         break;
+        //     case "month":
+        //         chosenYaxis = "monthCounts";
+        //         demoData = monthCountArr;
+        //         break;
+        //     default:
+        //         chosenYaxis = "yearCounts";
+        //         demoData = yearCountArr;
+        //         break;
+        // }
 
         console.log(" the chosen XY :: ", chosenXaxis, chosenYaxis, "demodata", demoData);
 
@@ -384,8 +389,7 @@ function initChart() {
 
                     // replaces chosenXaxis with value
                     chosenXaxis = value;
-                    console.log("this is the selected Xaxis :: ", chosenXaxis);
-                    console.log("this is the selected yAxis :: ", chosenYaxis);
+
 
                     switch (chosenXaxis) {
                         case "day":
@@ -401,7 +405,12 @@ function initChart() {
                             demoData = yearCountArr;
                             break;
                     }
-            
+
+                    console.log("this is the selected Xaxis :: ", chosenXaxis);
+                    console.log("this is the selected yAxis :: ", chosenYaxis);
+                    console.log("this is the selected db :: ", demoData);
+
+
                     // updates x & y scale for new data
                     xLinearScale = xScale(demoData, chosenXaxis);
                     yLinearScale = yScale(demoData, chosenYaxis);
@@ -410,67 +419,15 @@ function initChart() {
                     xAxis = renderXaxis(xLinearScale, xAxis);
                     yAxis = renderYaxis(yLinearScale, yAxis);
 
-                    // var circAmount = chartGroup.selectAll("circle").size();
-                    var circAmount = d3.select("#chartGrp")
-                        .selectAll("circle")
-                        .size();
 
-                    var newArrLength = demoData.length;
-
-                    
-                    console.log("there is total - element circle :: ", 
-                    circAmount);
-
-                    console.log("there is total - data points :: ", 
-                    newArrLength);
+                    // updates circle labels with new x values
+                    circlesGroup = renderCircles(circlesGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
 
 
-                    if (circAmount < newArrLength) {
-                        refreshExistElemt(circlesGroup);
+                    // updates tooltips with new info
+                    circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
 
-                        d3.select("#chartGrp").selectAll("circle")
-                            .data(demoData)
-                            .enter()
-                            .append("circle")
-                            .attr("cx", data => xLinearScale(data[chosenXaxis]))
-                            .attr("cy", data => yLinearScale(data[chosenYaxis]))
-                            .attr("r", circleRadius);
-
-                        console.log("more circles added, new circle count = ", chartGroup.selectAll("circle").size());
-                        // updates circle labels with new x values
-                        circlesGroup = renderCircles(circlesGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
-
-
-                        // updates tooltips with new info
-                        circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
-
-                    }
-
-                    else {
-                        d3.select("#chartGrp").selectAll("circle")
-                            .data(demoData)
-                            .exit()
-                            .remove();
-                        
-                        console.log("removed extra circles, new circle count = ", chartGroup.selectAll("circle").size());
-
-                        // updates circle labels with new x values
-                        circlesGroup = renderCircles(circlesGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
-
-                        // // updates tooltips with new info
-                        circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);                       
-                    }
-
-                    console.log("this is after add/remove circles :: ", circlesGroup);
-
-                    // var circlesGroup = chartGroup.selectAll("circle")
-                    // .data(demoData)
-                    // .enter()
-                    // .append("circle")
-                    // .attr("r", circleRadius);
-
-
-
+                
                     // changes classes to change css format for active and inactive xAxis labels
                     switch (chosenXaxis) {
                         case "day":
@@ -513,10 +470,10 @@ function initChart() {
                 }
             });
 
-        }
+    }
     )
         // log any error while pulling promises
-    .catch(function (err) {
-        console.log("Error(s) while running Promise :: ", err);
-    })
+        .catch(function (err) {
+            console.log("Error(s) while running Promise :: ", err);
+        })
 }
