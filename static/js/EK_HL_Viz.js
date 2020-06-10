@@ -122,24 +122,27 @@ function createSVG() {
 
 
 // =============== SCALING AXES =================
-function xScale(data, chosenXaxis) {
+function xScale(demoData, chosenXaxis) {
     // create scales
     var xLinearScale = d3.scaleLinear()
         // scale so that min of the axis is 20% extended beyond original data
         // max is 20% more than original
         .domain([
-            d3.min(data, d => d[chosenXaxis],
-            d3.max(data, d => d[chosenXaxis])
+            d3.min(demoData, d => d[chosenXaxis]),
+            d3.max(demoData, d => d[chosenXaxis])
+        ])
         .range([0, width]);
+console.log("this is width& min, max", width, d3.min(demoData, d => d[chosenXaxis]), d3.max(demoData, d => d[chosenXaxis]));
+
     return xLinearScale;
 }
 
-function xYearScale(data, chosenXaxis) {
+function xYearScale(demoData, chosenXaxis) {
     // create scales
     var xLinearScale = d3.time.scale().range([0, width]);
         // scale so that min of the axis is 20% extended beyond original data
         // max is 20% more than original
-        xLinearScale.domain(d3.extent(data, function (d) { return new Date(parseInt(d.Year),0); }));
+        xLinearScale.domain(d3.extent(demoData, function (d) { return new Date(parseInt(d.Year),0); }));
     return xLinearScale;
 }
 
@@ -178,7 +181,7 @@ function renderYaxis(newYscale, yAxis) {
 
 // create/ update circular data points on graph
 function renderCircles(circlesGroup, newXscale, newYscale, chosenXaxis, chosenYaxis) {
-
+console.log(" the chosen xAxis is :: ", chosenXaxis);
     circlesGroup.transition()
         .duration(transDura)
         .attr("cx", d => newXscale(d[chosenXaxis]))
@@ -186,17 +189,6 @@ function renderCircles(circlesGroup, newXscale, newYscale, chosenXaxis, chosenYa
     return circlesGroup;
 }
 
-// ================= RENDERING CIRC LABELS ===================
-
-// create/ update circular data points on graph
-function renderCirLabel(circLabelGroup, newXscale, newYscale, chosenXaxis, chosenYaxis) {
-
-    circLabelGroup.transition()
-        .duration(transDura)
-        .attr("x", d => newXscale(d[chosenXaxis]))
-        .attr("y", d => newYscale(d[chosenYaxis]));
-    return circLabelGroup;
-}
 
 
 // ================= UPDATE TOOLTIPS ===================
@@ -233,8 +225,7 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
         .html(function (row) {
             // income has different unit
             return (`
-            ${labelX}
-            -------------------------<br>
+            ${labelX} : ${row[chosenXaxis]}
             ${labelY} : 
                 </span>
                 <br>
@@ -275,29 +266,31 @@ function initChart() {
             yearArr.push(row['Launch_Year']);
         });
 
-        dayCounts = numFreqCount(dayArr, "day");
-        monthCounts = numFreqCount(monthArr, "month");
-        yearCounts = numFreqCount(yearArr,"year");
+        dayCountArr = numFreqCount(dayArr, "day");
+        monthCountArr = numFreqCount(monthArr, "month");
+        yearCountArr = numFreqCount(yearArr,"year");
 
-        console.log(" this is dayCounts :: ", dayCounts);
-        console.log(" this is monthCounts :: ", monthCounts);
-        console.log(" this is yearCounts :: ", yearCounts);
+        console.log(" this is day arr :: ", dayCountArr);
+        console.log(" this is monthCountArr :: ", monthCountArr);
+        console.log(" this is yearCountArr :: ", yearCountArr);
 
 
         switch (chosenXaxis) {
             case "day":
                 chosenYaxis = "dayCounts";
-                demoData = dayCounts;
-
+                demoData = dayCountArr;
+                break;
             case "month":
                 chosenYaxis = "monthCounts";
-                demoData = monthCounts;
-
-            case "year":
+                demoData = monthCountArr;
+                break;
+            default:
                 chosenYaxis = "yearCounts";
-                demoData = yearCounts;
+                demoData = yearCountArr;
+                break;
         }
 
+        console.log(" the chosen XY :: ", chosenXaxis, chosenYaxis, "\n", "demo['chosenXAxis']", demoData[chosenXaxis]);
 
         //  x & y linear scale function 
         var xLinearScale = xScale(demoData, chosenXaxis);
@@ -306,6 +299,7 @@ function initChart() {
 
         // Create initial axis functions
         var bottomAxis = d3.axisBottom(xLinearScale);
+
         var leftAxis = d3.axisLeft(yLinearScale);
 
         // append and show x & y axes
@@ -323,20 +317,16 @@ function initChart() {
             .data(demoData)
             .enter()
             .append("circle")
-            .attr("cx", data => xLinearScale(data[chosenXaxis]))
-            .attr("cy", data => yLinearScale(data[chosenYaxis]))
+            .attr("cx", data => {
+                console.log (" dataX :: ", data[chosenXaxis]);
+                xLinearScale(data[chosenXaxis])})
+            .attr("cy", data => {
+                // console.log (" dataY :: ", data[chosenYaxis]);
+                yLinearScale(data[chosenYaxis])})
             .attr("r", circleRadius);
 
-        // create initial circle labels === state abbr text
-        var circLabelGroup = chartGroup.selectAll(".circLabel")
-            .data(demoData)
-            .enter()
-            .append("text")
-            .classed("circLabel", true)
-            .attr("x", data => xLinearScale(data[chosenXaxis]))
-            .attr("y", data => yLinearScale(data[chosenYaxis]))
-            .attr("dy", 3.5)
-            .text(data => data.abbr);
+    
+   
 
 
         // --------- Create group for 3 x-axis labels ------------
@@ -377,22 +367,27 @@ function initChart() {
         // updateToolTip function above csv import
         var circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
 
-        // updateToolTipState function above csv import
-        var circLabelGroup = updateToolTip(chosenXaxis, chosenYaxis, circLabelGroup);
-
 
         // x axis labels event listener
         labelsGroupX.selectAll("text")
             .on("click", function () {
                 // get value of selection
                 var value = d3.select(this).attr("value");
+                console.log("this is the attr value to click :: ", value);
                 if (value !== chosenXaxis) {
+                    // if (chosenXaxis=="year"){
+                    //     xLinearScale = xYearScale (demoData, chosenXaxis);
+                    // }
+                    // else
+                    //     xLinearScale = xScale(demoData, chosenXaxis);
+
 
                     // replaces chosenXaxis with value
                     chosenXaxis = value;
 
                     // updates x & y scale for new data
                     xLinearScale = xScale(demoData, chosenXaxis);
+
                     yLinearScale = yScale(demoData, chosenYaxis);
 
                     // updates x axis with transition
@@ -402,25 +397,23 @@ function initChart() {
                     // updates circle labels with new x values
                     circlesGroup = renderCircles(circlesGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
 
-                    circLabelGroup = renderCirLabel(circLabelGroup, xLinearScale, yLinearScale, chosenXaxis, chosenYaxis);
 
                     // updates tooltips with new info
                     circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
 
-                    circLabelGroup = updateToolTip(chosenXaxis, chosenYaxis, circLabelGroup);
 
                     // changes classes to change css format for active and inactive xAxis labels
                     switch (chosenXaxis) {
                         case "day":
                             dayLabel
-                                .classed("active", false)
-                                .classed("inactive", true);
+                                .classed("active", true)
+                                .classed("inactive", false);
                             monthLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
                             yearLabel
-                                .classed("active", true)
-                                .classed("inactive", false);
+                                .classed("active", false)
+                                .classed("inactive", true);
                             break;
 
                         case "month":
@@ -428,27 +421,26 @@ function initChart() {
                                 .classed("active", false)
                                 .classed("inactive", true);
                             monthLabel
-                                .classed("active", false)
-                                .classed("inactive", true);
-                            yearLabel
                                 .classed("active", true)
                                 .classed("inactive", false);
+                            yearLabel
+                                .classed("active", false)
+                                .classed("inactive", true);
                             break;
 
                         default:
                             dayLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
-                            monthLabel
+                            yearLabel
                                 .classed("active", true)
                                 .classed("inactive", false);
-                            yearLabel
+                            monthLabel
                                 .classed("active", false)
                                 .classed("inactive", true);
                             break;
                     }
 
-                    getAnalysis(chosenXaxis, chosenYaxis);
                 }
             });
 
