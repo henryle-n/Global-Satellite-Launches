@@ -76,22 +76,25 @@ d3.json(dataUrl).then((data, err) => {
             y: yAxisDay,
             type: 'bar',
             marker: {
-                color: 'rgba(158, 55, 190, 0.35)'
+                color: 'rgba(56, 20, 148, 0.55))'
+
             }
         }];
         var dayBarLayout = {
-            title: 'Launch Day Counts',
+            title: 'Satellite Launch for EACH DAYS',
             font: {
-                family: 'Raleway, sans-serif'
+                family: 'monaco,Consolas,Lucida Console,monospace',
+                size: 21,
+                color: 'rgba(56, 20, 148, 1)'
             },
             showlegend: false,
 
             xaxis: {
                 tickangle: -0,
-                title: 'Day',
+                title: 'DAYS',
                 titlefont: {
-                    size: 16,
-                    color: 'rgb(107, 107, 107)'
+                    size: 17,
+                    color: 'rgba(56, 20, 148, 1))'
                 }
             },
 
@@ -101,14 +104,17 @@ d3.json(dataUrl).then((data, err) => {
             },
             bargap: 0.05,
             yaxis: {
-                title: 'Satellite Counts',
+                title: 'QUANTITY',
                 titlefont: {
-                    size: 16,
-                    color: 'rgb(107, 107, 107)'
+                    family: 'monaco,Consolas,Lucida Console,monospace',
+                    size: 17,
+                    color: 'rgba(56, 20, 148, 1)'
                 },
             }
 
         };
+
+
 
         Plotly.newPlot('LaunchDayBar', dayBarData, dayBarLayout);
 
@@ -122,22 +128,25 @@ d3.json(dataUrl).then((data, err) => {
             y: yAxisMonth,
             type: 'bar',
             marker: {
-                color: 'rgba(158, 55, 190, 0.35)'
+                color: 'rgba(225, 232, 17, 0.43))'
             }
         }];
         var monthBarLayout = {
-            title: 'Launch Month Counts',
+            title: 'Satellite Launch for EACH MONTHS',
             font: {
-                family: 'Raleway, sans-serif'
+                family: 'monaco,Consolas,Lucida Console,monospace',
+                size: 21,
+                color: 'rgba(129, 102, 4, 1))'
             },
             showlegend: false,
 
             xaxis: {
                 tickangle: -0,
-                title: 'Satellite Counts',
+                title: 'MONTHS ',
+                family: 'monaco,Consolas,Lucida Console,monospace',
                 titlefont: {
-                    size: 16,
-                    color: 'rgb(107, 107, 107)'
+                    size: 17,
+                    color: 'rgba(158, 126, 0, 1))'
                 }
             },
 
@@ -145,12 +154,13 @@ d3.json(dataUrl).then((data, err) => {
                 zeroline: false,
                 gridwidth: 2
             },
-            bargap: 0.05,
+            bargap: 0.04,
             yaxis: {
-                title: 'Satellite Counts',
+                title: 'QUANTITY',
                 titlefont: {
-                    size: 16,
-                    color: 'rgb(107, 107, 107)'
+                    family: 'monaco,Consolas,Lucida Console,monospace',
+                    size: 17,
+                    color: 'rgba(158, 126, 0, 1))'
                 },
             }
 
@@ -169,23 +179,27 @@ d3.json(dataUrl).then((data, err) => {
             x: xAxisYear,
             y: yAxisYear,
             type: 'bar',
+            orientation: "v",
             marker: {
-                color: 'rgba(158, 55, 190, 0.35)'
+                color: 'rgba(20, 116, 148, 0.55))'
             }
         }];
         var yearBarLayout = {
-            title: 'Launch Year Counts',
+            title: 'Satellite Launch for EACH YEARS',
             font: {
-                family: 'Raleway, sans-serif'
+                family: 'monaco,Consolas,Lucida Console,monospace',
+                size: 21,
+                color: 'rgba(7, 78, 100, 1)'
             },
             showlegend: false,
 
             xaxis: {
                 tickangle: -0,
-                title: 'Satellite Counts',
+                title: 'YEARS',
+                family: 'monaco,Consolas,Lucida Console,monospace',
                 titlefont: {
-                    size: 16,
-                    color: 'rgb(107, 107, 107)'
+                    size: 17,
+                    color: 'rgba(7, 78, 100, 1))'
                 }
             },
 
@@ -195,10 +209,11 @@ d3.json(dataUrl).then((data, err) => {
             },
             bargap: 0.05,
             yaxis: {
-                title: 'Satellite Counts',
+                title: 'QUANTITY',
+                family: 'monaco,Consolas,Lucida Console,monospace',
                 titlefont: {
-                    size: 16,
-                    color: 'rgb(107, 107, 107)'
+                    size: 17,
+                    color: 'rgba(7, 78, 100, 1))'
                 },
             }
 
