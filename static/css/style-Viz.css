@@ -1,0 +1,23 @@
+.proj-list {
+    color: rgb(218, 44, 44);
+    text-transform: capitalize;
+}
+
+
+
+.list-2 {
+    color: rgb(20, 220, 210);
+    /* background-color: darkgoldenrod; */
+}
+
+.inline-image {
+    max-width: 100px;
+    max-height: 100px;
+    transition: animation ease-in 3s;
+}
+
+@keyframes animation {
+    from {opacity: 0;}
+    50% {opacity: 0.5 !important} /* ignored */
+    to {opacity: 1;}
+}

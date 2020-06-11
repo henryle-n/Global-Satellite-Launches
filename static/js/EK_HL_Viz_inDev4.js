@@ -88,7 +88,7 @@ d3.json(dataUrl).then((data, err) => {
 
             xaxis: {
                 tickangle: -0,
-                title: 'Satellite Counts',
+                title: 'Day',
                 titlefont: {
                     size: 16,
                     color: 'rgb(107, 107, 107)'
