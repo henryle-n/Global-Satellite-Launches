@@ -347,6 +347,282 @@ label {
 }
 
 
+/* background cover for the entire page */
+body {
+	background-color: whitesmoke;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
 
+.nav-link:hover {
+	background-color:#d4f7f79d;
+}
+
+
+
+/* formating the brand name Latitude */
+.brandname {
+	font-family:  Impact, Verdana;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	background-color: lightblue;
+}	
+
+
+/* format text inside the text body of each graph */
+.body_text {
+	color : black;
+	font-size : 20px;
+	text-align: left;
+	background-color : white;
+	font-family: Verdana;
+
+}
+
+/* format summary box inside column #1 of the bootstrap grid */
+.box_sum {
+	background-color: white;
+	padding: 20px;
+}
+
+
+/* format box inside column #2 of the bootstrap grid */
+.box_vis {
+	background-color: white;
+	padding: 20px;
+}
+
+
+/* format content header */
+.head_cus{
+	color : #2eb8b8d2 ;
+	font-size : 40px;
+	text-align: left;
+	background-color : white;
+	font-family: Georgia, Tahoma, Geneva, Arial, sans-serif;
+	font-weight: 600;
+}
+
+.footer_ref {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: #FFF;
+	background-color: rgba(0, 0, 0, 0.623);
+	padding: 2px;
+	/* margin: 10px; */
+	/* height: auto; */
+	width: 100%;
+	position: static;
+	bottom: 0;
+	flex: 0 0 50px;/*or just height:50px;*/
+	margin-top: auto;
+}
+
+
+/* this will make the picture get a bit bigger 
+and a halo ring appears around the frame when hover the mouse over it*/
+#img_cus:hover {
+	background-color: rgba(43, 247, 219, 0.89);
+	width: 100%;
+	
+}
+
+img:hover {
+	background-color: rgba(43, 247, 219, 0.89);
+	
+}
+
+#img_cus {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+  }
+
+.box_comparison {
+padding: 40px;
+margin: 30px;
+margin-top: 120px;
+background-color: white;
+}
+
+.box_comparison_header {
+	color : #2eb8b8d2 ;
+	font-size : 25px;
+	text-align: left;
+	font-family: Georgia, Tahoma, Geneva, Arial, sans-serif;
+	font-weight: 700;
+	padding: 15px;
+}
+
+#nbar-format {
+	color: white;
+	font-weight: 700;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 40px;
+	margin-left: 150px;
+	background-color: #2eb8b8;
+	width: 200px;
+	max-width: 30%;
+	text-align: center;
+	border-radius: 0.5em;
+}
+
+
+.sub-title-font {
+	font-size: 18px;
+}
+
+/* to space out the content from the navbar and surrouding*/
+.row-grid {
+	margin: 25px ;
+    margin-top: 120px;
+}
+
+/* space out button from left edge */
+button{
+	margin-right: 30px;	  
+}
+
+
+/* configure entire navbar background */
+.navbar-expand-lg {
+	background-color: #ffffff;
+	}
+
+/* adjust button spacing from the left */
+.nav {
+	padding-right: 30px;
+}
+
+/* when screen is smaller, decrease the font size of Visualizations word */
+@media only screen and (max-width:1200px) {
+	.head_cus {
+		font-size: 35px;
+	}
+}
+
+/* when screen is smaller, decrease the font size of Visualizations word */
+@media only screen and (max-width:1100px) {
+	.head_cus {
+		font-size: 30px;
+	}
+
+	.sub-title-font {
+		font-size: 17px;
+	}
+
+	#nbar-format {
+		font-size: 25px;
+	}
+
+}
+
+/* when screen is smaller, decrease the font size of Visualizations word */
+@media only screen and (max-width:980px) {
+	.head_cus {
+		font-size: 25px;
+	}
+
+	/* add some cushion for the nav bar */
+	.navbar-brand {
+		padding: 10px; 
+	}
+
+	.sub-title-font {
+		font-size: 15px;
+	}
+
+	.body_text {
+		color : black;
+		font-size : 14px;
+		text-align: left;
+		background-color : white;
+		font-family: Verdana;
+	}
+	
+	#nbar-format {
+		
+		margin-left: 25px;
+		
+	}
+
+}
+
+
+/* change background color of navbar when the drop down button appears */
+@media only screen and (max-width: 992px) {
+	.navbar-expand-lg {
+		background-color: #2eb8b8;
+		}
+		.navbar {
+		  height : auto;
+		  padding: 0px;
+		}
+		
+		#navbarTogglerDemo02{
+			background-color: white;
+			padding: 20px;
+		}
+
+}
+
+/* when screen is smaller than 880, decrease the font size of Visualizations word */
+@media only screen and (max-width:850px) {
+	.head_cus {
+		font-size: 20px;
+	}
+
+	.sub-title-font {
+		font-size: 12px;
+	}
+
+}
+
+/* begin to stack at col-md  and reformat all entities*/
+@media only screen and (max-width:766.99px) {
+	
+	.head_cus {
+		font-size: 30px;
+	}
+
+	.box_vis {
+		
+		/* background-color: white; */
+		margin-top: 20px;
+		padding: 20px;
+				
+	}
+
+	.sub-title-font {
+		font-size: 14px;
+	}
+
+	.row-grid {
+		margin-left: 20px;
+		margin-right: 5px;
+		margin-top: 90px;
+	}
+
+}
+
+/* when screen is smaller decrease the font size of brand bar Latitude word */
+@media only screen and (max-width:690px) {
+	#nbar-format {
+		font-size: 20px;
+	}
+}
+
+
+/* when the screen is extremely small, stack all charts and resize subtitle text */
+@media only screen and (max-width:574.99px) {
+	.sub-title-font {
+		font-size: 18px;
+	}
+}
 
 
