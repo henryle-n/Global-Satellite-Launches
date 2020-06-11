@@ -1,49 +1,4 @@
-// =========== Henry's Data Retrieval- version 0 ============
-
-
 var dataUrl = "/api/top10-launch-dates";
-
-// var dayArr = []; // the master list of all days including duplications
-// var dayCountObj = []; // {day1: counts, day2: counts, etc..}
-// var monthArr = []; // the master list of all days including duplications
-// var monthCountArr = []; // {day1: counts, day2: counts, etc..}
-// var yearArr = []; // the master list of all days including duplications
-// var yearCountArr = [] // {day1: counts, day2: counts, etc..}
-
-// // for the plot, x and y axes
-// var xDay = [];
-// var yDay = [];
-// var xMonth = [];
-// var yMonth = [];
-// var xYear = [];
-// var yYear = [];
-
-// function numFreqCount(numArr, category) {
-
-//     // An object to hold word frequency
-//     var numCount = {};
-
-//     // Iterate through the array
-//     for (var i = 0; i < numArr.length; i++) {
-//         var currNum = numArr[i];
-//         // If the word has been seen before...
-//         if (currNum in numCount) {
-//             // Add one to the counter
-//             numCount[currNum] += 1;
-//         } else {
-//             // Set the counter at 1
-//             numCount[currNum] = 1;
-//         }
-//     }
-//     var CountArr = [];
-//     Object.entries(numCount).forEach(([k, v]) => {
-//         var CountObj = {}
-//         CountObj[category] = +k;
-//         CountObj[`${category}Counts`] = +v;
-//         CountArr.push(CountObj);
-//     });
-//     return CountArr;
-// }
 
 // ========== DECLARE VARIABLES =================
 
@@ -54,14 +9,14 @@ var width;
 var height;
 var svgArea;
 var chartGroup;
-var transDura = 800; // unit = ms :: transition Time between new data
-var scaleMin = 15; // percentmonth ::  axis value extension beyond dataset min value 
-var scaleMax = 10; // percentmonth ::  axis value extension beyond dataset max value
+var transDura = 1000; // unit = ms :: transition Time between new data
+var scaleMin = 15; // percent ::  axis value extension beyond dataset min value 
+var scaleMax = 15; // percent  ::  axis value extension beyond dataset max value
 var toolTip;
 var toolTipArea;
 // specify label starting position relative to origin and spacing out between labels of the same axis
-var labelStartPos = 3; // rem unit
-var labelSpacing = 1.3; // rem unit
+var labelStartPos = 7; // rem unit
+var labelSpacing = 1.5; // rem unit
 
 // circular datapoint radius
 var circleRadius = 12;
@@ -72,6 +27,9 @@ var chosenYaxis = "Day_Counts";
 
 var body = document.body,
     html = document.documentElement;
+
+var dateFormat = d3.timeFormat("%Y");
+var parseDate = d3.timeParse("%Y");
 
 // ============== SVG CREATTION ==================
 function refreshExistElemt(element) {
@@ -85,7 +43,7 @@ function createSVG() {
 
     // find svgHeight & Width upon loading based on container current size
     svgWidth = Math.min(
-        d3.select("#ekHenryLauchBar").node().getBoundingClientRect().width
+        d3.select("#HenryMultiX").node().getBoundingClientRect().width
     );
 
     // I love golden ratio = 1.618
@@ -105,9 +63,9 @@ function createSVG() {
     height = svgHeight - margin.top - margin.bottom;
 
     // create svg wrapper 
-    var ekHenryLauchBar = d3.select("body").select("#ekHenryLauchBar");
+    var HenryMultiX = d3.select("body").select("#HenryMultiX");
 
-    svgArea = ekHenryLauchBar
+    svgArea = HenryMultiX
         .append("div")
         .classed("svg-container", true)
         .append("svg")
@@ -125,16 +83,22 @@ function createSVG() {
 
 // =============== SCALING AXES =================
 function xScale(data, chosenXaxis) {
+    var xLinearScale;
+    if (chosenXaxis == "Year") {
+        xLinearScale = d3.scaleTime().range([0, width]);
+        xLinearScale.domain(d3.extent(data, d => {return d.Year;}))
+    }
+
+    else {
     // create scales
-    var xLinearScale = d3.scaleLinear()
-        // scale so that min of the axis is 20% extended beyond original data
-        // max is 20% more than original
+        xLinearScale = d3.scaleLinear()
         .domain([
             d3.min(data, d => d[chosenXaxis]) * (1 - scaleMin / 100),
             d3.max(data, d => d[chosenXaxis]) * (1 + scaleMax / 100)
         ])
         .range([0, width]);
-    return xLinearScale;
+    };
+        return xLinearScale;
 }
 
 // function used for updating y-scale var upon click on yAxis label
@@ -178,17 +142,6 @@ function renderCircles(circlesGroup, newXscale, newYscale, chosenXaxis, chosenYa
     return circlesGroup;
 }
 
-// ================= RENDERING CIRC LABELS ===================
-
-// create/ update circular data points on graph
-// function renderCirLabel(circLabelGroup, newXscale, newYscale, chosenXaxis, chosenYaxis) {
-
-//     circLabelGroup.transition()
-//         .duration(transDura)
-//         .attr("x", d newXscale(d[chosenXaxis]))
-//         .attr("y", d newYscale(d[chosenYaxis]));
-//     return circLabelGroup;
-// }
 
 
 // ================= UPDATE TOOLTIPS ===================
@@ -220,24 +173,37 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
             break;
     }
 
-
     // use d3.tip to construct tooltips
     toolTip = d3.tip()
         .attr("class", "tooltip")
         .offset([-10, 0])
         .html(function (row) {
+            if (chosenXaxis == "Year"){
                 return (`
                 ${labelX}:
                 <span style="color:#59DCE5">
-                    ${row[chosenXaxis]} yrs
-                </span>  
-                <br>
+                    ${dateFormat(row[chosenXaxis])}
+                </span> <br>------------<br>
                 ${labelY}: 
                 <span style="color:#59DCE5">
-                    ${row[chosenYaxis]}%
+                    ${row[chosenYaxis]}
                 </span>
-            `)
-            }
+            `)}
+
+            else {
+                return (`
+                ${labelX}:
+                <span style="color:#59DCE5">
+                    ${row[chosenXaxis]}
+                </span> <br>------------<br>
+                ${labelY}: 
+                <span style="color:#59DCE5">
+                    ${row[chosenYaxis]}
+                </span>
+            `)}
+
+
+            })
 
 
             // add tooltip to chart circles and state text
@@ -255,6 +221,8 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
             return elementGroup;
         }
 
+
+
     // ================== MAKE THE CHART ========================
     // Retrieve data from the CSV file and execute everything below
     function initChart() {
@@ -268,42 +236,11 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
                 data.forEach(row => {
                     row.Day = +row.Day;
                     row.Month = +row.Month;
-                    row.Year = +row.Year;
+                    row.Year = parseDate(row.Year);
                     row.Day_Counts = +row.Day_Counts;
                     row.Month_Counts = +row.Month_Counts;
                     row.Year_Counts = +row.Year_Counts;
                 });
-
-                // dayCountArr = numFreqCount(dayArr, "day").sort((a,b)=>b.dayCounts-a.dayCounts).slice(0,12).sort((a,b)=>a.day-b.day);
-
-                // monthCountArr = numFreqCount(monthArr, "month").sort((a,b)=>b.monthCounts-a.monthCounts).slice(0,12).sort((a,b)=>a.month-b.month);
-
-                // yearCountArr = numFreqCount(yearArr, "year").sort((a,b)=>b.yearCounts-a.yearCounts).slice(0,12).sort((a,b)=>a.year-b.year);;
-
-                // console.log(" this is dayCountArr :: ", dayCountArr);
-                // console.log(" this is monthCountArr :: ", monthCountArr);
-                // console.log(" this is yearCountArr :: ", yearCountArr);
-
-
-
-                // switch (chosenXaxis) {
-                //     case "day":
-                //         chosenYaxis = "dayCounts";
-                //         data = dayCountArr;
-                //         break;
-                //     case "month":
-                //         chosenYaxis = "monthCounts";
-                //         data = monthCountArr;
-                //         break;
-                //     case "year":
-                //         chosenYaxis = "yearCounts";
-                //         data = yearCountArr;
-                //         break;
-                //     default:
-                //         break;
-                // }
-
-                // console.log(" the chosen XY :: ", chosenXaxis, chosenYaxis, "data", data);
 
 
                 //  x & y linear scale function 
@@ -312,14 +249,22 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
 
 
                 // Create initial axis functions
-                var bottomAxis = d3.axisBottom(xLinearScale);
+                var bottomAxis;
+                if (chosenXaxis == "Year") {
+                    bottomAxis = d3.axisBottom(xLinearScale).ticks(12)
+                        .tickFormat(d => d.getFullYear());
+                }
+                else {
+                    bottomAxis = d3.axisBottom(xLinearScale);
+                }
+                
                 var leftAxis = d3.axisLeft(yLinearScale);
 
                 // append and show x & y axes
                 var xAxis = chartGroup.append("g")
                     .attr("id", "axisText")
                     .attr("transform", `translate(0, ${height})`)
-                    .call(bottomAxis);
+                    .call(bottomAxis)
 
                 var yAxis = chartGroup.append("g")
                     .attr("id", "axisText")
@@ -399,13 +344,6 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
                                 default:
                                     break;
                             }
-
-                            console.log(" 450 this is the selected Xaxis :: ", chosenXaxis);
-                            console.log(" 451 this is the selected yAxis :: ", chosenYaxis);
-                            console.log(" 452 this is the selected db :: ", data);
-                            console.log("452 this is the selected db :: ", data.forEach(d => d[chosenXaxis]));
-                            console.log("circ count :: ", d3.selectAll("circle").size());
-                            console.log("demo db length :: ", data.length)
                             // updates x & y scale for new data
                             xLinearScale = xScale(data, chosenXaxis);
                             yLinearScale = yScale(data, chosenYaxis);
@@ -419,7 +357,7 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
 
 
                             // updates tooltips with new info
-                            // circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
+                            circlesGroup = updateToolTip(chosenXaxis, chosenYaxis, circlesGroup);
 
 
                             // changes classes to change css format for active and inactive xAxis labels

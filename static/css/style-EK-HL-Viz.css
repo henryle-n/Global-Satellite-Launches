@@ -43,19 +43,20 @@ body {
 
 .tooltip {
   position: absolute;
-  width: 10rem;
-  height: 5rem;
+  width: 16rem;
+  height: 7rem;
   padding: 0.5rem;
-  padding-top: 8px;
-  font: 12px sans-serif;
+  padding-top: 10px;
+  font: 1.5rem sans-serif;
   color: white;
   text-align: center;
   border: 0;
   border-radius: 10px;
-  line-height: 1rem; /* spacing between text line */
+  line-height: 1.5rem; /* spacing between text line */
   font-weight: bold;
-  background: rgba(99, 64, 110, 0.87);
+  background: rgba(0, 0, 0, 0.479);
   border-radius: 1rem;
+  justify-content: center;
 }
 
 
@@ -81,23 +82,16 @@ text.inactive:hover {
   font-size: larger;
 }
 
-text.circLabel {
-  font-size: 10px;
-  text-anchor: middle;
-  font-family: sans-serif;
-  stroke: rgb(6, 164, 185);
-  stroke-width: 0.3;
-}
 
 circle {
-  fill : #cc088bc9;
-  stroke: rgba(19, 219, 226, 0.781);
+  fill : #21e9e97a;
+  stroke: rgba(0, 0, 0, 0.548);
   stroke-width: 2;
   opacity: 0.8;
 }
 
 #axisText {
-  font-size: 16px;
+  font-size: 26px;
   stroke: rgb(54, 160, 22);
 }
 
