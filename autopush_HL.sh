@@ -17,17 +17,14 @@ echo ${yel}Adding files...${nc} & git add .
 echo ---------------
 echo ${yel}Preparing to push...${nc} 
 echo ---------------
-echo Please ${red}input message${nc} for git push
+echo Please ${red}input message${nc} with double qoute for git push
 read message
-git commit -m $message
+echo Adding ${cyan}message to package...${nc}
+git commit -m "$message"
 echo ---------------
-git push
-echo ---------------
+git push & echo ${yel}FINISHED PUSHING !!!${nc} 
+echo ===============================
+echo 
+read
 
-echo =============================
-echo
-echo ${grn}Git Pushed${nc} Sucessfully!
-echo
-echo Press ${yel}Enter${yel} to Exit...
-echo
-echo
+
