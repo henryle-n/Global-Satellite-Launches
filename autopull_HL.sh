@@ -26,7 +26,7 @@ echo ===== ${cyn}THANK YOU${nc} for using my Scripts! - ${yel}HENRY LE${grn} ${g
 echo
 sleep 0.5
 finishTime=$(date)
-printf "  Local Time: %s\n" "${mag}$finishTime${nc}"
+printf "  Local Time :: %s\n" "${mag}$finishTime${nc}"
 echo "  Script Total Time :: ${mag}$SECONDS${nc} second(s)"
 echo
 echo  "  Press ${yel}Enter${yel} to Exit..."
