@@ -6,8 +6,8 @@ green ='\033[0;32m'
 pp = '\033[0;35m'
 nc='\033[0m'
 
-echo "Brought to you by ${cyan}Henry Le${nc}"
-echo Version: ${pp}0${nc}, Date: ${pp}Jun, 2020${nc}
+echo -e "Brought to you by ${cyan}Henry Le${nc}"
+echo -e Version: ${pp}0${nc}, Date: ${pp}Jun, 2020${nc}
 echo =============================
 echo
 echo Begins ${pp}Git Pulling${nc}. Please wait...
