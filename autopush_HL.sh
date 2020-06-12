@@ -70,13 +70,12 @@ do
 	esac
 done
 
-echo ================================
 echo
-
+echo === ${cyn}THANK YOU${nc} for using my Scripts - ${yel}HENRY LE${grn} ${grn}"(06/2020)"${nc} ===
 now=$(date)
-
+echo
 printf "Local Time: %s\n" "${mag}$now${nc}"
-
+echo
 echo "${lgrn}  FINISHED${nc}. Please hit ${yel}Enter${nc} to exit."
 echo
 echo

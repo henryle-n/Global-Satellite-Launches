@@ -27,13 +27,14 @@ echo ---------------
 echo ${red}Starting up ${cyn}Server${nc} and ${cyn}Browser${nc}... Please wait... 
 python application.py & sleep 2 & python -mwebbrowser http://127.0.0.1:5000/
 echo ---------------
-echo ${grn}SERVER HAS STARTED !!! ${nc}
-echo =============================
+echo ${grn}A NEW SERVER HAS STARTED !!! ${nc}
+echo ---------------
 echo
 
 now=$(date)
 
-echo ${cyn}THANK YOU${nc} for using my Scripts - ${yel}HENRY LE${grn} ${grn}"(06/2020)"${nc}
+echo ===${cyn}THANK YOU${nc} for using my Scripts - ${yel}HENRY LE${grn} ${grn}"(06/2020)"${nc} ===
+echo
 printf "Local Time: %s\n" "${mag}$now${nc}"
 echo
 echo =============================

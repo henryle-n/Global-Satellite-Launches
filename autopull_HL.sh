@@ -20,10 +20,12 @@ echo Begins ${red}Git Pulling${nc}. Please wait...
 echo ---------------
 git pull
 
-echo =============================
 echo
 echo ${grn}Git Pulled${nc} Sucessfully!
 now=$(date)
+echo
+echo === ${cyn}THANK YOU${nc} for using my Scripts - ${yel}HENRY LE${grn} ${grn}"(06/2020)"${nc} ===
+echo
 printf "Local Time: %s\n" "${mag}$now${nc}"
 echo Press ${yel}Enter${yel} to Exit...
 echo
