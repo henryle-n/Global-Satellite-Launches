@@ -13,6 +13,11 @@ noblink= $'\e[25m'
 bold=$'\e[1m' 
 nobold=$'\e[21m'
 
+date
+date +"%FORMAT"
+var=$(date)
+var=`date`
+
 
 echo Brought to you by: ${cyn}Henry Le${nc}
 echo -e Version: ${mag}0${nc}, Date: ${mag}Jun, 2020${nc}
@@ -41,8 +46,6 @@ do
 			echo ---------------
 			git push
 			echo
-			echo ================================
-			echo
 			echo
 			break
 		;;
@@ -53,7 +56,6 @@ do
 			echo
 			echo "${yel}Nothing was pushed${nc}"
 			echo
-			echo ================================
 			echo
 			break
 		;;
@@ -68,8 +70,16 @@ do
 	esac
 done
 
-echo "${lgrn}  FINISHED${nc}. Please hit ${yel}Enter${nc} to exit."
+echo ================================
+echo
 
+now=$(date)
+
+printf "Local Time: %s\n" "${mag}$now${nc}"
+
+echo "${lgrn}  FINISHED${nc}. Please hit ${yel}Enter${nc} to exit."
+echo
+echo
 read
 
 

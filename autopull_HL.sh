@@ -7,6 +7,11 @@ mag=$'\e[1;35m'
 cyn=$'\e[1;36m'
 nc=$'\e[0m'
 
+date
+date +"%FORMAT"
+var=$(date)
+var=`date`
+
 echo Brought to you by: ${red}Henry Le${nc}
 echo -e Version: ${mag}0${nc}, Date: ${mag}Jun, 2020${nc}
 echo =============================
@@ -18,7 +23,8 @@ git pull
 echo =============================
 echo
 echo ${grn}Git Pulled${nc} Sucessfully!
-echo
+now=$(date)
+printf "Local Time: %s\n" "${mag}$now${nc}"
 echo Press ${yel}Enter${yel} to Exit...
 echo
 echo
