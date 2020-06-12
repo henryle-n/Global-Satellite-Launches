@@ -1,10 +1,25 @@
 #!/bin/sh
-echo Brought to you by Henry Le
-echo Version: 0, Date: Jun, 2020
+
+red=$'\e[1;31m'
+grn=$'\e[1;32m'
+yel=$'\e[1;33m'
+mag=$'\e[1;35m'
+cyn=$'\e[1;36m'
+nc=$'\e[0m'
+
+echo Brought to you by: ${red}Henry Le${nc}
+echo -e Version: ${mag}0${nc}, Date: ${mag}Jun, 2020${nc}
 echo =============================
-echo Begins Git Pulling. Please wait...
+echo
+echo Begins ${red}Git Pulling${nc}. Please wait...
+echo ---------------
 git pull
+
 echo =============================
-echo Git Pulled Successfully!
-echo Press Enter to Exit...
+echo
+echo ${grn}Git Pulled${nc} Sucessfully!
+echo
+echo Press ${yel}Enter${yel} to Exit...
+echo
+echo
 read
