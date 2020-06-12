@@ -18,30 +18,32 @@ echo =============================
 startTime=$(date)
 SECONDS=0
 echo 
-printf "Local Time: %s\n" "${mag}$startTime${nc}"
-echo ---------------
+printf "Local Time: %s\n" "${mag}$startTime${nc}" 
+echo
+echo "--------------------------"
 
 while true
 do 
+	echo 
 	echo -e "${red}${bold}WARNING ${nBold}${nc}:: ${yel}Data may be lost${nc} if push \033[4mincorrectly!${nc}"
-	read -r -p "Are you ${cyn}sure${nc} you want to push (y/n)?${nc}" userinput
+	read -r -p "Are you ${cyn}sure${nc} you want to push (y/n)?${nc}  " userinput
 	case $userinput in 
 	
 		[yY][eE][sS]|[yY])
 			echo Begin ${red}Git Pushing${nc}. Please wait...
-			echo ---------------
+			echo "--------------------------"
 			echo ${yel}Adding files...${nc} & git add .
-			echo ---------------
+			echo "--------------------------"
 			echo "${yel}Preparing to push...${nc}" 
-			echo ---------------
+			echo "--------------------------"
 			echo Please ${red}input message${nc} "(${red}NO ${cyn}double quote${nc} needed)"
 			read message
-			echo ${yel}Adding message...${nc} & git commit -m "$message"
-			echo ---------------
+			printf "${yel}Adding message...${nc}\n" & git commit -m "$message"
+			echo "--------------------------"
 			echo Message: ${yel}$message${nc} - sucessfully added
 			echo ---------------
 			echo ${yel}UPLOADING FILES${nc} ... Please wait ...
-			echo ---------------
+			echo "--------------------------"
 			git push
 			echo
 			echo
@@ -50,11 +52,11 @@ do
 		
 		[nN][oO]|[nN])
 			echo
-			echo ================================
+			echo "--------------------------"
 			echo
-			echo "${yel}Nothing was pushed${nc}"
+			echo "${yel}NOTHING was pushed!${nc}"
 			echo
-			echo
+			echo "--------------------------"
 			break
 		;;
 		
