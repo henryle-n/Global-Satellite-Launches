@@ -38,7 +38,7 @@ do
 			echo "--------------------------"
 			echo Please ${red}input message${nc} "(${red}NO ${cyn}double quote${nc} needed)"
 			read message
-			printf "${yel}Adding message :: $message ${nc}to git package\n" & git commit -m "$message"
+			printf "${red}Adding message :: ${yel}$message ${nc}to git package\n" & git commit -m "$message"
 			echo "--------------------------"
 			echo Message: ${yel}$message${nc} - sucessfully added
 			echo "--------------------------"
