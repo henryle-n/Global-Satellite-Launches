@@ -38,7 +38,7 @@ do
 			read message
 			echo ${yel}Adding message...${nc} & git commit -m "$message"
 			echo ---------------
-			printf "Message: ${yel}$message${nc} - sucessfully added"
+			echo Message: ${yel}$message${nc} - sucessfully added
 			echo ---------------
 			echo ${yel}UPLOADING FILES${nc} ... Please wait ...
 			echo ---------------
