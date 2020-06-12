@@ -11,94 +11,94 @@ Serial_Number,Country_of_Operator_Owner,Value_Counts
 9,Germany,37
 10,Luxembourg,32
 11,Spain,21
-12,South Korea,16
-13,Argentina,16
+12,Argentina,16
+13,South Korea,16
 14,Israel,15
 15,Saudi Arabia,13
-16,Italy,12
-17,France,12
-18,Australia,12
+16,Australia,12
+17,Italy,12
+18,France,12
 19,Netherlands,12
 20,Taiwan/USA,11
 21,Brazil,11
 22,Indonesia,9
 23,United Arab Emirates,8
 24,Singapore,8
-25,Norway,7
+25,Kazakhstan,7
 26,Turkey,7
-27,Kazakhstan,7
+27,Norway,7
 28,Finland,7
-29,Denmark,5
-30,Algeria,5
-31,South Africa,5
-32,USA/Japan,5
+29,Algeria,5
+30,South Africa,5
+31,Malaysia,5
+32,Denmark,5
 33,Thailand,5
-34,Malaysia,5
-35,Vietnam,4
-36,Mexico,4
+34,USA/Japan,5
+35,Mexico,4
+36,Switzerland,4
 37,USA/Argentina,4
-38,Switzerland,4
-39,Egypt,3
+38,Vietnam,4
+39,Nigeria,3
 40,Pakistan,3
-41,Czech Republic,3
-42,France/Italy,3
-43,Nigeria,3
-44,France/Belgium/Sweden,2
-45,France/Italy/Belgium/Spain/Greece,2
-46,Japan/Singapore,2
-47,China/Germany,2
-48,China/Brazil,2
-49,Azerbaijan,2
-50,India/France,2
-51,Greece,2
-52,USA/Canada,2
-53,Philippines,2
-54,Lithuania,2
-55,Hungary,2
-56,USA/Germany,2
+41,France/Italy,3
+42,Czech Republic,3
+43,Egypt,3
+44,USA/Germany,2
+45,China/France,2
+46,France/Italy/Belgium/Spain/Greece,2
+47,Greece,2
+48,Sweden,2
+49,Philippines,2
+50,Belarus,2
+51,Lithuania,2
+52,China/Germany,2
+53,USA/Canada,2
+54,China/Brazil,2
+55,Azerbaijan,2
+56,Hungary,2
 57,Venezuela,2
-58,Belarus,2
-59,Sweden,2
-60,Russia/USA,2
-61,Poland,2
-62,China/France,2
+58,France/Belgium/Sweden,2
+59,Russia/USA,2
+60,India/France,2
+61,Japan/Singapore,2
+62,Poland,2
 63,Morocco,2
-64,Ecuador,1
-65,ESA/USA,1
-66,Turkmenistan/Monaco,1
-67,France/USA,1
-68,USA/Mexico,1
-69,Taiwan,1
-70,United Kingdom/ESA,1
-71,Iraq,1
-72,USA/Japan/Brazil,1
-73,Qatar,1
-74,USA/Canada/Japan,1
-75,Sudan,1
-76,Belgium,1
-77,Latvia,1
-78,USA/United Kingdom/Italy,1
-79,Peru,1
-80,Sri Lanka,1
-81,India/Canada,1
-82,Singapore/Taiwan,1
-83,Ukraine,1
+64,USA/France,1
+65,USA/United Kingdom/Italy,1
+66,Ethiopia,1
+67,France/Israel,1
+68,Iran,1
+69,Morocco/Germany,1
+70,Colombia,1
+71,Taiwan,1
+72,Belgium,1
+73,Latvia,1
+74,ESA/USA/Russia,1
+75,Bolivia,1
+76,Laos,1
+77,France/USA,1
+78,Bangladesh,1
+79,Iraq,1
+80,Qatar,1
+81,USA/Japan/Brazil,1
+82,USA/Canada/Japan,1
+83,Greece/United Kingdom,1
 84,Bhutan,1
-85,Jordan,1
-86,Iran,1
-87,Morocco/Germany,1
-88,Nepal,1
-89,Laos,1
-90,Chile,1
-91,Bulgaria,1
-92,Colombia,1
-93,Ethiopia,1
-94,Bangladesh,1
-95,Greece/United Kingdom,1
-96,China/Italy,1
-97,Austria,1
-98,Bolivia,1
-99,USA/Sweden,1
-100,USA/France,1
-101,France/Israel,1
-102,ESA/USA/Russia,1
+85,China/Italy,1
+86,ESA/USA,1
+87,Ukraine,1
+88,Bulgaria,1
+89,Ecuador,1
+90,Turkmenistan/Monaco,1
+91,Jordan,1
+92,USA/Sweden,1
+93,USA/Mexico,1
+94,Sudan,1
+95,Peru,1
+96,Singapore/Taiwan,1
+97,India/Canada,1
+98,Nepal,1
+99,Austria,1
+100,United Kingdom/ESA,1
+101,Sri Lanka,1
+102,Chile,1

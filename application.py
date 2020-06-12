@@ -98,6 +98,11 @@ def get_master_recs():
 def get_top10_LaunchDates_recs():
     return jsonify(data.get_top10_launch_dates())
 
+@app.route("/api/countryCountByYear")
+def get_countryCount_Year_Filterable():
+    return jsonify(data.get_countryCount_perYear_perCountry())
+
+
 # exe program
 if __name__ == '__main__':
     app.run(debug=True)
