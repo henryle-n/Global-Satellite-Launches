@@ -22,11 +22,12 @@ read message
 echo Adding message... & git commit -m "${cyn}$message${nc}"
 echo ---------------
 echo ${grn}Message added${nc}, beginning to push ...
+echo ---------------
 git push
 echo
 echo ================================
 echo
-echo "${cyan}FINISHED${nc}. Please hit ${yel}Enter${nc} to exit"
+echo "${cyn}FINISHED${nc}. Please hit ${yel}Enter${nc} to exit"
 read
 
 
