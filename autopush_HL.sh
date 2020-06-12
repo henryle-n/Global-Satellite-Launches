@@ -11,7 +11,7 @@ echo Brought to you by: ${red}Henry Le${nc}
 echo -e Version: ${mag}0${nc}, Date: ${mag}Jun, 2020${nc}
 echo =============================
 echo
-echo Begins ${red}Git Pulling${nc}. Please wait...
+echo Begins ${red}Git Pushing${nc}. Please wait...
 echo ---------------
 git add .
 git commit -am "auto push from Henry"
@@ -22,4 +22,6 @@ echo
 echo ${grn}Git Pushed${nc} Sucessfully!
 echo
 echo Press ${blu}Enter${blu} to Exit...
+echo
+echo
 read
