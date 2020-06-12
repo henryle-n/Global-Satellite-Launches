@@ -1,7 +1,10 @@
 #!/bin/sh
-
-git add .
-git commit -am %1
-git push
-echo Press Enter...
+echo Brought to you by Henry Le
+echo Version: 0, Date: Jun, 2020
+echo =============================
+echo Begins Git Pulling. Please wait...
+git pull
+echo =============================
+echo Git Pulled Successfully!
+echo Press Enter to Exit...
 read
