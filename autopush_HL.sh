@@ -7,26 +7,26 @@ mag=$'\e[1;35m'
 cyn=$'\e[1;36m'
 nc=$'\e[0m'
 
-echo Brought to you by: ${red}Henry Le${nc}
+echo Brought to you by: ${cyn}Henry Le${nc}
 echo -e Version: ${mag}0${nc}, Date: ${mag}Jun, 2020${nc}
 echo =============================
 echo
-echo Begins ${red}Git Pushing${nc}. Please wait...
+echo Begin ${red}Git Pushing${nc}. Please wait...
 echo ---------------
 echo ${yel}Adding files...${nc} & git add .
 echo ---------------
 echo ${yel}Preparing to push...${nc} 
 echo ---------------
-echo Please ${red}input message${nc} with double qoute for git push
+echo Please ${red}input message${nc} "(${red}NO ${cyn}double quote${nc} needed)"
 read message
-echo Adding message... & git commit -m ""${cyn}$message${nc}"" & echo message
+echo Adding message... & git commit -m "${cyn}$message${nc}"
 echo ---------------
 echo
 git push
 echo
 echo ================================
 echo
-echo ${red}Git push finished${nc}. Please hit ${yel}Enter${nc} to exit
+echo ${cyan}FINISHED${nc}. Please hit ${yel}Enter${nc} to exit
 read
 
 
