@@ -21,12 +21,12 @@ echo Please ${red}input message${nc} "(${red}NO ${cyn}double quote${nc} needed)"
 read message
 echo Adding message... & git commit -m "${cyn}$message${nc}"
 echo ---------------
-echo
+echo ${grn}Message added${nc}, beginning to push ...
 git push
 echo
 echo ================================
 echo
-echo ${cyan}FINISHED${nc}. Please hit ${yel}Enter${nc} to exit
+echo "${cyan}FINISHED${nc}. Please hit ${yel}Enter${nc} to exit"
 read
 
 
