@@ -21,11 +21,13 @@ echo Please ${red}input message${nc} with double qoute for git push
 read message
 echo Adding & message...
 git commit -m "${cyn}$message${nc}" 
-echo to package... 
 echo ---------------
-echo ===============================
+echo
 git push
-echo Hit Enter to Exit
+echo
+echo ================================
+echo
+echo ${red}Git push finished${nc}. Please hit ${yel}Enter${nc} to exit
 read
 
 
