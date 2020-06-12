@@ -8,24 +8,22 @@ cyn=$'\e[1;36m'
 nc=$'\e[0m'
 lgrn=$'\e[92m'
 blink=$'\e[5m'
-noblink= $'\e[25m'
-
-bold=$'\e[1m' 
-nobold=$'\e[21m'
-
-date
-date +"%FORMAT"
-var=$(date)
-var=`date`
 
 
-echo Brought to you by: ${cyn}Henry Le${nc}
-echo -e Version: ${mag}0${nc}, Date: ${mag}Jun, 2020${nc}
-echo =============================
+
 echo
+echo +++ Brought to you by: ${cyn}HENRY LE${nc} +++
+echo -e +++ Version: ${mag}0${nc}, Date: ${mag}Jun, 2020${nc} +++
+echo =============================
+startTime=$(date)
+SECONDS=0
+echo 
+printf "Local Time: %s\n" "${mag}$startTime${nc}"
+echo ---------------
+
 while true
 do 
-	echo -e "${red}${blink}${bold}WARNING${nobold}${noblink}${nc} :: ${yel}Data may be lost${nc} if push incorrectly!"
+	echo -e "${red}${bold}WARNING ${nBold}${nc}:: ${yel}Data may be lost${nc} if push \033[4mincorrectly!${nc}"
 	read -r -p "Are you ${cyn}sure${nc} you want to push (y/n)?${nc}" userinput
 	case $userinput in 
 	
@@ -71,13 +69,12 @@ do
 done
 
 echo
-echo === ${cyn}THANK YOU${nc} for using my Scripts - ${yel}HENRY LE${grn} ${grn}"(06/2020)"${nc} ===
-now=$(date)
+echo ===== ${cyn}THANK YOU${nc} for using my Scripts! - ${yel}HENRY LE${grn} ${grn}"(06/2020)"${nc} =====
+finishTime=$(date)
+printf "  Local Time: %s\n" "${mag}$finishTime${nc}"
+echo "  Script Total Time :: ${mag}$SECONDS${nc} second(s)"
 echo
-printf "Local Time: %s\n" "${mag}$now${nc}"
-echo
-echo "${lgrn}  FINISHED${nc}. Please hit ${yel}Enter${nc} to exit."
-echo
+echo  "  Press ${yel}Enter${yel} to Exit..."
 echo
 read
 

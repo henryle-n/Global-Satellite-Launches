@@ -7,14 +7,19 @@ mag=$'\e[1;35m'
 cyn=$'\e[1;36m'
 nc=$'\e[0m'
 
-date
-date +"%FORMAT"
-var=$(date)
-var=`date`
 
-echo Brought to you by: ${yel}Henry Le${nc}
-echo -e Version: ${mag}0${nc}, Date: ${mag}Jun, 2020${nc}
+
+echo
+echo +++ Brought to you by: ${cyn}HENRY LE${nc} +++
+echo -e +++ Version: ${mag}0${nc}, Date: ${mag}Jun, 2020${nc} +++
 echo =============================
+startTime=$(date)
+SECONDS=0
+echo 
+printf "Local Time: %s\n" "${mag}$startTime${nc}"
+echo ---------------
+
+echo 
 echo
 echo ${red}Deactivate${nc} any ${yel}existing Environment${nc}. Please wait...
 conda deactivate
@@ -33,9 +38,14 @@ echo
 
 now=$(date)
 
-echo ===${cyn}THANK YOU${nc} for using my Scripts - ${yel}HENRY LE${grn} ${grn}"(06/2020)"${nc} ===
+echo ===== ${cyn}THANK YOU${nc} for using my Scripts - ${yel}HENRY LE${grn} ${grn}"(06/2020)"${nc} =====
 echo
-printf "Local Time: %s\n" "${mag}$now${nc}"
+finishTime=$(date)
+sleep 5
+printf "  Local Time: %s\n" "${mag}$finishTime${nc}"
+echo "  Script Total Time :: ${mag}$SECONDS${nc} second(s)"
+echo
+echo  "  Press ${yel}Enter${yel} to Exit..."
 echo
 echo =============================
 echo
