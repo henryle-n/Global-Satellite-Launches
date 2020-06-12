@@ -19,9 +19,12 @@ echo ${yel}Preparing to push...${nc}
 echo ---------------
 echo Please ${red}input message${nc} with double qoute for git push
 read message
-echo Adding & git commit -m "${cyn}$message${nc}" & echo message to package... 
+echo Adding & message...
+git commit -m "${cyn}$message${nc}" 
+echo to package... 
 echo ---------------
 echo ===============================
+git push
 echo Hit Enter to Exit
 read
 
