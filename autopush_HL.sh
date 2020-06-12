@@ -2,7 +2,7 @@
 
 red=$'\e[1;31m'
 grn=$'\e[1;32m'
-blu=$'\e[1;34m'
+yel=$'\e[1;33m'
 mag=$'\e[1;35m'
 cyn=$'\e[1;36m'
 nc=$'\e[0m'
@@ -21,7 +21,7 @@ echo =============================
 echo
 echo ${grn}Git Pushed${nc} Sucessfully!
 echo
-echo Press ${blu}Enter${blu} to Exit...
+echo Press ${yel}Enter${yel} to Exit...
 echo
 echo
 read
