@@ -40,7 +40,7 @@ do
 			read message
 			printf "Adding message :: ${yel}\"$message\"${nc}to git package\n" & git commit -m "$message"
 			echo "--------------------------"
-			echo Message: "${yel}$message${nc}" - sucessfully added
+			echo Message: \"${yel}$message${nc}\" - sucessfully added
 			echo "--------------------------"
 			echo ${yel}UPLOADING FILES${nc} ... Please wait ...
 			echo "--------------------------"
