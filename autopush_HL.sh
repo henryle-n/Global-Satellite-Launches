@@ -13,9 +13,16 @@ echo =============================
 echo
 echo Begins ${red}Git Pushing${nc}. Please wait...
 echo ---------------
-git add .
-git commit -am "auto push from Henry"
+echo ${yel}Adding files...${nc} & git add .
+echo ---------------
+echo ${yel}Preparing to push...${nc} 
+echo ---------------
+echo Please ${red}input message${nc} for git push
+read message
+git commit -m $message
+echo ---------------
 git push
+echo ---------------
 
 echo =============================
 echo
@@ -24,4 +31,3 @@ echo
 echo Press ${yel}Enter${yel} to Exit...
 echo
 echo
-read
