@@ -19,15 +19,17 @@ echo ${yel}Preparing to push...${nc}
 echo ---------------
 echo Please ${red}input message${nc} "(${red}NO ${cyn}double quote${nc} needed)"
 read message
-echo Adding message... & git commit -m "${cyn}$message${nc}"
+echo Adding message... & git commit -m "$message"
 echo ---------------
-echo ${grn}Message added${nc}, beginning to push ...
+echo "Message ${cyn}$message${nc} sucessfully added"
+echo ---------------
+echo ${yel}UPLOADING FILES${nc} ... Please wait ...
 echo ---------------
 git push
 echo
 echo ================================
 echo
-echo "${cyn}  FINISHED${nc}. Please hit ${yel}Enter${nc} to exit"
+echo "${cyn}  FINISHED${nc}. Please hit ${yel}Enter${nc} to exit."
 echo
 read
 
