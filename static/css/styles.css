@@ -87,6 +87,16 @@ body {
     outline: 0 !important;
 }
 
+#intro-image {
+    /* Positioning */
+    float: left;
+    /* Box-model */
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
 hr {
     box-sizing: content-box;
     height: 0;
