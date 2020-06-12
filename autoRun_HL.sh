@@ -25,7 +25,6 @@ echo
 echo ${red}Thank you${nc} for using my Scripts - ${cyn}Henry${grn} ${grn}"(06/2020)"${nc}
 echo
 echo =============================
-echo =============================
 echo
 echo
 read
