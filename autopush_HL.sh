@@ -21,7 +21,7 @@ echo Please ${red}input message${nc} "(${red}NO ${cyn}double quote${nc} needed)"
 read message
 echo Adding message... & git commit -m "$message"
 echo ---------------
-echo "Message ${cyn}$message${nc} sucessfully added"
+echo "Message: ${cyn}$message${nc} - sucessfully added"
 echo ---------------
 echo ${yel}UPLOADING FILES${nc} ... Please wait ...
 echo ---------------
