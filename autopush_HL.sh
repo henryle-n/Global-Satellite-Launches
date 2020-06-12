@@ -7,7 +7,7 @@ mag=$'\e[1;35m'
 cyn=$'\e[1;36m'
 white=$'\e[0m'
 
-echo Brought to you by:$'\e[1;31m'Henry Le$'\e[0m'
+echo Brought to you by: ${red} Henry Le$'\e[0m'
 echo -e Version: ${pp}0${nc}, Date: ${pp}Jun, 2020${nc}
 echo =============================
 echo
