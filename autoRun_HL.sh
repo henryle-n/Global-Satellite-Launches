@@ -16,18 +16,18 @@ echo ---------------
 source p2env/Scripts/activate
 echo ${yel}Done Activating Environment${nc}.
 echo ---------------
-echo ${red}Starting up Server and Browser${nc}. Please wait... 
+echo ${red}Starting up ${cyn}Server${nc} and ${cyn}Browser${nc}... Please wait... 
 python application.py & sleep 2 & python -mwebbrowser http://127.0.0.1:5000/
 echo ---------------
 echo ${grn}SERVER HAS STARTED !!! ${nc}
 echo =============================
 echo 
-echo ${red}Thank you${nc} for using my Scripts - ${cyn}Henry${grn} ${grn}"(06/2020)"${nc}
+echo ${red}Thank you${nc} for using my Scripts - ${yel}HENRY LE${grn} ${grn}"(06/2020)"${nc}
 echo
 echo =============================
 echo
-echo
-read
+echo  
+
 
 
 
