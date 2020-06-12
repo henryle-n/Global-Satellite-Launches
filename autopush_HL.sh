@@ -20,7 +20,7 @@ echo ---------------
 echo Please ${red}input message${nc} with double qoute for git push
 read message
 echo Adding "${cyn}$message${nc}" to package...
-git commit -m "$message"
+git commit -m "${cyn}$message${nc}"
 echo ---------------
 git push & echo ${yel}FINISHED PUSHING !!!${nc} 
 echo ===============================
