@@ -27,7 +27,8 @@ git push
 echo
 echo ================================
 echo
-echo "${cyn}	FINISHED${nc}. Please hit ${yel}Enter${nc} to exit"
+echo "${cyn}  FINISHED${nc}. Please hit ${yel}Enter${nc} to exit"
+echo
 read
 
 
