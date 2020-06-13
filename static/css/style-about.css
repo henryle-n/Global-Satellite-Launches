@@ -6979,11 +6979,6 @@ button.bg-dark:focus {
 
 .d-block {
     display: block !important;
-    color: rgb(206, 202, 199);
-}
-
-.d-block:hover {
-    color: springgreen;
 }
 
 .d-table {
@@ -7999,7 +7994,6 @@ button.bg-dark:focus {
 .mt-0,
 .my-0 {
     margin-top: 0 !important;
-    color: rgba(37, 214, 52, 0.849);
 }
 
 .mr-0,
@@ -10242,7 +10236,7 @@ hr.light {
 header.masthead {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
-    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.7) 0%, rgba(92, 77, 66, 0.8) 100%), url("/static/assets/img/Portfolio/fullsize/Satellite Lauch Rez.jpg");
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.7) 0%, rgba(92, 77, 66, 0.8) 100%), url("/static/assets/img/aboutMasthead.png");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -10428,7 +10422,7 @@ ul {
 }
 
 .team-tile {
-    height: 349px;
+    height: auto;
 }
 
 .team-tile-section {
@@ -10436,6 +10430,7 @@ ul {
 }
 .team-tile-section-about {
     background: url("/static/assets/img/full-screen-image-3.jpg") no-repeat center top / cover;
+    padding-top: 200px;
 }
 
 .team-tile-section .team-tile {
@@ -10496,55 +10491,41 @@ p.proj-desc {
 }
 
 
-/* li.proj-list {
-    list-style: square;
-    padding-left: 2px;
-} */
-
-#proj-list {
-    list-style: inside;
-    text-align: left;
+#contact-info-links {
+    color: rgb(0, 26, 255);
+    background-color: transparent;
+    padding-left: 10px;
 }
-
-p.proj-desc {
-    text-align: left;
+#contact-a {
+    display: inline;
 }
-p.proj-desc-2 {
-    text-align: left;
-}
-
-
-.div.WDB-container{
-    text-align: center;
+#contact-ul{
     justify-content: center;
-    align-content: center;
+    position: relative;
+    margin-top: -50px;
+    transform: translate(45%, 50%);
+    padding-bottom: 80px;
 }
 
-.WDB {
-    text-align: center;
+#btn-about {
+    position: relative;
+}
+#btn-about {
+    margin: 0;
+    padding: 20px;
+    width: 180px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+
+}
+li {
+    text-align: left;
+
 }
 
-img.WDB-pic{
-    height: 1200px;
-    width: 1200px;
+i, p {
+    display: inline;
+
 }
-
-@media screen and ( max-width: 900px ) {
-    img.responsive { width: 600px; }
-    }
-@media screen and ( min-width:600px ) and ( max-width: 500px ) {
-img.responsive { width: 300px; }
-}
-
-img.responsive { height: auto; } 
-
-
-section#contact.page-section {
-    background-image: url("/static/assets/img/portfolio/fullsize/nightEarth.jpg");
-}
-
-div.contact-text {
-    color: rgb(216, 212, 209);
-}
-
-
