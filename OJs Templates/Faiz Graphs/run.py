@@ -46,7 +46,7 @@ def index():
 
 @app.route('/get_country_names_counts')
 def get_country_names_counts():
-    country_names_counts=pd.read_csv(static/assets/data/New_country_names_counts.csv)
+    country_names_counts=pd.read_csv("static/assets/data/New_country_names_counts.csv")
     
     #country_names_counts.to_json('static/assets/data/New_country_names_counts.json')
     return jsonify(country_names_counts)

@@ -8,6 +8,27 @@ cyn=$'\e[1;36m'
 nc=$'\e[0m'
 
 
+function print_ending_message {
+	echo ---------------
+	echo ${grn}A NEW SERVER HAS STARTED !!! ${nc}
+	echo ---------------
+	echo
+
+	now=$(date)
+
+	echo ===== ${cyn}THANK YOU${nc} for using my Scripts - ${yel}HENRY LE${grn} ${grn}"(06/2020)"${nc} =====
+	echo
+	finishTime=$(date)
+	printf "  Local Time :: %s\n" "${mag}$finishTime${nc}"
+	echo
+	echo "  Script Total Time :: ${mag}$SECONDS${nc} second(s)"
+	echo
+	echo "  When you're ${yel}DONE${yel}, ${yel}CLOSE THIS WINDOW${nc} to ${yel}SHUT DOWN${nc} server."
+	echo
+	echo =============================
+	echo ${cyn}
+	echo  
+}
 
 echo
 echo +++ Brought to you by: ${cyn}HENRY LE${nc} +++
@@ -30,26 +51,10 @@ source p2env/Scripts/activate
 echo ${yel}Done Activating Environment${nc}.
 echo ---------------
 echo ${red}Starting up ${cyn}Server${nc} and ${cyn}Browser${nc}... Please wait... 
-python application.py & sleep 2 & python -mwebbrowser http://127.0.0.1:5000/
-echo ---------------
-echo ${grn}A NEW SERVER HAS STARTED !!! ${nc}
-echo ---------------
-echo
+python application.py & sleep 1 & python -mwebbrowser http://127.0.0.1:5000/ &&
+print_ending_message
 
-now=$(date)
 
-echo ===== ${cyn}THANK YOU${nc} for using my Scripts - ${yel}HENRY LE${grn} ${grn}"(06/2020)"${nc} =====
-echo
-finishTime=$(date)
-sleep 5
-printf "  Local Time :: %s\n" "${mag}$finishTime${nc}"
-echo "  Script Total Time :: ${mag}$SECONDS${nc} second(s)"
-echo
-echo  "  Press ${yel}Enter${yel} to Exit..."
-echo
-echo =============================
-echo
-echo  
 
 
 

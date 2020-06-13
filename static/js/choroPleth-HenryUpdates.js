@@ -1,41 +1,77 @@
 function getLineGraph() {
   try {
-    $.getJSON( "./../static/assets/data/country_names_counts.json", function( data ) {
-      const graphData = generateDataFromJSON(data);
-    const ctx = document.getElementById("myChart").getContext("2d");
-    const myChartDom = document.getElementById("myChart");
-    if (screen.width <= 360) {
-      myChartDom.height = 400;
-    } else {
-      myChartDom.height = 200;
-    }
-    const myChart = new Chart(ctx, {
+    $.getJSON( "/api/lauch-history-by-country", function( data ) {
+      xAxis = data.map(row => row.Country_of_Operator_Owner).slice(0,10);
+      yAxis = data.map(row => row.Value_Counts).slice(0,10);
+      
+    const ctx = document.getElementById("HenryBarCounts").getContext("2d");
+    // if (screen.width <= 360) {
+    //   myChartDom.height = 400;
+    // } else {
+    //   myChartDom.height = 200;
+    // }
+    const HenryBarCount = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: graphData.xLabels,
+        labels: xAxis,
         datasets: [
           {
-            label: `Top ${graphData.top} Country Names Count`,
-            data: graphData.yLabels,
-            backgroundColor: "rgba(209, 34, 28, 0.2)",
-            borderColor: "rgb(209, 34, 28)",
+            label: `Satellite Counts`,
+            data: yAxis,
+            backgroundColor: "rgba(102, 221, 34, 0.6)",
+            borderColor: "#447E23",
             borderWidth: 1,
           },
         ],
       },
       options: {
+        title: {
+            display: true,
+            text: 'Top 10 Satellite Owners/ Countries',
+            fontSize : 30
+        },
+        legend: {
+          display:false
+        },
         scales: {
-          yAxes: [
-            {
+          yAxes: [{
+            scaleLabel : {
+              display: true,
+              labelString: "Satellite Counts",
+              fontSize: 20,
+              fontColor : "#447E23"
+            },
+            
               ticks: {
                 beginAtZero: true,
               },
             },
           ],
+          xAxes: [{
+            scaleLabel : {
+              display: true,
+              labelString: "Satellite Owners/ Countries",
+              fontSize: 20,
+              fontColor : "#447E23"
+            },
+            
+              ticks: {
+                beginAtZero: false,
+              },
+            },
+          ],
+        },
+        layout: {
+          padding: {
+              left: 0,
+              right:0,
+              top: 0,
+              bottom: 0
+          },
         },
       },
     });
-    return myChart;
+    return HenryBarCount;
     });
     
   } catch (error) {
@@ -43,57 +79,41 @@ function getLineGraph() {
   }
 }
 
-function generateDataFromJSON(countryNamesData) {
-  try {
-    let xLabels = [];
-    let yLabels = [];
-    const top = 10;
-    // let my_url = "{{ url_for('get_country_names_counts') }}";
-    // console.log(my_url);
-    
-    let sortedData = sortDataByValue(countryNamesData, top);
-    sortedData.map((_data)=>{
-      xLabels.push(_data.name);
-      yLabels.push(_data.value);
-      return _data;
-    })
-    // xLabels = Object.keys(Country_of_Operator_Owner).map((xlabel) => {
-    //   return Country_of_Operator_Owner[xlabel];
-    // });
-    // yLabels = Object.keys(Satellite_Counts).map((yLabels) => {
-    //   return Satellite_Counts[yLabels];
-    // });
-    return { xLabels, yLabels, top };
-  } catch (error) {
-    console.log(error);
-  }
-}
 
 async function extractCountryData(countries) {
   try {
     let countryNamesData;
-    await $.getJSON( "./../static/assets/data/country_names_counts.json", function( data ) {
+    await $.getJSON( "/api/lauch-history-by-country", function( data ) {
       countryNamesData = data;
     });    
-    const extractedCountries = [];
-    const { Country_of_Operator_Owner, Satellite_Counts } = countryNamesData;
-    Object.keys(Country_of_Operator_Owner).map((_countryOperator, index) => {
-      countries.map((_countryObj) => {
-        const { name } = (_countryObj || {}).properties;
-        if (
-          (name || "").toLowerCase() ===
-          (Country_of_Operator_Owner[_countryOperator] || "").toLowerCase()
-        ) {
-          extractedCountries.push({
-            ..._countryObj,
-            countValue: Satellite_Counts[_countryOperator],
+
+    var matchedCountries = [];
+
+
+    Object.values(countryNamesData).forEach( row => {
+
+      switch (row.Country_of_Operator_Owner) {
+        case "USA":
+          updatedCountryName = "United States of America";
+          break;
+        case "UK":
+          updatedCountryName = "United Kingdom";
+          break;
+        default:
+          updatedCountryName = row.Country_of_Operator_Owner;
+      }
+
+      countries.forEach((countryObj) => {
+
+        const { name } = (countryObj || {}).properties;
+        if ((name || "").toLowerCase() === (updatedCountryName || "").toLowerCase()) {
+          matchedCountries.push({...countryObj, countValue: row.Value_Counts,
           });
         }
       });
-      // return
-      // return (((_country || {}).properties || {}).name || "").toLowerCase();
     });
-    return extractedCountries;
+    return matchedCountries;
+    
   } catch (error) {
     console.log(error);
   }
@@ -106,11 +126,10 @@ async function extractCountryData(countries) {
       .then(async(data) => {
         let countries = ChartGeo.topojson.feature(data, data.objects.countries)
           .features;
-        // console.log(countries);
         
         countries = await extractCountryData(countries);
         const chart = new Chart(
-          document.getElementById("canvas").getContext("2d"),
+          document.getElementById("HenryChoroPleth").getContext("2d"),
           {
             type: "choropleth",
             data: {
@@ -148,24 +167,7 @@ async function extractCountryData(countries) {
   }
 }
 
-function sortDataByValue(data, top) {
-  try {
-    const { Country_of_Operator_Owner, Satellite_Counts } = data;
-    let myArrObj = Object.keys(Country_of_Operator_Owner).map((key)=>{
-      return {
-        name: Country_of_Operator_Owner[key],
-        value: Satellite_Counts[key]
-      }
-    })
-    // console.log(myArrObj);
-    myArrObj = myArrObj.sort((a, b)=>{
-      return b.value - a.value;
-    });
-    return myArrObj.slice(0, top);
-  } catch (error) {
-    console.log(error);
-  }
-}
+
 
 function init() {
   try {

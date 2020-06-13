@@ -1,3 +1,4 @@
+
 var dataUrl = "/api/top10-launch-dates";
 
 // ========== DECLARE VARIABLES =================
@@ -15,8 +16,9 @@ var scaleMax = 15; // percent  ::  axis value extension beyond dataset max value
 var toolTip;
 var toolTipArea;
 // specify label starting position relative to origin and spacing out between labels of the same axis
-var labelStartPos = 7; // rem unit
-var labelSpacing = 1.5; // rem unit
+var labelStartPos = 3; // rem unit
+var labelSpacing = 1; // rem unit
+var xAxisNum = 3; // specify how many of x axes will be created
 
 // circular datapoint radius
 var circleRadius = 12;
@@ -48,7 +50,7 @@ function createSVG() {
 
     // I love golden ratio = 1.618
     if (svgWidth >= 768) { // screen size in pixels
-        svgHeight = window.innerHeight / ((1 + Math.sqrt(5)) / 2);
+        svgHeight = window.innerHeight / ((1 + Math.sqrt(5)) / 2) + xAxisNum*labelSpacing + labelStartPos;
     } else
         svgHeight = svgWidth;
 
@@ -232,7 +234,6 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
 
         d3.json(dataUrl).then((data, err) => {
                 if (err) throw err;
-                console.log("314 this is raw data ::  ", data)
                 data.forEach(row => {
                     row.Day = +row.Day;
                     row.Month = +row.Month;
@@ -262,12 +263,12 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
 
                 // append and show x & y axes
                 var xAxis = chartGroup.append("g")
-                    .attr("id", "axisText")
+                    .attr("id", "axisText")  // for axis ticks 
                     .attr("transform", `translate(0, ${height})`)
                     .call(bottomAxis)
 
                 var yAxis = chartGroup.append("g")
-                    .attr("id", "axisText")
+                    .attr("id", "axisText")  // for axis ticks 
                     .call(leftAxis)
 
                 // create initial circles
@@ -312,6 +313,7 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
                 // add text labels to the labelsGroup
                 var yAxisLabel = labelsGroupY.append("text")
                     .attr("y", `${-labelStartPos}rem`)
+                    .attr("id", "yAxisLabel")
                     .text("Satellite Lauch Counts");
 
 
@@ -408,3 +410,4 @@ function updateToolTip(chosenXaxis, chosenYaxis, elementGroup) {
                 console.log("Error(s) while running Promise :: ", err);
             })
     }
+// initChart()

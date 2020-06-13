@@ -40,7 +40,7 @@ do
 			read message
 			printf "Adding message :: ${yel}\"$message\"${nc}to git package\n" & git commit -m "$message"
 			echo "--------------------------"
-			echo Message: \"${yel}$message${nc}\" - ${grn}sucessfully added${nc}
+			echo Message: \"${yel}$message${nc}\" - ${grn}sucessfully added!${nc}
 			echo "--------------------------"
 			echo ${yel}UPLOADING FILES${nc} ... Please wait ...
 			echo "--------------------------"
@@ -76,7 +76,7 @@ finishTime=$(date)
 printf "  Local Time :: %s\n" "${mag}$finishTime${nc}"
 echo "  Script Total Time :: ${mag}$SECONDS${nc} second(s)"
 echo
-echo  "  Press ${yel}Enter${yel} to Exit..."
+echo  "  Press ${yel}Enter to Exit...${nc}"
 echo
 read
 
