@@ -39,7 +39,6 @@ body {
   background: #04045c;
   min-height: 40px;
   font-size: 1.7rem;
-
 }
 
 .navbar {
@@ -59,7 +58,6 @@ body {
   padding: 30px;
 }
 
-
 /* Adding styles to the aside and filter form */
 .ufo-form {
   margin-top: 20px;
@@ -71,18 +69,24 @@ body {
 
 .filters {
   margin-top: 0px;
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 
 label {
   font-size: 1.7rem;
-  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
-  'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif, -apple-system, BlinkMacSystemFont;
+}
+
+#table-area tr td {
+  text-align: center;
+  color : white;    
 }
 
 #table-area th {
   text-align: center;
   background-color: rgb(0, 0, 0);
+  color : white; 
 }
 
 #table-area th:first-child,
@@ -103,7 +107,7 @@ label {
 .hero {
   position: relative;
   height: 500px;
-  padding-top : 30px;
+  padding-top: 30px;
   margin-top: 0px;
   background: rgb(24, 12, 78);
   background-image: url("/static/assets/img/Starlink-satellite-bus-SpaceX-Teslarati-orbit-edit-2-c.jpg");
@@ -130,40 +134,38 @@ label {
   opacity: 0;
   animation: subtitle 1.2s forwards linear;
   animation-delay: 0.9s;
-  }
+}
 
+/* ============ for STATUS box============= */
+#sitRep {
+  padding: 5px;
+  background-color: rgb(14, 75, 104);
+}
 
-  /* ============ for STATUS box============= */
-  #sitRep{
-    padding: 5px;
-    background-color: rgb(14, 75, 104);
-  }
-  
-  #user-notif,
-  #usNoteDate,
-  #sitRep,
-  #noData {
-    color: rgb(192, 14, 216);
-    font-size: 2rem;
-    text-align: center;
-  }
-  #user-notif {
-    color: rgb(37, 199, 37);
-    font-size: 1.6rem;
-  }
-  
-  #usNoteDate {
-    color: violet;
-    font-size: 1.5rem;
-  }
-  
-  #noData {
-    color: red;
-    font-size: 1.6rem;
-  }
-  
+#user-notif,
+#usNoteDate,
+#sitRep,
+#noData {
+  color: rgb(192, 14, 216);
+  font-size: 2rem;
+  text-align: center;
+}
+#user-notif {
+  color: rgb(37, 199, 37);
+  font-size: 1.6rem;
+}
+
+#usNoteDate {
+  color: violet;
+  font-size: 1.5rem;
+}
+
+#noData {
+  color: red;
+  font-size: 1.6rem;
+}
+
 /* ================= END of STATUS box ============= */
-
 
 /* input placeholder color changes */
 .form-control::-webkit-input-placeholder {
@@ -190,27 +192,26 @@ label {
   font-size: 1.7rem;
 }
 
-
 /* hints for user input */
 /* just to make sure the input box is spanned the entire space */
 .user-hint {
-  display: block;    
+  display: block;
 }
 .user-hint .user-hint-text {
   top: 100px;
   min-width: 450px;
-  max-width : 1200px;
+  max-width: 1200px;
   visibility: hidden;
   background-color: rgb(230, 231, 165);
-  border-radius:4px;
-  border: thin ;
+  border-radius: 4px;
+  border: thin;
   position: absolute;
   z-index: 3; /*make sure the hint box on top of other elements*/
   padding: 5px;
-  margin-top : -15px; 
+  margin-top: -15px;
   opacity: 0;
   transition: opacity 0.2s;
-  color : black;
+  color: black;
   font-size: 1.7rem;
 }
 .user-hint .user-hint-text::after {
@@ -223,11 +224,10 @@ label {
   opacity: 0.95;
 }
 
-
 /* filter button format */
 #filter-btn {
   background-color: rgba(105, 81, 12, 0.849);
-  position : relative; 
+  position: relative;
   font-size: 17px;
   padding: 10px;
   left: 15px;
@@ -235,15 +235,12 @@ label {
   border-radius: 15px;
   min-width: auto;
   text-align: center;
-  }
+}
 
-  #filter-btn:hover {
-    background-color: rgb(167, 144, 18);
-    color: black;
-  }
-
-
-
+#filter-btn:hover {
+  background-color: rgb(167, 144, 18);
+  color: black;
+}
 
 /* media queries which will only be activated at specific screen sizes */
 
@@ -252,7 +249,6 @@ label {
     font-size: 1.4em;
   }
 }
-
 
 @media (max-width: 1200px) {
   #table-area td {
@@ -265,7 +261,6 @@ label {
     font-size: 1em;
   }
 }
-
 
 @media (max-width: 500px) {
   #table-area thead {
@@ -287,7 +282,7 @@ label {
     width: 100%;
     height: 1px;
     margin-top: 20px;
-    content: " " ;
+    content: " ";
   }
 
   #table-area td {
@@ -346,283 +341,258 @@ label {
   }
 }
 
-
 /* background cover for the entire page */
 body {
-	background-color: whitesmoke;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .nav-link:hover {
-	background-color:#d4f7f79d;
+  background-color: #d4f7f79d;
 }
-
-
 
 /* formating the brand name Latitude */
 .brandname {
-	font-family:  Impact, Verdana;
-	font-size: 20px;
-	color: white;
-	text-align: center;
-	background-color: lightblue;
-}	
-
+  font-family: Impact, Verdana;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  background-color: lightblue;
+}
 
 /* format text inside the text body of each graph */
 .body_text {
-	color : black;
-	font-size : 20px;
-	text-align: left;
-	background-color : white;
-	font-family: Verdana;
-
+  color: black;
+  font-size: 20px;
+  text-align: left;
+  background-color: white;
+  font-family: Verdana;
 }
 
 /* format summary box inside column #1 of the bootstrap grid */
 .box_sum {
-	background-color: white;
-	padding: 20px;
+  background-color: white;
+  padding: 20px;
 }
-
 
 /* format box inside column #2 of the bootstrap grid */
 .box_vis {
-	background-color: white;
-	padding: 20px;
+  background-color: white;
+  padding: 20px;
 }
 
-
 /* format content header */
-.head_cus{
-	color : #2eb8b8d2 ;
-	font-size : 40px;
-	text-align: left;
-	background-color : white;
-	font-family: Georgia, Tahoma, Geneva, Arial, sans-serif;
-	font-weight: 600;
+.head_cus {
+  color: #2eb8b8d2;
+  font-size: 40px;
+  text-align: left;
+  background-color: white;
+  font-family: Georgia, Tahoma, Geneva, Arial, sans-serif;
+  font-weight: 600;
 }
 
 .footer_ref {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-size: 20px;
-	font-weight: bold;
-	font-variant: small-caps;
-	color: #FFF;
-	background-color: rgba(0, 0, 0, 0.623);
-	padding: 2px;
-	/* margin: 10px; */
-	/* height: auto; */
-	width: 100%;
-	position: static;
-	bottom: 0;
-	flex: 0 0 50px;/*or just height:50px;*/
-	margin-top: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.623);
+  padding: 2px;
+  /* margin: 10px; */
+  /* height: auto; */
+  width: 100%;
+  position: static;
+  bottom: 0;
+  flex: 0 0 50px; /*or just height:50px;*/
+  margin-top: auto;
 }
-
 
 /* this will make the picture get a bit bigger 
 and a halo ring appears around the frame when hover the mouse over it*/
 #img_cus:hover {
-	background-color: rgba(43, 247, 219, 0.89);
-	width: 100%;
-	
+  background-color: rgba(43, 247, 219, 0.89);
+  width: 100%;
 }
 
 img:hover {
-	background-color: rgba(43, 247, 219, 0.89);
-	
+  background-color: rgba(43, 247, 219, 0.89);
 }
 
 #img_cus {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 90%;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
 
 .box_comparison {
-padding: 40px;
-margin: 30px;
-margin-top: 120px;
-background-color: white;
+  padding: 40px;
+  margin: 30px;
+  margin-top: 120px;
+  background-color: white;
 }
 
 .box_comparison_header {
-	color : #2eb8b8d2 ;
-	font-size : 25px;
-	text-align: left;
-	font-family: Georgia, Tahoma, Geneva, Arial, sans-serif;
-	font-weight: 700;
-	padding: 15px;
+  color: #2eb8b8d2;
+  font-size: 25px;
+  text-align: left;
+  font-family: Georgia, Tahoma, Geneva, Arial, sans-serif;
+  font-weight: 700;
+  padding: 15px;
 }
 
 #nbar-format {
-	color: white;
-	font-weight: 700;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-size: 40px;
-	margin-left: 150px;
-	background-color: #2eb8b8;
-	width: 200px;
-	max-width: 30%;
-	text-align: center;
-	border-radius: 0.5em;
+  color: white;
+  font-weight: 700;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 40px;
+  margin-left: 150px;
+  background-color: #2eb8b8;
+  width: 200px;
+  max-width: 30%;
+  text-align: center;
+  border-radius: 0.5em;
 }
 
-
 .sub-title-font {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 /* to space out the content from the navbar and surrouding*/
 .row-grid {
-	margin: 25px ;
-    margin-top: 120px;
+  margin: 25px;
+  margin-top: 120px;
 }
 
 /* space out button from left edge */
-button{
-	margin-right: 30px;	  
+button {
+  margin-right: 30px;
 }
-
 
 /* configure entire navbar background */
 .navbar-expand-lg {
-	background-color: #ffffff;
-	}
+  background-color: #ffffff;
+}
 
 /* adjust button spacing from the left */
 .nav {
-	padding-right: 30px;
+  padding-right: 30px;
 }
 
 /* when screen is smaller, decrease the font size of Visualizations word */
-@media only screen and (max-width:1200px) {
-	.head_cus {
-		font-size: 35px;
-	}
+@media only screen and (max-width: 1200px) {
+  .head_cus {
+    font-size: 35px;
+  }
 }
 
 /* when screen is smaller, decrease the font size of Visualizations word */
-@media only screen and (max-width:1100px) {
-	.head_cus {
-		font-size: 30px;
-	}
+@media only screen and (max-width: 1100px) {
+  .head_cus {
+    font-size: 30px;
+  }
 
-	.sub-title-font {
-		font-size: 17px;
-	}
+  .sub-title-font {
+    font-size: 17px;
+  }
 
-	#nbar-format {
-		font-size: 25px;
-	}
-
+  #nbar-format {
+    font-size: 25px;
+  }
 }
 
 /* when screen is smaller, decrease the font size of Visualizations word */
-@media only screen and (max-width:980px) {
-	.head_cus {
-		font-size: 25px;
-	}
+@media only screen and (max-width: 980px) {
+  .head_cus {
+    font-size: 25px;
+  }
 
-	/* add some cushion for the nav bar */
-	.navbar-brand {
-		padding: 10px; 
-	}
+  /* add some cushion for the nav bar */
+  .navbar-brand {
+    padding: 10px;
+  }
 
-	.sub-title-font {
-		font-size: 15px;
-	}
+  .sub-title-font {
+    font-size: 15px;
+  }
 
-	.body_text {
-		color : black;
-		font-size : 14px;
-		text-align: left;
-		background-color : white;
-		font-family: Verdana;
-	}
-	
-	#nbar-format {
-		
-		margin-left: 25px;
-		
-	}
+  .body_text {
+    color: black;
+    font-size: 14px;
+    text-align: left;
+    background-color: white;
+    font-family: Verdana;
+  }
 
+  #nbar-format {
+    margin-left: 25px;
+  }
 }
-
 
 /* change background color of navbar when the drop down button appears */
 @media only screen and (max-width: 992px) {
-	.navbar-expand-lg {
-		background-color: #2eb8b8;
-		}
-		.navbar {
-		  height : auto;
-		  padding: 0px;
-		}
-		
-		#navbarTogglerDemo02{
-			background-color: white;
-			padding: 20px;
-		}
+  .navbar-expand-lg {
+    background-color: #2eb8b8;
+  }
+  .navbar {
+    height: auto;
+    padding: 0px;
+  }
 
+  #navbarTogglerDemo02 {
+    background-color: white;
+    padding: 20px;
+  }
 }
 
 /* when screen is smaller than 880, decrease the font size of Visualizations word */
-@media only screen and (max-width:850px) {
-	.head_cus {
-		font-size: 20px;
-	}
+@media only screen and (max-width: 850px) {
+  .head_cus {
+    font-size: 20px;
+  }
 
-	.sub-title-font {
-		font-size: 12px;
-	}
-
+  .sub-title-font {
+    font-size: 12px;
+  }
 }
 
 /* begin to stack at col-md  and reformat all entities*/
-@media only screen and (max-width:766.99px) {
-	
-	.head_cus {
-		font-size: 30px;
-	}
+@media only screen and (max-width: 766.99px) {
+  .head_cus {
+    font-size: 30px;
+  }
 
-	.box_vis {
-		
-		/* background-color: white; */
-		margin-top: 20px;
-		padding: 20px;
-				
-	}
+  .box_vis {
+    /* background-color: white; */
+    margin-top: 20px;
+    padding: 20px;
+  }
 
-	.sub-title-font {
-		font-size: 14px;
-	}
+  .sub-title-font {
+    font-size: 14px;
+  }
 
-	.row-grid {
-		margin-left: 20px;
-		margin-right: 5px;
-		margin-top: 90px;
-	}
-
+  .row-grid {
+    margin-left: 20px;
+    margin-right: 5px;
+    margin-top: 90px;
+  }
 }
 
 /* when screen is smaller decrease the font size of brand bar Latitude word */
-@media only screen and (max-width:690px) {
-	#nbar-format {
-		font-size: 20px;
-	}
+@media only screen and (max-width: 690px) {
+  #nbar-format {
+    font-size: 20px;
+  }
 }
-
 
 /* when the screen is extremely small, stack all charts and resize subtitle text */
-@media only screen and (max-width:574.99px) {
-	.sub-title-font {
-		font-size: 18px;
-	}
+@media only screen and (max-width: 574.99px) {
+  .sub-title-font {
+    font-size: 18px;
+  }
 }
-
-
