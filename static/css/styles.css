@@ -79,7 +79,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: hsla(24, 95%, 88%, 0.17);
+    background-color: hsla(24, 83%, 5%, 0.17);
     ;
 }
 
@@ -10237,6 +10237,7 @@ header.masthead {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
     background: linear-gradient(to bottom, rgba(92, 77, 66, 0.7) 0%, rgba(92, 77, 66, 0.8) 100%), url("/static/assets/img/Portfolio/fullsize/Satellite Lauch Rez.jpg");
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -10394,7 +10395,7 @@ h2.team-name {
 /* ======================================================= */
 
 .row.heading h2 {
-    color: #fff;
+    color: #000000;
     font-size: 40px;
     line-height: 95px;
     font-weight: 400;
@@ -10484,3 +10485,20 @@ p.proj-desc {
     top: 6px;
     width: 70px;
 }
+
+
+/* .team-tile2-section {
+    background: url("/static/assets/img/portfolio/fullsize/ourTeam.png") no-repeat center top / cover;
+} */
+
+
+/* header.masthead h4 {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.7) 0%, rgba(92, 77, 66, 0.8) 100%), url("/static/assets/img/Portfolio/fullsize/ourTeam.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+} */

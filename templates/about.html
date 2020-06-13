@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Project 2 - About Our Team Page" />
+    <meta name="author" content="Ekin Kaplan" />
+    <title>ABOUT OUR TEAM</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <!-- Favicon-->
@@ -18,58 +20,133 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
     <!-- Henry's customized styles-->
     <link href="/static/css/styles.css" rel="stylesheet" />
+
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="/">Satellite History
+                <img class="nav-sat-logo" src="/static/assets/img/satellite.svg">
+            </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#aboutteam">About Our Team</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#proj-desciption">Project
+                            Description</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/visualization">Visualization</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Database</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#database">API Access</a>
+                                <a class="dropdown-item" href="/api">API List</a>
+                                <a class="dropdown-item" href="/data-filterable">Filterable Data Table</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- </body> -->
+        <!-- Masthead-->
+        <!-- <header class="masthead">
+        <div class="container h-30">
+            <div class="row h-30 align-items-center justify-content-right text-right">
+                <div class="col-lg-07 align-self-baseline">
+                    <h4 class="text-uppercase text-white font-weight-bold"> MEET OUR TEAM </h4>
+                    <hr class="divider my-4" />
+                </div> -->
+
+
+        <header class="masthead ">
+            <div class="container h+25">
+                <section class="row h align-items-center justify-content-left text-center">
+                    <div class="col-lg-8 text-left">
+                        <!-- <h4 class="text-white mt-0"> MEET OUR Team </h4> -->
+
+                        <img class="inline-image  " src="/static/assets/img/giphy.gif" alt="">
+                        <hr class="divider light my-4" />
+
+
+
+                    </div>
+                    <!-- </section> -->
+
+                    <div class="container h-100">
+                        <section class="row h-100 align-items-center justify-content-center text-left">
+                            <div class="col-md-12">
+                                <div class="team-tile" style="height: 40px">
+                                    <!--style="height: 349px;"-->
+                                    <figure><img src="/static/assets/img/portfolio/team/HNL.jpg" class="img-responsive" alt="" id="intro-image"></figure>
+                                    <h4>Henry Le</h4>
+                                    <p>Project Team Lead<br>------ <br>Front/Back-End Developer</p>
+                                    <!-- <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                                    <div>Henry : +1 (405) 464-0815</div> -->
+                                    <i class="fas fa-envelope fa-3x mb-3 text-muted align-items-justify-left "></i>
+                                    <a class="d-block" href="mailto:henryle.b11@gmail.com">henryle.b11@gmail.com</a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="row h-100 align-items-center justify-content-center text-left">
+                            <div class="col-md-12">
+                                <div class="team-tile" style="height: 40px">
+                                    <!--style="height: 349px;"-->
+                                    <figure><img src="/static/assets/img/portfolio/team/EK.jpg" class="img-responsive" alt="" id="intro-image"></figure>
+                                    <h4>Ekin KAPLAN</h4>
+                                    <p>Javascript Developer<br>------ <br>DataAnalyst</p>
+                                    <i class="fas fa-envelope fa-3x mb-3 text-muted align-items-justify-left "></i>
+                                    <a class="d-block" href="mailto:ekinkamanli@gmail.com">exxxxxi@gmail.com</a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="row h-100 align-items-center justify-content-center text-left">
+                            <div class="col-md-12">
+                                <div class="team-tile" style="height: 40px">
+                                    <!--style="height: 349px;"-->
+                                    <figure><img src="/static/assets/img/portfolio/team/OJN.jpg" class="img-responsive" alt="" id="intro-image"></figure>
+                                    <h4>O.J NEDEBBIO </h4>
+                                    <p>Javascript Developer<br>-----<br> ask to O.j ? </p>
+                                    <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                                    <a class="d-block" href="mailto:xxxxxxx@gmail.com">xxxxxxx@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- PHONE NUMBER INFO -->
+                            <!-- <div class="row">
+                                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                                    <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                                    <div>Henry : +1 (405) 464-0815</div>
+                                    <div>Ekin : +1 (xxx) xxx-xxxx</div>
+                                    <div>O.J. : +1 (xxx) xxx-xxxx</div>
+                                </div>
+
+                            </div> -->
+                            <!-- <img class="inline-image" src="/static/assets/img/giphy.gif" alt=""> -->
+
+                        </section>
+                    </div>
+
+                    <!-- Footer-->
+                    <footer class="bg-light py-5">
+                        <div class="container ">
+                            <div class="medium text-center text-muted">Brought to you by: <b>Ekin Kaplan</b><br>June, 2020</div>
+                        </div>
+                    </footer>
+                    <!-- Bootstrap core JS-->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+                    <!-- Third party plugin JS-->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+                    <!-- Core theme JS-->
+                    <script src="/static/js/scripts.js"></script>
+
+
+        </header>
 </head>
-<h1>THIS IS ABOUT US PAGE</h1>
-<div class="container">
-    <section class="row">
-        <div class="col-md-12">
-            <div class="team-tile" style="height: 50px">
-                <!--style="height: 349px;"-->
-                <figure><img src="/static/assets/img/portfolio/team/HNL.jpg" class="img-responsive" alt="" id="intro-image"></figure>
-                <h3>Henry Le</h3>
-                <p>Project Team Lead<br>-----<br>Front/Back-End Developer</p>
-                <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-                <!-- <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p> -->
-            </div>
-        </div>
-    </section>
-    <hr>
-    <hr>
-    <section class="row">
-        <div class="col-md-12">
-            <div class="team-tile" style="height: 50px">
-                <!--style="height: 349px;"-->
-                <figure><img src="/static/assets/img/portfolio/team/HNL.jpg" class="img-responsive" alt="" id="intro-image"></figure>
-                <h3>Ekin KAPLAN</h3>
-                <p>Project Team Lead<br>-----<br></p>
-                <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-                <!-- <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p> -->
-            </div>
-        </div>
-    </section>
-    <hr>
-    <hr>
-    <section class="row">
-        <div class="col-md-12">
-            <div class="team-tile" style="height: 50px">
-                <!--style="height: 349px;"-->
-                <figure><img src="/static/assets/img/portfolio/team/HNL.jpg" class="img-responsive" alt="" id="intro-image"></figure>
-                <h3>O.J NEDEBBIO </h3>
-                <p>JAVASCRIPT DEVELOPER<br>-----<br></p>
-                <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-                <!-- <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p> -->
-            </div>
-        </div>
-    </section>
-</div>
-<!-- Bootstrap core JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-<!-- Third party plugin JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-<!-- Core theme JS-->
-<script src="/static/js/scripts.js"></script>
-</body>
 
 </html>
