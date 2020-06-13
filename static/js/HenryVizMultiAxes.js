@@ -407,5 +407,8 @@ function initChart() {
         // log any error while pulling promises
         .catch(function (err) {
             console.log("Error(s) while running Promise :: ", err);
-        })
-}
+        });
+};
+
+
+initChart();

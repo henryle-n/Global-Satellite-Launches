@@ -4,7 +4,9 @@ function getLineGraph() {
       xAxis = data.map(row => row.Country_of_Operator_Owner).slice(0,10);
       yAxis = data.map(row => row.Value_Counts).slice(0,10);
       
-    const ctx = document.getElementById("HenryBarCounts").getContext("2d");
+    const ctx = document.getElementById("HenryBarCounts")
+    console.log("this is get ctx, ", ctx);
+    ctx.getContext("2d");
     // if (screen.width <= 360) {
     //   myChartDom.height = 400;
     // } else {
