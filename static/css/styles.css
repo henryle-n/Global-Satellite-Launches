@@ -79,7 +79,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: hsla(24, 95%, 88%, 0.17);
+    background-color: hsla(24, 83%, 5%, 0.17);
     ;
 }
 
@@ -10394,7 +10394,7 @@ h2.team-name {
 /* ======================================================= */
 
 .row.heading h2 {
-    color: #fff;
+    color: #000000;
     font-size: 40px;
     line-height: 95px;
     font-weight: 400;
