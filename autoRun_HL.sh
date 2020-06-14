@@ -51,7 +51,7 @@ source p2env/Scripts/activate
 echo ${yel}Done Activating Environment${nc}.
 echo ---------------
 echo ${red}Starting up ${cyn}Server${nc} and ${cyn}Browser${nc}... Please wait... 
-python application.py & sleep 1 & python -mwebbrowser http://127.0.0.1:5000/ &&
+python application.py & sleep 2 & python -mwebbrowser http://127.0.0.1:5000/ &&
 print_ending_message
 
 

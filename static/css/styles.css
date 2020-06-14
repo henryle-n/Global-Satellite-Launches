@@ -7999,7 +7999,7 @@ button.bg-dark:focus {
 .mt-0,
 .my-0 {
     margin-top: 0 !important;
-    color: rgba(37, 214, 52, 0.849);
+    color: rgb(255, 128, 44);
 }
 
 .mr-0,
@@ -10242,11 +10242,13 @@ hr.light {
 header.masthead {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
-    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.7) 0%, rgba(92, 77, 66, 0.8) 100%), url("/static/assets/img/Portfolio/fullsize/Satellite Lauch Rez.jpg");
+    background: linear-gradient(to top,
+     rgba(172, 91, 33, 0.658) 0%,
+     rgba(92, 77, 66, 0.8) 100%), url("/static/assets/img/Portfolio/fullsize/Satellite Lauch Rez.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
 }
 
