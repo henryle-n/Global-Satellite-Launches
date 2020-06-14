@@ -2,15 +2,17 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="APIs List">
-  <meta name="author" content="Henry Le">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Satellite Launch APIs</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style-api.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      
+    <meta name="description" content="APIs List">
+      
+    <meta name="author" content="Henry Le">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Launch APIs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-api.css') }}">
 
 </head>
 
@@ -22,33 +24,51 @@
                     <h1>Available APIs</h1>
                 </div>
             </div>
-        
+
+
+            <!-- copy from here down -->
+            <!-- ========================================================== -->
             <div class="row">
                 <div class="col-md-12">
                     <div class="api-list">
-                        <p id="heading-1">Click a link below</p><hr>
+                        <p id="heading-1">Click a link below</p>
+                        <hr>
                         <ul>
-                            <li><a class = "api-link" href="/api/satellite-directory">All Satellite Name Records</a></li><br>     
-                            <li><a class = "api-link" href="/api/launch-date">Launch Date Records</a></li><br>
-							<li><a class = "api-link" href="/api/top10-launch-dates">Top 10 Launch Date Records</a></li><br>
-                            <li><a class = "api-link" href="/api/metadata">Database Descriptions (Metadata)</a></li><br>
-                            <li><a class = "api-link" href="/api/satellite-bio">Satellite Biography (46yrs)</a>
-                                <ul>                        
-                                    <li><a class = "api-link" href="/api/satellite-bio/1HOPSAT-TD (1st-generation High Optical Performance Satellite)">Example :: "1HOPSAT-TD" Record</a></li>
+                            <li><a class="api-link" href="/api/satellite-directory">All Satellite Name Records</a></li>
+                            <br>
+                            <li><a class="api-link" href="/api/launch-date">Launch Date Records</a></li><br>
+                            <li><a class="api-link" href="/api/top10-launch-dates">Top 10 Launch Date Records</a></li>
+                            <br>
+                            <li><a class="api-link" href="/api/metadata">Database Descriptions (Metadata)</a></li><br>
+                            <li><a class="api-link" href="/api/satellite-bio">Satellite Biography (46yrs)</a>
+                                <ul>
+                                    <li><a class="api-link"
+                                            href="/api/satellite-bio/1HOPSAT-TD (1st-generation High Optical Performance Satellite)">Example
+                                            :: "1HOPSAT-TD" Record</a></li>
                                 </ul>
                             </li><br>
-                            <li><a class = "api-link" href="/api/lauch-history-by-country">Total Satellite Launch Counts by Country</a>
+                            <li><a class="api-link" href="/api/lauch-history-by-country">Total Satellite Launch Counts
+                                    by Country</a>
                                 <ul>
-                                    <li><a class = "api-link" href="/api/lauch-history-by-country/USA">Example :: Total Satellite Launch Counts by USA</a></li>
+                                    <li><a class="api-link" href="/api/lauch-history-by-country/USA">Example :: Total
+                                            Satellite Launch Counts by USA</a></li>
 
                                 </ul>
                             </li><br>
-                            <li><a class = "api-link" href="/api/master-record">46 years of Satellite Launch Master Data</a></li>
-                            <a class="btn btn-primary" id="btn-back" href="/">Back to Main Page</a><br/>
+                            <li><a class="api-link" href="/api/master-record">46 years of Satellite Launch Master
+                                    Data</a></li>
+                            <a class="btn btn-primary" id="btn-back" href="/">Back to Main Page</a><br />
                         </ul>
                     </div>
                 </div>
             </div>
+
+            <!-- this is the end -->
+            <!-- ================================================= -->
+
+
+
+
         </div>
     </div>
 </body>
