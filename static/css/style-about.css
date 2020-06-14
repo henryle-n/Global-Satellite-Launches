@@ -9931,7 +9931,7 @@ button.bg-dark:focus {
 }
 
 .text-white {
-    color: #fff !important;
+    color: #e3e54d !important;
 }
 
 .text-primary {
@@ -10397,7 +10397,7 @@ h2.team-name {
 /* ======================================================= */
 
 .row.heading h2 {
-    color: #f9f6fd;
+    color: #e3e54d;
     background-color: #1f08259e;
     font-size: 40px;
     line-height: 95px;
@@ -10462,7 +10462,7 @@ ul {
 }
 
 .team-tile-section .team-tile h3 {
-    color: #f5f2fd;
+    color: #e3e54d;
     font-size: 20px;
     font-weight: 500;
     padding: 6px 0;
@@ -10471,11 +10471,11 @@ ul {
 
 .team-tile-section .team-tile h3 a {
     text-decoration: none;
-    color: #f5f2fd;
+    color: #e3e54d;
 }
 
 .team-tile-section .team-tile p {
-    color: #f5f2fd;
+    color: #dfdfc0;
     font-size: 13px;
     line-height: 20px;
     font-weight: 400;
