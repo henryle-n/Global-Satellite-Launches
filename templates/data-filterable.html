@@ -3,19 +3,17 @@
 
 <head>
   <meta charset="UTF-8">
-<<<<<<< HEAD
   <meta name="description" content="Global Satellite Launches - Filterable">
   <meta name="keywords" content="Global Satellite Launches">
   <meta name="author" content="Henry Le, Ekin Kaplan, OJ Ndebbio">
   <meta name="Date" content="June 15, 2020">
-  <title>UFO Chaser</title>
-=======
-  <meta name="description" content="UFO Sighting Data - Filterable">
+  <title>Satellite Launch</title>
+  <!-- <meta name="description" content="UFO Sighting Data - Filterable">
   <meta name="keywords" content="UFO, Sighting, UFO Data">
   <meta name="author" content="Henry Le">
   <meta name="Date" content="Jun 10, 2020">
   <title>Global Satellite Launch Data</title>
->>>>>>> 93711ce1009863ab7faf9208313887c0ebdeb252
+<!>>>>>>> 93711ce1009863ab7faf9208313887c0ebdeb252 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
@@ -42,7 +40,7 @@
     <div class="hero text-center">
       <h1>Global Satellite Launches</h1>
       <p>In the last 46 years, there are over 2,600 Satellites and counting have been successfully lauched!</p>
-      <img class="hero-img" src="/static/assets/img/nasaCursor_Henry.png">
+      <img class="hero-img" src="">
     </div>
     <div class="container-fluid ctn-fl">
       <div class="row margin-top-50">
@@ -69,57 +67,57 @@
                         </span>
                       </li>
 
-                      <!-- city  -->
-                      <li class="user-hint filter list-group-item">
-                        <label for="city">City</label>
-                        <input class="form-control" id="city" type="text" placeholder="Benton, Bonita, etc.">
-                        <span class="user-hint-text">
-                          <b>HINT:</b>
-                          <ul>
-                            <li>Input <b>city</b> names in either lower or upper case<em></em></li> 
-                            <li>E.g.: &nbsp;&nbsp;<em><b>benton, Bonita, EL CAJON</b>, etc.</em></li> 
-                          </ul>
-                        </span>
-                      </li>
-
-
-                      <!-- state  -->
-                      <li class="user-hint filter list-group-item">
-                        <label for="state">State</label>
-                        <input class="form-control" id="state" type="text" placeholder="AR, CA, OR, etc.">
-                        <span class="user-hint-text">
-                          <b>HINT:</b>
-                          <ul>
-                            <li>Input <b>state</b> names in either lower or upper case</li> 
-                            <li>Use two letters format</li>
-                            <li>E.g.: &nbsp;&nbsp;<em><b>AR, ar, OR, ky</b>, etc.</em></li>
-                          </ul>
-                        </span>
-                      </li>
-
                       <!-- country  -->
                       <li class="user-hint filter list-group-item">
                         <label for="country">Country</label>
-                        <input class="form-control" id="country" type="text" placeholder="US, CA">
+                        <input class="form-control" id="country" type="text" placeholder="USA, China, Russia etc.">
                         <span class="user-hint-text">
                           <b>HINT:</b>
                           <ul>
-                            <li>Input <b>country</b> names in either lower or upper case</li> 
-                            <li>Use two letters format</li>
-                            <li>E.g.: &nbsp;&nbsp;<em><b>us, US, Ca, cA</b>, etc.</em></li>
+                            <li>Input <b>country</b> names in either lower or upper case<em></em></li> 
+                            <li>E.g.: &nbsp;&nbsp;<em><b>usa, china, RUSSIA</b>, etc.</em></li> 
                           </ul>
                         </span>
                       </li>
 
-                      <!-- shape  -->
+
+                      <!-- launchsite -->
                       <li class="user-hint filter list-group-item">
-                        <label for="shape">Shape</label>
-                        <input class="form-control" id="shape" type="text" placeholder="Changing, Fireball, etc.">
+                        <label for="launchsite">Launch_Site</label>
+                        <input class="form-control" id="launch_site" type="text" placeholder="Cygnus, CAPE CANAVERAL etc.">
                         <span class="user-hint-text">
                           <b>HINT:</b>
                           <ul>
-                            <li>Input UFO <b>shape</b> in either lower or upper case</li> 
-                            <li>E.g.: &nbsp;&nbsp;<em><b>Light, triangle, cirCLe</b>, etc.</em></li>
+                            <li>Input <b>launchsite</b> names in either lower or upper case</li> 
+                            <li>Use text format</li>
+                            <li>E.g.: &nbsp;&nbsp;<em><b>Cape Canaveral, cape canaveral, Cygnus, cygnus, Sea Launch Odyssey, SEA LAUNCH OdySSEY</b>, etc.</em></li>
+                          </ul>
+                        </span>
+                      </li>
+
+                      <!-- purpose  -->
+                      <li class="user-hint filter list-group-item">
+                        <label for="purpose">Purpose</label>
+                        <input class="form-control" id="purpose" type="text" placeholder="Communications, earth observation">
+                        <span class="user-hint-text">
+                          <b>HINT:</b>
+                          <ul>
+                            <li>Input <b>purpose</b> names in either lower or upper case</li> 
+                            <li>Use text format</li>
+                            <li>E.g.: &nbsp;&nbsp;<em><b>Communiacations, earth observation/Technology, Earth observation</b>, etc.</em></li>
+                          </ul>
+                        </span>
+                      </li>
+
+                      <!-- orbitclasses  -->
+                      <li class="user-hint filter list-group-item">
+                        <label for="orbitclasses">OrbitClasses</label>
+                        <input class="form-control" id="orbitclasses" type="text" placeholder="GEO, LEO, etc.">
+                        <span class="user-hint-text">
+                          <b>HINT:</b>
+                          <ul>
+                            <li>Global Satellite Launches<b>orbitclasses</b> in either lower or upper case</li> 
+                            <li>E.g.: &nbsp;&nbsp;<em><b>Leo, gEo, GEO</b>, etc.</em></li>
                           </ul>
                         </span>
                       </li>
@@ -141,16 +139,35 @@
             <table id="ufo-table" class="table table-striped">
               <thead>
                 <tr>
+                  <!-- <th class="table-head">Launch_Date</th>
+                  <th class="table-head">Country_of_Operator_Owner</th>
+                  <th class="table-head">Launch_Site</th>
+                  <th class="table-head">Purpose</th>
+                  <th class="table-head">Orbit_Classes</th> -->
                   <th class="table-head">Apogee (km)</th>
                   <th class="table-head">COSPAR Number</th>
                   <th class="table-head">Comments</th>
                   <th class="table-head">Contractors /Country Names</th>
-                  <th class="table-head">Shape</th>
-                  <th class="table-head">Duration</th>
-                  <th class="table-head">Comments</th>
-                  <th class="table-head">Comments</th>
-                  <th class="table-head">Comments</th>
-                  <th class="table-head">Comments</th>
+                  <th class="table-head">Contractors Names</th>
+                  <th class="table-head">Country of Operator Owner</th>
+                  <th class="table-head">Dry Mass (kg)</th>
+                  <th class="table-head">Expected Lifetime(years)</th>
+                  <th class="table-head">Inclination (degrees)</th>
+                  <th class="table-head">Launch Date</th>
+                  <th class="table-head">Launch Mass(km)</th>
+                  <th class="table-head">Launch Site</th>
+                  <th class="table-head">Launch Vehicle</th>
+                  <th class="table-head">NORAD Number</th>
+                  <th class="table-head">Operator Owner</th>
+                  <th class="table-head">Orbit Classes</th>
+                  <th class="table-head">Orbit Types</th>
+                  <th class="table-head">Orig Sequence</th>
+                  <th class="table-head">Perigee (km)</th>
+                  <th class="table-head">Period minutes</th>
+                  <th class="table-head">Power (watts)</th>
+                  <th class="table-head">Purpose</th>
+                  <th class="table-head">Satellite Names</th>
+                  <th class="table-head">Users Names</th>
                 </tr>
               </thead>
               <tbody>
@@ -161,9 +178,9 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <span class="bottom">Global Satellite Launches</span>
-    </footer>
+    </footer> -->
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
