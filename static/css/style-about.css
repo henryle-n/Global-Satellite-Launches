@@ -10437,6 +10437,11 @@ ul {
     padding-top: 180px;
 }
 
+.team-tile-section2-about {
+    background: url("/static/assets/img/launcEk.jpg") no-repeat center top / cover;
+    padding-top: 180px;
+}
+
 .team-tile-section .team-tile {
     float: left;
     width: 100%;
