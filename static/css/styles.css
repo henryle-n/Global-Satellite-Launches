@@ -2542,14 +2542,13 @@ fieldset:disabled a.btn {
     color: #fff;
     background-color: #f24516;
     border-color: #ee3e0d;
+    box-shadow: ;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
     color: #fff;
     background-color: #f24516;
-    border-color: #ee3e0d;
-    box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
 }
 
 .btn-primary.disabled,
@@ -10154,8 +10153,8 @@ hr.light {
 .btn {
     font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     /* background-color: indianred; */
-    background-color: rgb(200, 77, 134);
-    color: rgb(244, 245, 250);
+    background-color: rgba(206, 113, 59, 0.329);
+    color: #ff3700;
 }
 
 .btn-xl {
@@ -10163,8 +10162,8 @@ hr.light {
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
-    border: none;
     border-radius: 10rem;
+    border-color: #f4623a;
 }
 
 .page-section {
@@ -10172,9 +10171,9 @@ hr.light {
 }
 
 #mainNav {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
     background-color: rgb(0, 0, 0, 0.5);
-    transition: background-color 0.5s ease;
+    transition: background-color 1s ease;
 }
 
 #mainNav .navbar-brand {
@@ -10243,8 +10242,8 @@ header.masthead {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
     background: linear-gradient(to top,
-     rgba(172, 91, 33, 0.658) 0%,
-     rgba(92, 77, 66, 0.8) 100%), url("/static/assets/img/Portfolio/fullsize/Satellite Lauch Rez.jpg");
+     rgba(160, 105, 65, 0.658) 0%,
+     rgba(24, 19, 16, 0.8) 100%), url("/static/assets/img/Portfolio/fullsize/Satellite Lauch Rez.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -10548,5 +10547,3 @@ section#contact.page-section {
 div.contact-text {
     color: rgb(216, 212, 209);
 }
-
-
