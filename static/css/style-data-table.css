@@ -1,5 +1,5 @@
 /* @import "styles.css"; */
-/* @import url("/static/css/styles.css"); */
+@import url("/static/css/styles.css");
 
 * {
   box-sizing: border-box;
@@ -605,4 +605,64 @@ button {
   }
 }
 
+.nav-sat-logo{
+  max-width: 40px;
+  max-height: auto;
+  position: relative;
+  display: inline;
+  transform: translate(150px,-30px);
 
+}
+
+
+#mainNav{
+  background-color: rgb(0, 0, 0);
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 13px !important;
+}
+
+.js-scroll-trigger{
+  color: white !important;
+  font-size: 15px !important;
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700);
+[data-notify="container"][class*="alert-henry-"] {
+	background-color: rgba(255, 255, 238, 0.911)!important;
+	border-width: 0px!important;
+    border-left: 15px solid rgba(233, 96, 96, 0.89)!important ;
+	border-radius: 20px;
+	box-shadow: 0 100px 100px 0 rgb(217, 255, 2);
+	font-family: 'Old Standard TT', serif!important;
+    letter-spacing: 1px!important;
+    min-width: fit-content!important;
+}
+[data-notify="container"].alert-henry-orange {
+	border-left-color: #e23b0d93!important;
+
+}
+[data-notify="container"][class*="henry-"] > [data-notify="title"] {
+	color: rgb(255, 0, 85)!important;
+	display: block;
+    font-weight: 700!important;
+    font-size: 20px!important;
+    margin-bottom: 5px!important;
+}
+[data-notify="container"][class*="alert-henry-"] > [data-notify="message"] {
+	font-weight: 400;
+}
+
+.alert{
+  color:rgb(0, 0, 0);
+  background-color: palegoldenrod;
+  border-radius: 20px;
+  font-size: 14px;
+  
+}
+span {
+  display: block;
+}

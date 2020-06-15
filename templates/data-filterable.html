@@ -21,8 +21,8 @@
   <meta http-equiv='cache-control' content='no-cache'>
   <meta http-equiv='expires' content='0'>
   <meta http-equiv='pragma' content='no-cache'>
-  <link rel="stylesheet" href="/static/css/style-data-table.css">
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <link rel="stylesheet" href="/static/css/style-data-table.css">
 
 </head>
 
@@ -40,10 +40,10 @@
           aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto my-2 my-lg-0">
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About Our Team</a>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/about">About Our Team</a>
             </li>
 
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#proj-desc-anchor">Project
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/#proj-desc-anchor">Project
                 Description</a>
             </li>
 
@@ -55,13 +55,12 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Database</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item js-scroll-trigger" href="#api-section">API Access</a>
                 <a class="dropdown-item" href="/api">API List</a>
                 <a class="dropdown-item" href="/data-filterable">Filterable Data Table</a>
               </div>
             </li>
 
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -226,29 +225,41 @@
   <script src="/static/js/light-bootstrap-dashboard.js"></script>
 
   <script src="/static/js/app-data-table.js"></script>
+  <script src="/static/js/scroll-data-table.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
-  
       $.notify({ // by bootstrap
-        message: "Welcome! You're visiting Raw Data Table"
+        title: "Welcome!",
+        message: "You're visiting Raw Data Table"
   
       }, {
-        type: 'warning',
-        delay: 3000,
-        z_index: 3000,
-        showProgressbar: false,
-        animate: {
-          enter: 'animated fadeInDown',
-          exit: 'animated fadeOutUp'
-        },
-        spacing: 20,
-        placement: {
-          from: "top",
-          align: "center"
-        },
-      });
-  
-      });
+                type: 'alert',
+                delay: 3000, // in millisecs
+                z_index: 3000,
+                showProgressbar: false,
+                animate: {
+                    enter: 'animated fadeInDownBig',
+                    exit: 'animated fadeOutUpBig'
+                },
+                offset: {
+                    x: 20,
+                    y: 70
+                },
+                allow_dismiss: true,
+                placement: {
+                    from: "top",
+                    align: "left",
+
+                },
+                template: '' +
+                    '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+                    '<span data-notify="title">{1}</span>' + '<hr>' +
+                    '<span data-notify="message">{2}</span>' +
+                    '</div>'
+
+            });
+
+        });
   </script>
 </body>
 
