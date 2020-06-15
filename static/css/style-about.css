@@ -6796,7 +6796,7 @@ button.bg-danger:focus {
 
 .bg-light {
     /* background-color: #f8f9fa !important; */
-    background-color: #460d51!important;
+    background-color: #2e1676bf !important;
 }
 
 a.bg-light:hover,
@@ -9829,7 +9829,7 @@ button.bg-dark:focus {
 
 .text-center {
     text-align: center !important;
-    background-color: #2c1131e3
+    background-color: #2c113100
 }
 
 @media (min-width: 576px) {
@@ -10449,7 +10449,7 @@ ul {
 
 .team-tile-section .team-tile h3 {
     color: #e9ec4c;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
     padding: 6px 0;
     text-transform: uppercase;
@@ -10499,7 +10499,7 @@ p.proj-desc {
     justify-content: center;
     position: relative;
     margin-top: -50px;
-    transform: translate(45%, 50%);
+    transform: translate(40%, 50%);
     padding-bottom: 80px;
 }
 
@@ -10524,7 +10524,13 @@ li {
 i,
 p {
     display: inline-block;
-    color: #dcd3ce
+    color: #dcd3ce;
+    padding: 0 30px;
+    text-align: justify;
+}
+
+p.job-title {
+    text-align: center;
 }
 
 .team-tile-section-api {
@@ -10551,4 +10557,10 @@ p.job-title {
 }
 
 
+h2.text-white.mt-0 {
+    padding: 30px 20px;
+}
 
+h3.team-name {
+    font-size: 33px !important;
+}
