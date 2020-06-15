@@ -2482,7 +2482,7 @@ textarea.form-control.is-invalid {
     }
 }
 
-.btn {
+.btn-about {
     display: inline-block;
     font-weight: 400;
     color: #212529;
@@ -10433,12 +10433,7 @@ ul {
 }
 
 .team-tile-section-about {
-    background: url("/static/assets/img/pink.jpg") no-repeat center top / cover;
-    padding-top: 180px;
-}
-
-.team-tile-section2-about {
-    background: url("/static/assets/img/launcEk.jpg") no-repeat center top / cover;
+    background: url("/static/assets/img/pink.png") no-repeat center top / cover;
     padding-top: 180px;
 }
 
@@ -10537,5 +10532,18 @@ li {
 
 i,
 p {
-    display: inline;
+    display: inline-block;
+    color: #dcd3ce
+}
+
+.team-tile-section-api {
+    background: url("/static/assets/img/apiEk.jpg") no-repeat center top / cover;
+    padding-top: 180px;
+}
+
+.btn a {
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* background-color: indianred; */
+    background-color: #460d518f;
+    color: rgb(244, 245, 250);
 }
