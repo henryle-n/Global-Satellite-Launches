@@ -76,7 +76,7 @@ d3.json(dataUrl).then((data, err) => {
             }
         }];
         var dayBarLayout = {
-            // title: 'Satellite Launch Counts Per Day',
+            title: 'Satellite Launch Counts Per Day',
             font: {
                 family: 'monaco,Consolas,Lucida Console,monospace',
                 size: 21,
@@ -127,7 +127,7 @@ d3.json(dataUrl).then((data, err) => {
             }
         }];
         var monthBarLayout = {
-            // title: 'Satellite Launch Counts per Month',
+            title: 'Satellite Launch Counts per Month',
             font: {
                 family: 'monaco,Consolas,Lucida Console,monospace',
                 size: 21,
@@ -176,7 +176,7 @@ d3.json(dataUrl).then((data, err) => {
             }
         }];
         var yearBarLayout = {
-            // title: 'Satellite Launch Counts per Year',
+            title: 'Satellite Launch Counts per Year',
             font: {
                 family: 'monaco,Consolas,Lucida Console,monospace',
                 size: 21,
