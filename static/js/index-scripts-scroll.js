@@ -101,6 +101,8 @@ var facts = [
   "They're orbiting around the Earth 24/7!",
   "That's why we can call our friends & families.",
   "No matter where they are, all days and all nights.",
+  "Satellites make GPS available",
+  "not only cars but also airplanes!",
   "Pretty AMAZING, right?",
   "But do you know who owns the most satellite?",
   "... make a guess, is it the U.S.A.?",
@@ -114,7 +116,8 @@ var facts = [
   "May be we can find interesting facts...",
   "Scroll down to see our team and project.",
   "Or select one of the options in the Navigation Bar.",
-  "Thank you for visting and enjoy!"
+  "On behalf of my team...",
+  "Thank you for visting and enjoy! -- Henry"
 ]
   
 

@@ -1,3 +1,6 @@
+/* @import "styles.css"; */
+/* @import url("/static/css/styles.css"); */
+
 * {
   box-sizing: border-box;
   font-family: Ubuntu, sans-serif;
@@ -109,8 +112,11 @@ label {
   height: 500px;
   padding-top: 30px;
   margin-top: 0px;
-  background: rgb(24, 12, 78);
-  background-image: url("/static/assets/img/Starlink-satellite-bus-SpaceX-Teslarati-orbit-edit-2-c.jpg");
+  /* background: rgb(24, 12, 78); */
+  /* background-image: linearurl("/static/assets/img/Starlink-satellite-bus-SpaceX-Teslarati-orbit-edit-2-c.jpg"); */
+
+    
+  background: linear-gradient(to top, rgba(177, 137, 109, 0.452) 0%, rgba(24, 19, 16, 0.8) 100%), url("/static/assets/img/Starlink-satellite-bus-SpaceX-Teslarati-orbit-edit-2-c.jpg");
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
@@ -120,6 +126,7 @@ label {
   margin-top: 150px;
   font-size: 0.5rem;
   animation: title 1.2s forwards linear;
+  color: rgb(255, 255, 255);
 }
 
 .hero p {
@@ -127,6 +134,7 @@ label {
   opacity: 0;
   animation: subtitle 1.2s forwards linear;
   animation-delay: 1.2s;
+  color: #fff;
 }
 
 .hero-img {
@@ -596,3 +604,5 @@ button {
     font-size: 18px;
   }
 }
+
+
