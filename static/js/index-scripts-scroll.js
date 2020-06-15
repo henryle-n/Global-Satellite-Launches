@@ -28,7 +28,7 @@
 
   // function to collapse nav bar
   var navbarCollapse = function () {
-    if ($("#mainNav").offset().top > 100) {
+    if ($("#mainNav").offset().top > 500) {
       $("#mainNav").addClass("navbar-scrolled");
     } else {
       $("#mainNav").removeClass("navbar-scrolled");
@@ -45,13 +45,15 @@
 })(jQuery); // End of use strict
 
 
-// Good trial for Vanilla JS
-var textContainerID = ".main-page-title";
+
+
+// Good trial for Vanilla JS, hope to create a "plain" animation!
+var textContainerID = "h1.main-page-title";
 
 var textContainer = document.querySelector(textContainerID);
 var textString= textContainer.textContent;
 var splittedText = textString.split("");
-textContainer.innerHTML = "";
+textContainer.textContent = "";
 var strLen = splittedText.length;
 
 
@@ -76,7 +78,7 @@ var userTextWaitTime = textAnimSpeed * strLen;
 var timer;
 
 // build a timer loop
-setTimeout(userMessage2, userTextWaitTime);
+setTimeout(userMessage, userTextWaitTime);
 
 function animMainT () {
   
@@ -94,14 +96,24 @@ function animMainT () {
 
 
 var facts = [
-  "Did you know: In the last 46 years, there are 2,666 Satellites and counting have been successfully lauched!?",
-  "Pretty Amazing, right?",
-  "Do you know who owns the most satellite?",
-  "Do you know who are the second and the third?",
-  " Well, so many facts we didn't know, right?",
-  "Let's find out!",
-  "Scroll down to see our team and project",
-  "Or select one of the options in the Navigation Bar!",
+  "Did you know?",
+  "In the last 46 years, 2,666 Satellites have been successfully lauched!",
+  "They're orbiting around the Earth 24/7!",
+  "That's why we can call our friends & families.",
+  "No matter where they are, all days and all nights.",
+  "Pretty AMAZING, right?",
+  "But do you know who owns the most satellite?",
+  "... make a guess, is it the U.S.A.?",
+  "Hum... not sure...",  
+  "Then, who come the second and the third?",
+  "Rumors said China and Russia...",
+  "... but",
+  "Do we know the answers for sure?",
+  "Let's find out...",
+  "... thru amazing Data Analytics & Visualization!",
+  "May be we can find interesting facts...",
+  "Scroll down to see our team and project.",
+  "Or select one of the options in the Navigation Bar.",
   "Thank you for visting and enjoy!"
 ]
   
@@ -115,56 +127,44 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function userMessage2() {
+async function userMessage() {
   
+  // first time run, need to get the active class added 
   if(!msgArea.classList.contains("activeText")) {
   msgArea.classList.add('activeText');
   }
   
+  // loop thru facts and get each fact, then push it to the message area
   for (nFact=0; nFact<factsLen-1; nFact++) {
+
     if(!msgArea.classList.contains("inactiveText")) {
       msgArea.classList.add('inactiveText');
     }
-    console.log ("contains activeText ??", msgArea.classList.contains("inactiveText"));
+
     msgArea.classList.replace('inactiveText', 'activeText');
-    
     fact = facts[nFact]
-    console.log("this is fact :: ", fact);
-    msgArea.innerHTML = fact;
+    msgArea.textContent = fact;
+
     await sleep(3000);
+    
     msgArea.classList.replace('activeText', 'inactiveText');
-    console.log("inactive changed");
     await sleep(150);
   }
   
-  msgArea.innerHTML = facts.slice(-1);
+  // get the last item in the user mssg box - this will have different anim
+  msgArea.textContent = facts.slice(-1);
   msgArea.classList.replace('inactiveText', 'activeText-last');
+  
+  // timer to call and run the title text anim
   timer= setInterval(animMainT, textAnimSpeed);
+  
+  // change class to run anim on button 
   document.querySelector('.btn-xl-hidden').classList.replace('btn-xl-hidden', 'btn-xl-show');
+  
+  // change class to make rolling down prompt
+  document.querySelector('.box-arrow-hidden').classList.replace('box-arrow-hidden', 'box-arrow');
+
+  // change class to run the header divider 
+  document.querySelector('.masthead-divider-inactive').classList.replace('masthead-divider-inactive', 'masthead-divider-active');
 
 };
-
-
-
-
-
-function userMessage (fact){
-    msgArea.classList.add('activeText');
-    // msgArea.classList.add('activeText');
-    
-    fact = facts[nFact]
-    console.log("this is fact :: ", fact);
-    msgArea.innerHTML = fact;
-    nFact++  
-    msgArea.classList.add('activeText');
-
-    if (nFact == factsLen){
-      clearInterval(timerMsgBox);
-      timerMsgBox=null;
-      console.log("All facts exported!")
-    };
-
-}
-
-
-

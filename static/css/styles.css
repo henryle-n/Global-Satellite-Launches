@@ -6810,7 +6810,7 @@ button.bg-danger:focus {
 
 .bg-light {
     /* background-color: #f8f9fa !important; */
-    background-color: #854461 !important;
+    background-color: #b0703b !important;
 }
 
 a.bg-light:hover,
@@ -10667,14 +10667,15 @@ span.myAnim {
     align-content: center;
 }
 
-hr.my-4 {
+hr.my-4.masthead-divider-inactive {
     border-color: #f4623a !important;
     opacity: 0;
-    /* min-height: 52px; */
-    /* border-width: 6; */
-    animation: masthead-div-enter 1s 2.5s forwards;
-    /* color: rgb(231, 219, 210); */
+}
 
+hr.my-4.masthead-divider-active {
+    border-color: #f4623a !important;
+    opacity: 0;
+    animation: masthead-div-enter 1s forwards;
 }
 
 .user-exp-active {
@@ -10692,16 +10693,14 @@ p#user-exp-box{
 }
 
 
-
-
 .btn-xl-hidden {
     opacity:0;
 }
 
 nav {
     opacity:0;
-    /* transform: translate3d(-0em, 10em, 10em); */
-    animation: henry-enter 1s 5s ease-in forwards;
+    /* transform: translate3d(-50em, 0em, 0em); */
+    animation: henry-enter 1s  ease-in forwards;
 }
 
 .btn-xl-show {
@@ -10772,20 +10771,21 @@ animation: henry-enter 1s 5s ease-in forwards;
     100% {
         opacity: 1;
         /* color: rgb(238, 233, 230); */
+        /* transform: translate3d(-0em, 0em, 00em); */
 
     }
 }
 
 @keyframes masthead-div-enter {
     from {
-        border-width: 0;
+        /* border-width: 0; */
         transform: translate(-100px, 0);
         opacity: 0;
         
     }
     
     100% {
-        border-width: 6px;
+        /* border-width: 6px; */
         transform: translate(0, 0);
         opacity: 1;
         }
@@ -10822,3 +10822,44 @@ animation: henry-enter 1s 5s ease-in forwards;
 }
 
 
+/* running arrows  */
+.box-arrow-hidden {
+    opacity: 0
+}
+
+.box-arrow {
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%, 50%);
+}
+
+.box-arrow span {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    transform: rotate(45deg);
+    animation: animate-arrow 2s infinite;
+}
+.box-arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+.box-arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate-arrow {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-30px, -30px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(40px, 40px);
+    }
+}

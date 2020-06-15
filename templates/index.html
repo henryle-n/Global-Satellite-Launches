@@ -29,6 +29,7 @@
 </head>
 
 <body>
+    <div id="top-of-page"></div>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
@@ -72,15 +73,23 @@
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
                     <h1 class="text-uppercase text-white font-weight-bold main-page-title main-page-title">Global Satellite Launches#1974 - 2020</h1>
-                    <hr class="divider my-4" />
+                    <hr class="divider my-4 masthead-divider-inactive" />
                 </div>
-                <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 font-weight-light mb-5" id="user-exp-text" id="user-exp-box">
+                <div class="col-lg-10 align-self-baseline">
+                    <p class="text-white-75 font-weight-light mb-5 inactiveText" id="user-exp-text" id="user-exp-box">
                         <!-- User message goes here? -->
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque velit, veniam voluptatem, quaerat
+                        vel dolores illo quod odio excepturi eveniet voluptas impedit quis assumenda exercitationem quam
+                        iure nisi obcaecati natus.
                     </p>
-                    
-                    <a class="btn btn-primary btn-xl js-scroll-trigger btn-xl-hidden" href="#about">Find Out More</a>
+
+                    <a class="btn btn-primary btn-xl js-scroll-trigger btn-xl-hidden" href="/visualization">Go to Visualization</a>
                 </div>
+            </div>
+            <div class="box-arrow-hidden">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
@@ -310,13 +319,15 @@
     <!-- Core theme JS-->
     <script src="/static/js/index-scripts-scroll.js"></script>
     <script type="text/javascript">
+        //  my best noti-box
         $(document).ready(function () {
-
-
+            $('html, body').animate({
+                scrollTop: $('#top-of-page').offset().top
+            }, 'slow');
             $.notify({ // by bootstrap
                 title: '<p class="noti-Header">Hi there! Welcome!<hr></p>',
-                message: "<b>You're visiting our HomePage!</b><br>\
-                 -- <em>Designer</em> :: <b>Henry Le</b><br>"
+                message: "<b>You're visiting the HomePage!</b><br>\
+                -- <em>Designer</em> :: <b>Henry Le</b><br>"
             }, {
                 type: 'henry-orange',
                 delay: 4000, // in millisecs
@@ -334,21 +345,18 @@
                 placement: {
                     from: "bottom",
                     align: "left",
-                    
+
                 },
-                template: '' + 
+                template: '' +
                     '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
-                            '<span data-notify="title">{1}</span>' +
-                            '<span data-notify="message">{2}</span>' +
-                            '</div>' 
+                    '<span data-notify="title">{1}</span>' +
+                    '<span data-notify="message">{2}</span>' +
+                    '</div>'
 
             });
 
         });
     </script>
-
-
-
 </body>
 
 </html>
