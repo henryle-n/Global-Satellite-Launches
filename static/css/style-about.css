@@ -188,7 +188,7 @@ sup {
 }
 
 a {
-    color: #f4623a;
+    color: #fdf5f3;
     text-decoration: none;
     background-color: transparent;
 }
@@ -10546,4 +10546,9 @@ p {
     /* background-color: indianred; */
     background-color: #460d518f;
     color: rgb(244, 245, 250);
+}
+
+.bg-light-ek {
+    /* background-color: #f8f9fa !important; */
+    background-color: #090422d9 !important;
 }
