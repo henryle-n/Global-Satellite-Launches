@@ -199,7 +199,7 @@ pre {
     margin-top: 0;
     margin-bottom: 1rem;
     overflow: auto;
-    -ms-overflow-style: scrollbar;
+    -ms-overflow-style: scroll bar;
 }
 
 figure {
@@ -10509,31 +10509,34 @@ hr.hr-white {
 }
 
 ;
-
-/* div.col-md-12.main-body {
-    margin-top: 250px;
-    padding-top: 100px;
+div.col-md-12.main-body {
+    margin-top: 350px;
+    padding-top: 140px;
 }
 
 .container-md {
     padding: 0 0;
-} */
+}
 
 div.ek3 {
-    /* display: block; */
+    display: block;
     position: absolute;
     bottom: 0;
-    margin: 30px 0px;
-    padding: 100px 0px !important;
-    background-color: rgba(182, 76, 37, 0.5);
-    /* text-align: center; */
+    margin: 40px 0px;
+    padding: 20px 0px !important;
+    background-color: #031b3377;
+    text-align: center;
     justify-content: center;
 }
 
 .text-center {
-    background-color: transparent;
+    background-color: #09072449, transparent;
+    line-height: 50px;
+    position: relative;
+    text-align: justify;
 }
 
 .api-text-body {
-    padding-top: 300px;
+    padding-top: 200px;
+    padding: 15px
 }
