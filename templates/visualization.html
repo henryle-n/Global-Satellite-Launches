@@ -20,11 +20,11 @@
   <link href="/static/css/Henry-Mod-Viz-Page.css" rel="stylesheet" />
 
 
-  <!--  CSS for Demo Purpose, don't include it in your project     -->
-  <!-- <link href="/static/css/demo.css" rel="stylesheet" /> -->
-
+  
   <!-- Animation library for notifications   -->
-  <!-- <link href="/static/css/animate.min.css" rel="stylesheet"/> -->
+  <link href="/static/css/animate.min.css" rel="stylesheet"/>
+
+  <!-- customize css -->
   <link href="/static/css/style-Viz.css" rel="stylesheet" />
 
   <!--     I'm all about icon, and beautiful fonts - Henry/ Jun 2020     -->
@@ -317,17 +317,18 @@
     // HenryVizMultiAxes.initChart();
 
     $.notify({ // by bootstrap
-      message: "Welcome to World of Visualization!<br>-- <em>Author</em> :: <b>Henry Le</b>"
+      message: "Welcome to World of Visualization!<br>-- <em>Author</em> :: <b>Henry Le</b><br>Team Members: E. Kaplan, O.J.Ndebbio"
 
     }, {
-      type: 'info',
-      timer: 2000, // in millisecs
+      type: 'warning',
+      delay: 3000,
       z_index: 3000,
       showProgressbar: false,
       animate: {
         enter: 'animated fadeInDown',
         exit: 'animated fadeOutUp'
       },
+      spacing: 20,
       placement: {
         from: "top",
         align: "center"
