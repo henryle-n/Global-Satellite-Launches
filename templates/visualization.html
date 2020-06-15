@@ -2,37 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="/static/assets/img/favicon.ico">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="/static/assets/img/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Visualization</title>
+  <title>Visualization</title>
 
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-
-
-    <!-- Bootstrap core CSS     -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
 
 
-    <!--  Light Bootstrap Table core CSS    -->
-    <link href="/static/css/Henry-Mod-Viz-Page.css" rel="stylesheet" />
+  <!-- Bootstrap core CSS     -->
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 
-  
+  <!--  Light Bootstrap Table core CSS    -->
+  <link href="/static/css/Henry-Mod-Viz-Page.css" rel="stylesheet" />
+
+
+
   <!-- Animation library for notifications   -->
-  <link href="/static/css/animate.min.css" rel="stylesheet"/>
-  
+  <link href="/static/css/animate.min.css" rel="stylesheet" />
+
   <!-- customize css -->
   <link href="/static/css/style-Viz.css" rel="stylesheet" />
   <!--  CSS for Demo Purpose, don't include it in your project     -->
   <!-- <link href="/static/css/demo.css" rel="stylesheet" /> -->
-  
+
   <!-- Animation library for notifications   -->
   <!-- <link href="/static/css/animate.min.css" rel="stylesheet"/> -->
   <link href="/static/css/style-Viz.css" rel="stylesheet" />
-  
+
   <!--     I'm all about icon, and beautiful fonts - Henry/ Jun 2020     -->
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
   <script src="https://kit.fontawesome.com/25f64a2ed2.js" crossorigin="anonymous"></script>
@@ -41,13 +41,13 @@
 
 <body>
   <div class="wrapper">
-  <a name="top"></a>
-  <div class="sidebar" data-color="nakedRed-HL" data-image="/static/assets/img/sidebar-5.jpg">
+    <a name="top"></a>
+    <div class="sidebar" data-color="nakedRed-HL" data-image="/static/assets/img/sidebar-5.jpg">
       <div class="sidebar-wrapper">
         <div class="logo">
           <a href="#top" class="simple-text">visualization dashboard</a>
         </div>
-        
+
         <ul class="nav">
           <li class="active">
             <a href="">
@@ -66,228 +66,267 @@
           </li>
           <li>
             <a href="">
-                            <p>Typography</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <p>Icons</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <p>Maps</p>
-                        </a>
-                      </li>
-                    </ul>
+              <p>Typography</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>Icons</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>Maps</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-panel">
+      <nav class="navbar navbar-default navbar-fixed">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="navbar-brn" href="#top">Visualization DashBoard</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="/">
+                  <i class="fas fa-home"></i>
+                  <p class="hidden-lg hidden-md">Back to Home Page</p>
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="far fa-chart-bar"></i>
+                  <b class="caret hidden-lg hidden-md"></b>
+                  <p class="hidden-lg hidden-md">
+                    Explore Charts
+                    <b class="caret"></b>
+                  </p>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#HenryMultiX">Launch Date</i></a></li>
+                  <li><a href="#HenryBarCounts">Top 10 Satellite Owners</a></li>
+                  <li><a href="#HenryChoroPleth">ChoroPleth Map</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fas fa-database"></i>
+                  <b class="caret hidden-lg hidden-md"></b>
+                  <p class="hidden-lg hidden-md">
+                    Database
+                    <b class="caret"></b>
+                  </p>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="data-filterable">Filterable Data Table</a></li>
+                  <li><a href="api">Available API List</a></li>
+                </ul>
+              </li>
+              <ul class="dropdown-menu">
+                <li><a href="data-filterable">Filterable Data Table</a></li>
+                <li><a href="api">Available API List</a></li>
+              </ul>
+              </li>
+
+              <li>
+                <a href="/about">
+                  <i class="fas fa-user-friends"></i>
+                  <p class="hidden-lg hidden-md">About our Team</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="/#contact">
+                  <i class="far fa-address-card"></i>
+                  <p class="hidden-lg hidden-md">Contact us</p>
+                </a>
+              </li>
+              <li class="separator hidden-lg"></li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+
+
+      <div class="content">
+        <div class="container-fluid">
+          <!-- 1st row -->
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <div class="card">
+                <div class="header">
+                  <h4 class="title">Satellite Counts by Launch Dates</h4>
+                  <p class="category">Organized in Years, Months, Days</p>
+                  <hr>
+                </div>
+                <div id="HenryMultiX">
+                  <!-- Henry's Multi X is here -->
+                </div>
+                <div class="footer">
+                  <hr>
+                  <div class="stats">
+                    <i class="fa fa-clock-o"></i> Updated: Jun, 2020
                   </div>
                 </div>
-                
-                <div class="main-panel">
-                  <nav class="navbar navbar-default navbar-fixed">
-                    <div class="container-fluid">
-                      <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" id="navbar-brn" href="#top">Visualization DashBoard</a>
-                      </div>
-                      <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                          <li>
-                            <a href="/">
-                              <i class="fas fa-home"></i>
-                              <p class="hidden-lg hidden-md">Back to Home Page</p>
-                            </a>
-                          </li>
-                          <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                              <i class="far fa-chart-bar"></i>
-                              <b class="caret hidden-lg hidden-md"></b>
-                              <p class="hidden-lg hidden-md">
-                                Explore Charts
-                                <b class="caret"></b>
-                              </p>
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a href="#HenryMultiX">Launch Date</i></a></li>
-                              <li><a href="#HenryBarCounts">Top 10 Satellite Owners</a></li>
-                              <li><a href="#HenryChoroPleth">ChoroPleth Map</a></li>
-                            </ul>
-                          </li>
-                          
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fas fa-database"></i>
-                                    <b class="caret hidden-lg hidden-md"></b>
-                                    <p class="hidden-lg hidden-md">
-                                        Database
-                                        <b class="caret"></b>
-                                    </p>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="data-filterable">Filterable Data Table</a></li>
-                                    <li><a href="api">Available API List</a></li>
-                                </ul>
-                            </li>
-                            <ul class="dropdown-menu">
-                                <li><a href="data-filterable">Filterable Data Table</a></li>
-                                <li><a href="api">Available API List</a></li>
-                            </ul>
-                            </li>
-
-                            <li>
-                                <a href="/about">
-                                    <i class="fas fa-user-friends"></i>
-                                    <p class="hidden-lg hidden-md">About our Team</p>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="/#contact">
-                                    <i class="far fa-address-card"></i>
-                                    <p class="hidden-lg hidden-md">Contact us</p>
-                                </a>
-                            </li>
-                            <li class="separator hidden-lg"></li>
-                        </ul>
-                    </div>
-
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="card">
+                <div class="header">
+                  <h4 class="title">46 years of Satellite History</h4>
+                  <p class="category">Counts by Nations</p><br>
                 </div>
-            </nav>
-
-
-            <div class="content">
-                <div class="container-fluid">
-                    <!-- 1st row -->
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-12">
-                            <div class="card">
-                                <div class="header">
-                                    <h4 class="title">Satellite Counts by Launch Dates</h4>
-                                    <p class="category">Organized in Years, Months, Days</p>
-                                    <hr>
-                                </div>
-                                <div id="HenryMultiX">
-                                    <!-- Henry's Multi X is here -->
-                                </div>
-                                <div class="footer">
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Updated: Jun, 2020
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-sm-12">
-                            <div class="card">
-                                <div class="header">
-                                    <h4 class="title">46 years of Satellite History</h4>
-                                    <p class="category">Organized in Years, Months, Days</p><br>
-                                </div>
-                                <canvas id="HenryChoroPleth">
+                <canvas id="HenryChoroPleth">
                   <!-- Henry's Multi X is here -->
                 </canvas>
-                                <div class="footer">
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Updated: Jun, 2020
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end 1st row -->
-
-                    <!-- 2nd row -->
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-12">
-                            <div class="card">
-                                <div class="header">
-                                    <h4 class="title">Satellite Counts by Launch Dates</h4>
-                                    <p class="category">Organized in Years, Months, Days</p>
-                                    <!-- Ekin's Bar charts is here -->
-                                    <hr>
-                                </div>
-                                <canvas id="HenryBarCounts" width="400" height="200"></canvas>
-                                <!-- Henry's Bar counts is here -->
-                                <div class="footer">
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Updated: Jun, 2020
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-12">
-                            <div class="card">
-                                <div class="header">
-                                    <h4 class="title">46 years of Satellite History</h4>
-                                    <p class="category">Organized in Years, Months, Days</p><br>
-                                </div>
-                                <div id="HenryChorgfgfgfoPleth">
-                                    <!-- Henry's Multi X is here -->
-                                </div>
-                                <div class="footer">
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Updated: Jun, 2020
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end 2nd row -->
+                <div class="footer">
+                  <hr>
+                  <div class="stats">
+                    <i class="fa fa-clock-o"></i> Updated: Jun, 2020
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
+          <!-- end 1st row -->
 
+          <!-- 2nd row -->
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <div class="card">
+                <div class="header">
+                  <h4 class="title">Top 10 Satellite Owned Nations</h4>
+                  <p class="category">46 years history</p>
+                  <!-- Henry's Bar charts is here -->
+                  <hr>
+                </div>
+                <canvas id="HenryBarCounts" width="400" height="200"></canvas>
+                <!-- Henry's Bar counts is here -->
+                <div class="footer">
+                  <hr>
+                  <div class="stats">
+                    <i class="fa fa-clock-o"></i> Updated: Jun, 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="card">
+                <div class="header">
+                  <h4 class="title">46 years of Satellite History</h4>
+                  <p class="category">Organized in Years, Months, Days</p><br>
+                </div>
+                <div id="HenryChorgfgfgfoPleth">
+                  <!-- Henry's Multi X is here -->
+                </div>
+                <div class="footer">
+                  <hr>
+                  <div class="stats">
+                    <i class="fa fa-clock-o"></i> Updated: Jun, 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end 2nd row -->
+        </div>
 
-                <footer class="footer">
-                    <div class="container-fluid">
-                        <nav class="pull-left">
-                            <ul>
-                                <li>
-                                    <a href="/">
-                                        <i class="fas fa-home">
+        <!-- 3rd row -->
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <div class="card">
+              <div class="header">
+                <h4 class="title">Satellite Counts by Launch Dates</h4>
+                <p class="category">Organized in Years, Months, Days</p>
+                <hr>
+              </div>
+              <div id="HenryMultiX">
+                <!-- Henry's Multi X is here -->
+              </div>
+              <div class="footer">
+                <hr>
+                <div class="stats">
+                  <i class="fa fa-clock-o"></i> Updated: Jun, 2020
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <div class="card">
+              <div class="header">
+                <h4 class="title">46 years of Satellite History</h4>
+                <p class="category">Organized in Years, Months, Days</p><br>
+              </div>
+              <canvas id="HenryChoroPleth">
+                <!-- Henry's Multi X is here -->
+              </canvas>
+              <div class="footer">
+                <hr>
+                <div class="stats">
+                  <i class="fa fa-clock-o"></i> Updated: Jun, 2020
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end 3rd row -->
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <nav class="pull-left">
+              <ul>
+                <li>
+                  <a href="/">
+                    <i class="fas fa-home">
                       <span id="footer-text"> Home Page</span>
                     </i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/api">
-                                        <i class="fas fa-database">
+                  </a>
+                </li>
+                <li>
+                  <a href="/api">
+                    <i class="fas fa-database">
                       <span id="footer-text"> APIs</span>
                     </i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/about">
-                                        <i class="far fa-address-card">
+                  </a>
+                </li>
+                <li>
+                  <a href="/about">
+                    <i class="far fa-address-card">
                       <span id="footer-text"> About us</span>
                     </i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/#contact">
-                                        <i class="far fa-address-card">
+                  </a>
+                </li>
+                <li>
+                  <a href="/#contact">
+                    <i class="far fa-address-card">
                       <span id="footer-text"> Contact us</span>
                     </i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <p class="copyright pull-right">
-                            &copy;
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> || <a href="https://www.linkedin.com/in/le-henry">Henry Le</a>
-                        </p>
-                    </div>
-                </footer>
-            </div>
-        </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <p class="copyright pull-right">
+              &copy;
+              <script>
+                document.write(new Date().getFullYear())
+              </script> || <a href="https://www.linkedin.com/in/le-henry">Henry Le</a>
+            </p>
+          </div>
+        </footer>
+      </div>
+    </div>
 </body>
 
 <!--   Core JS Files   -->
@@ -321,10 +360,10 @@
   $(document).ready(function () {
 
     $.notify({ // by bootstrap
-      message: "Welcome to World of Visualization!<br>-- <em>Author</em> :: <b>Henry Le</b><br>Team Members: E. Kaplan, O.J.Ndebbio"
+      message: "Welcome to World of Visualization!<br>-- <em>Author</em> :: <b>Henry Le - 2020"
 
     }, {
-      type: 'warning',
+      type: 'info',
       delay: 3000,
       z_index: 3000,
       showProgressbar: false,
@@ -339,7 +378,7 @@
       },
     });
 
-    });
+  });
 </script>
 
 </html>

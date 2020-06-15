@@ -3913,3 +3913,24 @@ fieldset[disabled] .btn-neutral.active {
         -webkit-overflow-scrolling: touch;
     }
 }
+
+
+canvas#HenryChoroPleth {
+    padding: 10px 70px;
+    width: 900px !important;
+    height: 400px !important;
+}
+canvas#HenryBarCounts {
+    padding: 30px 60px;
+    width: 800px !important;
+    height: 500px !important;
+    padding-bottom: 70px;
+}
+
+div.card {
+    height: 550px ;
+}
+
+div.col-lg-6 .col-sm-12 {
+    min-height: 100% ;
+}
