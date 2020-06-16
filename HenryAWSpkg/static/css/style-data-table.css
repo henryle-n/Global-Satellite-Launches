@@ -112,10 +112,6 @@ label {
   height: 500px;
   padding-top: 30px;
   margin-top: 0px;
-  /* background: rgb(24, 12, 78); */
-  /* background-image: linearurl("/static/assets/img/Starlink-satellite-bus-SpaceX-Teslarati-orbit-edit-2-c.jpg"); */
-
-    
   background: linear-gradient(to top, rgba(177, 137, 109, 0.452) 0%, rgba(24, 19, 16, 0.8) 100%), url("/static/assets/img/Starlink-satellite-bus-SpaceX-Teslarati-orbit-edit-2-c.jpg");
   background-attachment: fixed;
   background-position: center center;

@@ -1,3 +1,12 @@
+
+# Author: Henry Le
+# Date: Jun. 15, 2020
+# version 0 - first release
+# if you some how find this file of mine on github, please feel free to take and modify it. I wish you the best of luck on what you want to do.
+# learning coding is not easy as it's about learning a new language!
+ 
+ 
+ 
 # dependencies
 import pandas as pd
 import numpy as np
@@ -6,8 +15,8 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, inspect, join, outerjoin, MetaData, Table
 
+# creating reflective base to query data from sqlite db
 class SatLaunch():
-
     def __init__(self, connect_string):
         self.engine = create_engine(connect_string)
         # self.conn = self.engine.connect()
@@ -23,8 +32,8 @@ class SatLaunch():
         self.SatCount40yr = self.Base.classes['Launch_by_Country_46yr']
         self.Top10LaunchDates = self.Base.classes['Top10_Launch_Dates']
         self.ChoroPlethMap = self.Base.classes['ChoroplethMapData-Henry-Updates']
-        
-        
+    
+    # self check to make sure I have all tables
     def display_db_info(self):
         inspector = inspect(self.engine)
         tables = self.inspector.get_table_names()
@@ -36,7 +45,7 @@ class SatLaunch():
             for column in inspector.get_columns(table):
                 print(f"name: {column['name']}   column type: {column['type']}")
 
-
+    # create meta data to get table desciption
     def meta_info(self):
         inspector = inspect(self.engine)
         tables = self.inspector.get_table_names()
@@ -46,7 +55,6 @@ class SatLaunch():
             ea_metadata = {
                 "Table_Name" : table
             }
-            
             new_dict=new_dict={
             "column_name" : [],
             "column_type" : []
@@ -69,6 +77,7 @@ class SatLaunch():
         session.close()  
         return list(df.Satellite_Names)
     
+
     # get all demo data based on chosen satellite name
     def get_satbio_data(self, sat_name=""):
         session = Session(self.engine)
@@ -94,6 +103,7 @@ class SatLaunch():
         session.close()  
         return df.to_dict(orient="records")
     
+
     # 40 years of satellite launch counts by country 
     def get_40yr_sat_lauch_by_country(self, country_name=""):
         session = Session(self.engine)
@@ -130,7 +140,7 @@ class SatLaunch():
         session.close()  
         return df.to_dict(orient="records")
 
-
+    # country satellite counts
     def get_countryCount_perYear_perCountry(self, country_name=""):
         session = Session(self.engine)
 
@@ -145,13 +155,11 @@ class SatLaunch():
         return df.to_dict(orient="records")
 
 
-
-                      
+# if file is run as main i.e. run from this file, the following commands are executed
 if __name__ == '__main__':
-    info = SatLaunch("sqlite:///Data/UCS_Satellite.db")
+    info = SatLaunch("sqlite:///data/UCS_Satellite.db")
     info.display_db_info()
     info.meta_info()
-
     # print("\nAll Satellite Names:\n", info.get_satellite_names())
     # print("\nSatellite 1HOPSAT-TD:\n", info.get_demographic_data("1HOPSAT-TD (1st-generation High Optical Performance Satellite)"))
     # print("\nAll Satellite-Owned Countries\n", info.get_40yr_sat_lauch_by_country())
@@ -160,8 +168,3 @@ if __name__ == '__main__':
     # print("\nAll Satellite-Owned Countries\n", info.get_launch_date())
     # print("\nTop 10 Launch Dates\n", info.get_top10_launch_dates())
     # print("\nGet Country Name by Year\n", info.get_countryCount_perYear_perCountry())
-
-
-
-
-
