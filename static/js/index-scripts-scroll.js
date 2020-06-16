@@ -49,7 +49,6 @@
 
 // Good trial for Vanilla JS, hope to create a "plain" animation!
 var textContainerID = "h1.main-page-title";
-
 var textContainer = document.querySelector(textContainerID);
 var textString= textContainer.textContent;
 var splittedText = textString.split("");
@@ -93,10 +92,9 @@ function animMainT () {
   }
 
 
-
-
+// this is for animation text on the webpage upon loading
 var facts = [
-  "Did you know?",
+  "Do you know?",
   "In the last 46 years, 2,666 Satellites have been successfully lauched!",
   "They're orbiting around the Earth 24/7!",
   "That's why we can call our friends & families.",
@@ -126,10 +124,12 @@ var nFact=0;
 var msgArea = document.querySelector('#user-exp-text');
 var factsLen = facts.length;
 
+// promise to delay the class change - main driving for animation using css
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// since I use the promise, await need to be used so to queu each text change and class change
 async function userMessage() {
   
   // first time run, need to get the active class added 
@@ -147,14 +147,13 @@ async function userMessage() {
     msgArea.classList.replace('inactiveText', 'activeText');
     fact = facts[nFact]
     msgArea.textContent = fact;
-
     await sleep(3000);
     
     msgArea.classList.replace('activeText', 'inactiveText');
     await sleep(150);
   }
   
-  // get the last item in the user mssg box - this will have different anim
+    // get the last item in the user mssg box - this will have different anim
   msgArea.textContent = facts.slice(-1);
   msgArea.classList.replace('inactiveText', 'activeText-last');
   
@@ -169,5 +168,4 @@ async function userMessage() {
 
   // change class to run the header divider 
   document.querySelector('.masthead-divider-inactive').classList.replace('masthead-divider-inactive', 'masthead-divider-active');
-
 };

@@ -1,19 +1,4 @@
 @charset "UTF-8";
-/* @import "/static/css/animate.min.css"; */
-
-/*!
-* Start Bootstrap - Creative v6.0.2 (https://startbootstrap.com/themes/creative)
-* Copyright 2013-2020 Start Bootstrap
-* Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
-*/
-
-
-/*!
- * Bootstrap v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 
 :root {
     --blue: #007bff;
@@ -10238,7 +10223,7 @@ hr.light {
 header.masthead {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
-    background: linear-gradient(to top, rgba(160, 105, 65, 0.658) 0%, rgba(24, 19, 16, 0.8) 100%), url("/static/assets/img/Portfolio/fullsize/Satellite Lauch Rez.jpg");
+    background: linear-gradient(to top, rgba(160, 105, 65, 0.658) 0%, rgba(24, 19, 16, 0.8) 100%), url("/static/assets/img/SatMH.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -10429,7 +10414,8 @@ ul {
 }
 
 .team-tile-section {
-    background: url("/static/assets/img/portfolio/fullsize/ourTeam.png") no-repeat center top / cover;
+    background: linear-gradient(to top, rgba(85, 45, 177, 0.432) 0%, rgba(49, 99, 104, 0.8) 100%),url("/static/assets/img/portfolio/fullsize/ourTeam.png") no-repeat center top / cover;
+    background-attachment: fixed;
 }
 
 .team-tile-section .team-tile {
@@ -10618,8 +10604,10 @@ section#proj-desciption{
     background-image: linear-gradient(to bottom,
     rgba(0, 0, 0, 0.836) 0%,
     rgba(0, 0, 0, 0) 100%),
-    url("/static/assets/img/projDesc.png");
+    url("/static/assets/img/nasaLaunch.jpg");
     background-repeat: no-repeat;
+    background-size: cover !important;
+    background-attachment: fixed;
 }
 
 div.container-project{
