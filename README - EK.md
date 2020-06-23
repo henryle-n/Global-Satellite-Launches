@@ -1,27 +1,24 @@
-# The Era of Global Communications and Surveillance
-
-## Overview 
-![picture is broken](static/3assets/img/underConstruction.PNG)
-
-<p align="center">
-    <img height=400px width=600px>
-</p>
 
 
-This is my list:  
-  * This is my list # 1
-  * this is my list # 2
-  * ***This is Italic***
+  
 
-*You **can combine them***
 
-```
- <p align="center">
-    <img height=400px width=600px>
-</p>
-```
-First Header | Second Header
+## Tools / Techniques / Modules
+* Python |  HTML5 / CSS3 | Markdown | JavaScript |
+* Flask | Bootstrap 
+* ETL | SQLite database creation| Python Flask App | API routes | Webpage Rendering |
+* Node.js| Chart.js | Plotly.js | Webpage designs
+
+
+
+
+
+
+
+
+Team Members | Github Info
 ------------ | -------------
-Content cell 1 | Content cell 2
-Content column 3 | Content column 4
-Content column 5 | this is my cell 6
+Henry Le | https://github.com/henryle-n
+Ekin Kaplan | https://github.com/ekin651
+O.J. Ndebbio | https://github.com/ojndebbio
+
