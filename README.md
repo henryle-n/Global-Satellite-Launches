@@ -11,7 +11,15 @@ Thanks to 2,666 Satellites that currently orbiting earth, all of those are made 
 <img src="/static/assets/img/readme/readme.gif" alt="t-unlimited">
 </div>
 
-## Links to DataBase and Hosting Web Servers
+
+## About our Team
+Team Members | Roles | Github Info | LinkedIn
+------------ | ----------- | ------------- | ---------
+Henry Le |  Project Lead, Front & Back-End Developer | https://github.com/henryle-n | https://www.linkedin.com/in/le-henry/
+Ekin Kaplan | Front End & JS Developer | https://github.com/ekin651 |
+O.J. Ndebbio | JS Developer | https://github.com/ojndebbio |
+
+## Raw DataBase & Web Servers
 ### Dataset
 * https://www.ucsusa.org/resources/satellite-database
 
@@ -25,16 +33,14 @@ Thanks to 2,666 Satellites that currently orbiting earth, all of those are made 
 * Cloud Deployment / Cloud Computing with Amazon Web Services (AWS) and Heroku
 * Python |  HTML5 / CSS3 | Markdown | JavaScript | SQL
 * Flask App | API Routes | Bootstrap | SQLAlchemy | SQLite
-* Node.js| Chart.js | Plotly.js | GeoJSON
-* Visual Studio Code Insiders | Live Server (by R. Dey) | Instant Markdown (by D. Bankier) | Google Chrome ver. 84x
+* Node.js | Chart.js | Plotly.js | GeoJSON
+* Visual Studio Code | Live Server (by R. Dey) | Instant Markdown (by D. Bankier) | Google Chrome ver. 84x
 * Windows 10 Professional, ver. 1909 | MacOS Mojave 10.14.6
 
-## About our Team
-Team Members | Roles | Github Info
------------- | ----------- | -------------
-Henry Le |  Project Lead, Front & Back-End Developer | https://github.com/henryle-n
-Ekin Kaplan | Front End & JS Developer | https://github.com/ekin651
-O.J. Ndebbio | JS Developer | https://github.com/ojndebbio
+## WorkFlow
+The process of creating this project from start to finish is describing in the flow chart as below:
+
+![work-flow](/static/assets/img/portfolio/fullsize/Project-2-WDB.svg)
 
 ## Table of Contents
 
