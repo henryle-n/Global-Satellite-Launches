@@ -12,6 +12,7 @@ Thanks to 2,666 Satellites that currently orbiting earth, all of those are made 
 </div>
 
 ## Languages / Tools / Techniques / Modules
+* Cloud Deployment / Cloud Computing with Amazon Web Services (AWS)
 * Python |  HTML5 / CSS3 | Markdown | JavaScript | SQL
 * Flask App | API Routes | Bootstrap | SQLAlchemy | SQLite
 * Node.js| Chart.js | Plotly.js | GeoJSON
@@ -32,6 +33,19 @@ File names | Content
 xxx |  xxx
 xx | xxx
 xxx | xxx
+
+## Summary post-Data Exploration
+* U.S.A. by far the leader of the world in Satellite Counts, both as the manufacturer and as the user
+* China comes as 2<sup>nd</sup>, and Russia to be 3<sup>rd</sup> 
+* The 14<sup>th</sup> and xx<sup>th</sup> days of the month have the highest Satellite Counts
+* xxx month have most Satellite Launches
+
+
+## Team Lesson Learned
+* Multi-axes utilizing D3.js only work if each object of each axis have the same length and they have to be inside the same dataset
+* ChoroPleth Map works only if the country names match with GeoJSON database. For example, if dataset uses "US" as the name of the country, GeoJSON returns not found as the database country name is "United States of America"
+* Node.js and Chart.js are great tools beside Plotly.js for creating chart
+* Saving npm modules on app folder would eliminate problem if CDN goes offline, but would consume quite a bit of storage 
 
 ## Features
 * Auto message animation on the "*masthead*" of the main webpage, helping grap user's attention and invoke thoughts and curiosity about the data/ info to be presented, by "vanilla" JS with ```setInterval()``` and ```setTimeout()``` functions
