@@ -68,7 +68,7 @@
 
     <div class="hero text-center">
       <h1>Global Satellite Launches</h1>
-      <p>In the last 46 years, there are over 2,600 Satellites and counting have been successfully lauched!</p>
+      <p>In the last 146 years, there are over 2,600 Satellites and counting have been successfully lauched!</p>
       <img class="hero-img" src="">
     </div>
     <div class="container-fluid ctn-fl">
@@ -166,12 +166,15 @@
             </div>
           </aside>
         </div>
-        <div class="col-md-10">
+        <!-- <div class="table-responsive" style="overflow-x:auto; overflow-y:auto; max-height:700px; max-width: auto;">
+          <table class="table table-striped table-bordered table-hover table-sm"> -->
+              <!-- the table -->
+         <div class="col-md-10">
           <p id="sitRep">Please input filtering conditions to begin.</p>
-          <div id="table-area" class="table-responsive-md">
-            <table id="ufo-table" class="table table-striped">
-              <thead>
-                <tr>
+          <div id="table-area" class="table-responsive" style="overflow-x:auto; overflow-y:auto; max-height:700px; max-width: auto; background-color: blue ;">
+            <table id="ufo-table" class="table table-striped"> 
+              <thead class="table-info">
+                <tr style="text-align: right;">
                   <th class="table-head">Apogee (km)</th>
                   <th class="table-head">COSPAR Number</th>
                   <th class="table-head">Comments</th>
@@ -197,7 +200,7 @@
                   <th class="table-head">Satellite Names</th>
                   <th class="table-head">Users Names</th>
                 </tr>
-              </thead>
+              <!-- </thead> -->
               <tbody>
                 <!-- this is where to insert table data with js-script -->
               </tbody>
