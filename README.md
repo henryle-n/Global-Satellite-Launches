@@ -11,8 +11,18 @@ Thanks to 2,666 Satellites that currently orbiting earth, all of those are made 
 <img src="/static/assets/img/readme/readme.gif" alt="t-unlimited">
 </div>
 
+## Links to DataBase and Hosting Web Servers
+### Dataset
+* https://www.ucsusa.org/resources/satellite-database
+
+### Amazon Web Services (AWS) - Elastic Beanstalk 
+* http://henekon-satellite.us-east-2.elasticbeanstalk.com/
+
+### Heroku
+* https://henekon-satellite.herokuapp.com/
+
 ## Languages / Tools / Techniques / Modules
-* Cloud Deployment / Cloud Computing with Amazon Web Services (AWS)
+* Cloud Deployment / Cloud Computing with Amazon Web Services (AWS) and Heroku
 * Python |  HTML5 / CSS3 | Markdown | JavaScript | SQL
 * Flask App | API Routes | Bootstrap | SQLAlchemy | SQLite
 * Node.js| Chart.js | Plotly.js | GeoJSON
