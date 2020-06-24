@@ -64,18 +64,17 @@ File names | Content Description | Author
 **Data** |  Processed/ cleaned .CSV files / SQLite DB | H. Le / E. Kaplan / O.J. Ndebbio
 **Henry-AWS-pkg** | Final package deployed on AWS | H. Le
 **Henry-Heroku** |  Final package deployed on Heroku |H. Le
-**Team Planning** | Workflow Proposal      | H. Le / E. Kaplan / O.J. Ndebbio
-**static**| Folder contains 'assests' / 'css' / 'js ' /  'nodeModules-Henry-Updates'  files  | H. Le / E. Kaplan / O.J. Ndebbio
+**Team Planning** | Workflow Proposal document with detailed plans and responsibilities      | H. Le / E. Kaplan / O.J. Ndebbio
+**static**| Folder contains assests (images and fonts), CSS, JS, and Node modules (npm installed)  | H. Le / E. Kaplan / O.J. Ndebbio
 **templates**| Folder contains 'html files' which are the templates for displaying data on the web     |  H. Le / E. Kaplan / O.J. Ndebbio
-**AutoPull-GitHub_HL.sh**| Automatically Pull github updates | H. Le
-**AutoPush-GitHub_HL.sh**| Automatically Push github updates| H. Le
-**AutoRunNoteBook_HL.sh** |  Automatically Pull github updates | H. Le
-**AutoRunServer_HL.bat**|  Automatically Run Servers | H. Le
-**AutoRunServer_HL.sh**| Automatically Run Servers  | H. Le
+**AutoPull-GitHub_HL.sh**| Automatically Pull GitHub updates | H. Le
+**AutoPush-GitHub_HL.sh**| Automatically Push GitHub updates| H. Le
+**AutoRunNoteBook_HL.sh** |  Automatically activate dev. environment, and run Jupyter Notebook | H. Le
+**AutoRunServer_HL.bat**|  Automatically Run Servers (for Windows) | H. Le
+**AutoRunServer_HL.sh**| Automatically Run Servers (for Windows Git Bash or MacOS)  | H. Le
 **ETL.ipynb**|  Extract, transform, load the our data | H. Le / E. Kaplan / O.J. Ndebbio
-**README.md**|  Explanation of our project                |  H. Le / E. Kaplan / O.J. Ndebbio
-**SatelliteClass.py** |                             |  H. Le 
-**application.py** | exported / converted from the jupyter notebook                               |  H. Le 
+**SatelliteClass.py** | SQLAlchemy for connecting to SQLite DB and query data for application.py API routes |  H. Le 
+**application.py** | exported / converted from the jupyter notebook |  H. Le 
 
 ## Summary post-Data Exploration
 * U.S.A. by far the leader of the world in Satellite Counts, both as the manufacturer and as the user (1,327 satellites)
@@ -106,10 +105,10 @@ File names | Content Description | Author
 * The HTML provides some layout or structure for the web page 
 
 #### Ekin Kaplan
-* Learned new JS library/ modules, such as jQuery, Node.js, and Chart.js.
-* The CSS control the layout of multiple web pages all at once.
+* Learned new JS library/ modules, such as jQuery, Node.js, and Chart.js
+* The CSS control the layout of multiple web pages all at once
 * Bootsrap is customized as per the designs of our project.
-* HTML can be easily integrated with multiple languages and does not create any issues in it. For example in Javascript, node.js, CSS.We write the code of these languages between the HTML and it mixes with them easily.
+* HTML can be easily integrated with multiple languages and does not create any issues in it. For example in Javascript, node.js, CSS.We write the code of these languages between the HTML and it mixes with them easily
 
 
 
