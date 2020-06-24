@@ -65,7 +65,7 @@ Data |  Processed/ cleaned .CSV files / SQLite DB | H. Le / E. Kaplan / O.J. Nde
 Henry-AWS-pkg | Final package deployed on AWS | H. Le
 Henry-Heroku  | xxx |H. Le
 Team Planning | xxx | H. Le / E. Kaplan / O.J. Ndebbio
-static |Folder contains assests / css /js and /nodeModules-Henry-Updates files  | H. Le / E. Kaplan / O.J. Ndebbio
+static |Folder contains 'assests' / 'css' / 'js ' and /  'nodeModules-Henry-Updates'  files  | H. Le / E. Kaplan / O.J. Ndebbio
 templates |        |  H. Le / E. Kaplan / O.J. Ndebbio
 AutoPull-GitHub_HL.sh| Automatically Pull github updates | H. Le
 AutoPush-GitHub_HL.sh| Automatically Push github updates| H. Le
@@ -74,8 +74,8 @@ AutoRunServer_HL.bat|  Automatically Run Servers | H. Le
 AutoRunServer_HL.sh| Automatically Run Servers  | H. Le
 ETL.ipynb|                                          | H. Le / E. Kaplan / O.J. Ndebbio
 README.md|                                         |  H. Le / E. Kaplan / O.J. Ndebbio
-SatelliteClass.py|                             |  H. Le / E. Kaplan / O.J. Ndebbio
-application.py |                                |  H. Le / E. Kaplan / O.J. Ndebbio
+SatelliteClass.py|                             |  H. Le 
+application.py |                                |  H. Le 
 
 ## Summary post-Data Exploration
 * U.S.A. by far the leader of the world in Satellite Counts, both as the manufacturer and as the user (1,327 satellites)
