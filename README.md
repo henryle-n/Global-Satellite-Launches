@@ -40,10 +40,10 @@ Raw CSV of all Satellite history was downloaded:
 
 ## Web Servers
 Final website was hosted on both Amazon Web Services (AWS) and Heroku
-### AWS - Elastic Beanstalk 
+#### AWS - Elastic Beanstalk 
 * http://henekon-satellite.us-east-2.elasticbeanstalk.com/
 
-### Heroku
+#### Heroku
 * https://henekon-satellite.herokuapp.com/
 
 ## Languages / Tools / Techniques / Modules
