@@ -30,8 +30,8 @@ Thanks to 2,666 Satellites that are currently orbiting Earth, all of those are m
 Team Members | Roles | Github Info | LinkedIn
 ------------ | ----------- | ------------- | ---------
 Henry Le |  Project Lead, Front & Back-End Developer | https://github.com/henryle-n | https://www.linkedin.com/in/le-henry/
-Ekin Kaplan | Front End & JS Developer | https://github.com/ekin651 | 
-O.J. Ndebbio | JS Developer | https://github.com/ojndebbio | 
+Ekin Kaplan | Front End & JS Developer | https://github.com/ekin651 | https://www.linkedin.com/in/kaplan-ekin/
+O.J. Ndebbio | JS Developer | https://github.com/ojndebbio | https://www.linkedin.com/in/odudu-ndebbio-b6023414/
 
 ## Raw DataBase & Web Servers
 ### Dataset
