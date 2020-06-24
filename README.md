@@ -106,10 +106,11 @@ File names | Content Description | Author
 * The HTML provides some layout or structure for the web page 
 
 #### Ekin Kaplan
+* Learned new JS library/ modules, such as jQuery, Node.js, and Chart.js.
 * The CSS control the layout of multiple web pages all at once.
 * Bootsrap is customized as per the designs of our project.
 * HTML can be easily integrated with multiple languages and does not create any issues in it. For example in Javascript, Php, node.js, CSS and  we write the code of these languages between the HTML and it mixes with them very easily.
-* Learned new JS library/ modules, such as jQuery, Node.js, and Chart.js.
+
 
 
 ## Features
