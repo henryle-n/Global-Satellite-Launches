@@ -80,7 +80,7 @@ File names | Content Description | Author
 **AutoRunNoteBook_HL.sh** |  Automatically activate dev. environment, and run Jupyter Notebook | H. Le
 **AutoRunServer_HL.bat**|  Automatically Run Servers (for Windows) | H. Le
 **AutoRunServer_HL.sh**| Automatically Run Servers (for Windows Git Bash or MacOS)  | H. Le
-**ETL.ipynb**|  Extract, transform, load the our data | H. Le / E. Kaplan / O.J. Ndebbio
+**Extract-Transform-Load.ipynb**|  Extract, transform, load the our data | H. Le / E. Kaplan / O.J. Ndebbio
 **SatelliteClass.py** | SQLAlchemy for connecting to SQLite DB and query data for application.py API routes |  H. Le 
 **application.py** | exported / converted from the jupyter notebook |  H. Le 
 
