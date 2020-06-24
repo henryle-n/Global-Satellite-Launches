@@ -5,13 +5,19 @@ Have you ever wondered how people can call each other from anywhere in the world
 
 Or, have you ever wondered why our phone is so smart that it knows our location and give us direction to wherever we want to go, or may be how the pilots know where to fly too, there is no landmark up **there** in the air...?
 
-Thanks to 2,666 Satellites that are currently orbiting Earth, all of those are made possible. In this project, the team of three, led by ****Henry** Le**, with team members of **Ekin Kaplan** and **O.J. Ndebbio** explored and analyzed the dataset of Satellite Launches from 1974 - 2020 (46 years).
+Thanks to 2,666 Satellites that are currently orbiting Earth 24/7, all of those are made possible. In this project, the team of three, led by ****Henry** Le**, with team members of **Ekin Kaplan** and **O.J. Ndebbio** explored and analyzed the dataset of Satellite Launches from 1974 - 2020 (46 years).
 
-<u>Questions we'd love to explore: </u> 
+<u>What we'd love to explore: </u> 
 
 <ol>
     <li>
         Satellite distributions among nations: who are the top 10 Satellite Owners?
+    </li>
+    <li>
+        Who is the top Satellite Owner/ Operator?
+    </li>
+    <li>
+        Who are 2<sup>nd</sup> and 3<sup>rd</sup> Satellite Owner/ Operators?
     </li>
     <li>
         How many Satellite Launches in a particular day, month, and year?
