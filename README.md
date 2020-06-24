@@ -33,12 +33,14 @@ Henry Le |  Project Lead, Front & Back-End Developer | https://github.com/henryl
 Ekin Kaplan | Front End & JS Developer | https://github.com/ekin651 | https://www.linkedin.com/in/kaplan-ekin/
 O.J. Ndebbio | JS Developer | https://github.com/ojndebbio | https://www.linkedin.com/in/odudu-ndebbio-b6023414/
 
-## Raw DataBase & Web Servers
-### Dataset
+## Raw DataBase
+Raw CSV of all Satellite history was downloaded:
 * https://www.ucsusa.org/resources/satellite-database
 * Overview of database :  Includes country of Satellite origin, purpose & other operational details of satellites
 
-### Amazon Web Services (AWS) - Elastic Beanstalk 
+## Web Servers
+Final website was hosted on both Amazon Web Services (AWS) and Heroku
+### AWS - Elastic Beanstalk 
 * http://henekon-satellite.us-east-2.elasticbeanstalk.com/
 
 ### Heroku
