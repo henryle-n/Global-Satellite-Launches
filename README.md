@@ -67,7 +67,7 @@ Henry-Heroku  | xxx |H. Le
 Team Planning | xxx | xxxx
 static | xxx | xxx
 AutoPull-GitHub_HL.sh| xxx | H. Le
-AutoPush-GitHub_HL.sh|| xxx | H. Le
+AutoPush-GitHub_HL.sh|  xxx | H. Le
 AutoRunNoteBook_HL.sh| xxx| H. Le
 AutoRunServer_HL.bat| xxx| H. Le
 AutoRunServer_HL.sh| xxx | H. Le
