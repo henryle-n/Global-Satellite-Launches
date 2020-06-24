@@ -3,10 +3,24 @@
 ## Background
 Have you ever wondered how people can call each other from anywhere in the world at any time?  
 
-Or, have you ever wondered why our phone is so smart that it knows our location and give us direction to wherever we want to go, or may be how the pilots know where to fly too, there is no landmark up there in the air...?
+Or, have you ever wondered why our phone is so smart that it knows our location and give us direction to wherever we want to go, or may be how the pilots know where to fly too, there is no landmark up **there** in the air...?
 
-Thanks to 2,666 Satellites that currently orbiting earth, all of those are made possible. In this project, the team of three, led by **Henry Le**, with team members of **Ekin Kaplan** and **O.J. Ndebbio**.  
+Thanks to 2,666 Satellites that are currently orbiting Earth, all of those are made possible. In this project, the team of three, led by ****Henry** Le**, with team members of **Ekin Kaplan** and **O.J. Ndebbio** explored and analyzed the dataset of Satellite Launches from 1974 - 2020 (46 years).
 
+<u>Questions we'd love to explore: </u> 
+
+<ol>
+    <li>
+        Satellite distributions among nations: who are the top 10 Satellite Owners?
+    </li>
+    <li>
+        How many Satellite Launches in a particular day, month, and year?
+    </li>
+    <li>
+        Interactive Data Table returning data based on user's query inputs.
+    </li>
+</ol>
+<br>
 <div align="center">
 <img src="/static/assets/img/readme/readme.gif" alt="t-unlimited">
 </div>
@@ -16,12 +30,13 @@ Thanks to 2,666 Satellites that currently orbiting earth, all of those are made 
 Team Members | Roles | Github Info | LinkedIn
 ------------ | ----------- | ------------- | ---------
 Henry Le |  Project Lead, Front & Back-End Developer | https://github.com/henryle-n | https://www.linkedin.com/in/le-henry/
-Ekin Kaplan | Front End & JS Developer | https://github.com/ekin651 |
-O.J. Ndebbio | JS Developer | https://github.com/ojndebbio |
+Ekin Kaplan | Front End & JS Developer | https://github.com/ekin651 | 
+O.J. Ndebbio | JS Developer | https://github.com/ojndebbio | 
 
 ## Raw DataBase & Web Servers
 ### Dataset
 * https://www.ucsusa.org/resources/satellite-database
+* Overview of database :  Includes country of Satellite origin, purpose & other operational details of satellites
 
 ### Amazon Web Services (AWS) - Elastic Beanstalk 
 * http://henekon-satellite.us-east-2.elasticbeanstalk.com/
@@ -33,7 +48,7 @@ O.J. Ndebbio | JS Developer | https://github.com/ojndebbio |
 * Cloud Deployment / Cloud Computing with Amazon Web Services (AWS) and Heroku
 * Python |  HTML5 / CSS3 | Markdown | JavaScript | SQL
 * Flask App | API Routes | Bootstrap | SQLAlchemy | SQLite
-* Node.js | Chart.js | Plotly.js | GeoJSON
+* Node.js | Chart.js | Plotly.js | GeoJSON | jQuery
 * Visual Studio Code | Live Server (by R. Dey) | Instant Markdown (by D. Bankier) | Google Chrome ver. 84x
 * Windows 10 Professional, ver. 1909 | MacOS Mojave 10.14.6
 
@@ -44,24 +59,48 @@ The process of creating this project from start to finish is describing in the f
 
 ## Table of Contents
 
-File names | Content 
------------- | ----------- 
-xxx |  xxx
-xx | xxx
-xxx | xxx
+File names | Content Description | Author
+------------ | ----------- | ----------
+xxx |  xxx | 
+xx | xxx | xxx
+xxx | xxx | xxxx
+xxx | xxx | xxxx
+xxx | xxx | xxx
+xxx | xxx | xxxx
 
 ## Summary post-Data Exploration
-* U.S.A. by far the leader of the world in Satellite Counts, both as the manufacturer and as the user
-* China comes as 2<sup>nd</sup>, and Russia to be 3<sup>rd</sup> 
-* The 14<sup>th</sup> and xx<sup>th</sup> days of the month have the highest Satellite Counts
-* xxx month have most Satellite Launches
+* U.S.A. by far the leader of the world in Satellite Counts, both as the manufacturer and as the user (1,327 satellites)
+* China comes as 2<sup>nd</sup> (363 satellites), and Russia to be 3<sup>rd</sup> (169 satellites) 
+* The 14<sup>th</sup> and 29<sup>th</sup> days of the month, months of Feb. and Dec., and the year of 2019 have the highest Satellite Counts
+* Within the U.S.A. satellites are used for:
+
+  * Civil: 30 counts
+
+  * Commercial: 935 counts
+
+  * Government: 170 counts
+
+  * Military: 192 counts
+
 
 
 ## Team Lesson Learned
+#### Henry Le
 * Multi-axes utilizing D3.js only work if each object of each axis have the same length and they have to be inside the same dataset
 * ChoroPleth Map works only if the country names match with GeoJSON database. For example, if dataset uses "US" as the name of the country, GeoJSON returns not found as the database country name is "United States of America"
 * Node.js and Chart.js are great tools beside Plotly.js for creating chart
 * Saving npm modules on app folder would eliminate problem if CDN goes offline, but would consume quite a bit of storage 
+* Learned new JS library/ modules, such as jQuery, Node.js, and Chart.js
+
+#### O.J.Ndebbio
+* The CSS & Bootsrap provides custom formats & decorations
+* The HTML provides some layout or structure for the web page 
+
+#### Ekin Kapplan
+* xxx
+* xxx
+* xxx
+
 
 ## Features
 * Auto message animation on the "*masthead*" of the main webpage, helping grap user's attention and invoke thoughts and curiosity about the data/ info to be presented, by "vanilla" JS with ```setInterval()``` and ```setTimeout()``` functions
