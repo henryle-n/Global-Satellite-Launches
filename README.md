@@ -94,23 +94,22 @@ File names | Content Description | Author
 
 ## Team Lesson Learned
 #### Henry Le
+* Enhanced UX/UI through text animations, color changes, mouse events, etc.
 * Multi-axes utilizing D3.js only work if each object of each axis have the same length and they have to be inside the same dataset
 * ChoroPleth Map works only if the country names match with GeoJSON database. For example, if dataset uses "US" as the name of the country, GeoJSON returns not found as the database country name is "United States of America"
 * Node.js and Chart.js are great tools beside Plotly.js for creating chart
 * Saving npm modules on app folder would eliminate problem if CDN goes offline, but would consume quite a bit of storage 
-* Learned new JS library/ modules, such as jQuery, Node.js, and Chart.js
+* Learned new JS libraries/ modules, such as jQuery, Node.js, and Chart.js
 
 #### O.J.Ndebbio
 * The CSS & Bootsrap provides custom formats & decorations
 * The HTML provides some layout or structure for the web page 
 
 #### Ekin Kaplan
-* Learned new JS library/ modules, such as jQuery, Node.js, and Chart.js
-* The CSS control the layout of multiple web pages all at once
-* Bootsrap is customized as per the designs of our project.
-* HTML can be easily integrated with multiple languages and does not create any issues in it. For example in Javascript, node.js, CSS.We write the code of these languages between the HTML and it mixes with them easily
-
-
+* Learned new JS libraries/ modules, such as jQuery, Node.js, and Chart.js
+* Effectively used CSS control the layout of multiple web pages
+* Bootsrap is customized as per design of our project.
+* HTML can be easily integrated with multiple languages to make interactive webpages (JS/CSS)
 
 ## Features
 * Auto message animation on the "*masthead*" of the main webpage, helping grap user's attention and invoke thoughts and curiosity about the data/ info to be presented, by "vanilla" JS with ```setInterval()``` and ```setTimeout()``` functions
