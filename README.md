@@ -109,7 +109,7 @@ File names | Content Description | Author
 * Learned new JS library/ modules, such as jQuery, Node.js, and Chart.js.
 * The CSS control the layout of multiple web pages all at once.
 * Bootsrap is customized as per the designs of our project.
-* HTML can be easily integrated with multiple languages and does not create any issues in it. For example in Javascript, Php, node.js, CSS and  we write the code of these languages between the HTML and it mixes with them very easily.
+* HTML can be easily integrated with multiple languages and does not create any issues in it. For example in Javascript, node.js, CSS.We write the code of these languages between the HTML and it mixes with them easily.
 
 
 
