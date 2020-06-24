@@ -106,9 +106,9 @@ File names | Content Description | Author
 * The HTML provides some layout or structure for the web page 
 
 #### Ekin Kapplan
-* xxx
-* xxx
-* xxx
+* The CSS & Bootsrap provides custom formats & decorations
+* The HTML provides some layout or structure for the web page 
+* Learned new JS library/ modules, such as jQuery, Node.js, and Chart.js.
 
 
 ## Features
