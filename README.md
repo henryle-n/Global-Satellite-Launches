@@ -61,8 +61,8 @@ The process of creating this project from start to finish is describing in the f
 
 File names | Content Description | Author
 ------------ | ----------- | ----------
-xxx |  xxx | 
-xx | xxx | xxx
+Data |  Processed/ cleaned .CSV files / SQLite DB | H. Le / E. Kaplan / O.J. Ndebbio
+Henry-AWS-pkg | Final package deployed on AWS | H. Le
 xxx | xxx | xxxx
 xxx | xxx | xxxx
 xxx | xxx | xxx
@@ -111,7 +111,7 @@ xxx | xxx | xxxx
 * Multiple element tags embedded in each visualization charts, which allows user to quickly navigate to point of interest by clicking on a specific chart name
 * Several ```.sh``` and ```.bat``` files were created to automate the process of pushing or pulling on GitHub, or auto activate the python environment, start the ```application.py``` file, and run the web browser - saved significant amount of time for all team members
 
-## Improvement Opportunity
+## Improvement Opportunities
 * Auto message animation on webpage appears and disappears with a fixed time interval. It'd be better to build a dynamic wait time based on the length of the message so that each message won't appear too fast or too slow
 
-* Better format for all webpages to keep a consistent format. In this project, since there are 3 members working on different pages, the consistency of the format is not fixed intime before deadline
+* Better format for all webpages to keep a consistent format. In this project, since there are 3 members working on different pages, the consistency of the format is not fixed intime before deadlines
