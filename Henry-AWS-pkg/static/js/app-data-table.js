@@ -136,6 +136,13 @@ function runFilter (data) {
   }
 };
 
+// onclick will download the csv
+document.getElementById("csv-btn").onclick = download_csv;
+
+// onclick to clear out all filter
+document.getElementById("reset-btn").onclick = resetFilter;
+
+
 
 
 // ============== Henry's & OJ's modifications ================
@@ -160,8 +167,3 @@ d3.json("/api/master-record").then(function (tableData) {
   console.log(error);
 })
 
-// onclick will download the csv
-document.getElementById("csv-btn").onclick = download_csv;
-
-// onclick to clear out all filter
-document.getElementById("reset-btn").onclick = resetFilter;
