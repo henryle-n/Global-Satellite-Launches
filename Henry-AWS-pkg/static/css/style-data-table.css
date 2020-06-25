@@ -8727,7 +8727,7 @@ label {
 #filter-btn {
   background-color: rgba(251, 117, 117, 0.575);
   position: relative;
-  font-size: 17px;
+  font-size: 13px;
   border-radius: 5px;
   width: 100px;
   text-align: center;
@@ -8737,7 +8737,17 @@ label {
 #csv-btn{
   background-color: rgba(169, 195, 255, 0.835);
   position: relative;
-  font-size: 17px;
+  font-size: 13px;
+  padding:10px;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+}
+/* reset button format */
+#reset-btn{
+  background-color: rgba(131, 173, 118, 0.513);
+  position: relative;
+  font-size: 13px;
   padding:10px;
   border-radius: 5px;
   width: 100px;
@@ -8754,7 +8764,11 @@ label {
   background-color: rgba(42, 106, 255, 0.835);;
   color: white;
   border-radius: 10px;
-
+}
+#reset-btn:hover {
+  background-color: rgba(29, 190, 14, 0.835);;
+  color: white;
+  border-radius: 10px;
 }
 
 /* media queries which will only be activated at specific screen sizes */
