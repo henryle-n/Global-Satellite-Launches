@@ -5228,10 +5228,12 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
 .navbar-brand {
   float: left;
-  padding: 9.5px 15px;
+  padding: 9.5px 30px;
   font-size: 19px;
   line-height: 21px;
-  height: 40px
+  height: 40px;
+  margin-right: 100px ;
+
 }
 
 .navbar-brand:hover,
@@ -9133,7 +9135,7 @@ button {
   max-height: auto;
   position: relative;
   display: inline;
-  transform: translate(150px, -30px);
+  transform: translate(120px, -30px);
 
 }
 
