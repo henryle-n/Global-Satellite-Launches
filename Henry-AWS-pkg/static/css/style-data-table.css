@@ -8715,22 +8715,46 @@ label {
   opacity: 0.95;
 }
 
+.btn-area {
+  display: flex;
+  justify-content: left;
+  padding: 0px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
 /* filter button format */
 #filter-btn {
-  background-color: rgba(105, 81, 12, 0.849);
+  background-color: rgba(251, 117, 117, 0.575);
   position: relative;
   font-size: 17px;
-  padding: 10px;
-  left: 15px;
-  bottom: 10px;
-  border-radius: 15px;
-  min-width: auto;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  padding:10px;
+}
+/* download csv button format */
+#csv-btn{
+  background-color: rgba(169, 195, 255, 0.835);
+  position: relative;
+  font-size: 17px;
+  padding:10px;
+  border-radius: 5px;
+  width: 100px;
   text-align: center;
 }
 
 #filter-btn:hover {
-  background-color: rgb(167, 144, 18);
-  color: black;
+  background-color: rgb(255, 68, 68);
+  color: white;
+  border-radius: 10px;
+}
+
+#csv-btn:hover {
+  background-color: rgba(42, 106, 255, 0.835);;
+  color: white;
+  border-radius: 10px;
+
 }
 
 /* media queries which will only be activated at specific screen sizes */
@@ -9180,3 +9204,4 @@ html {
 .panel-heading {
   background-color: rgb(29, 29, 29) !important;
 }
+
