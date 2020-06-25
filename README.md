@@ -123,9 +123,9 @@ File names | Content Description | Author
 * Auto message animation on the "*masthead*" of the main webpage, helping grap user's attention and invoke thoughts and curiosity about the data/ info to be presented, by "vanilla" JS with ```setInterval()``` and ```setTimeout()``` functions
 * Auto Notification Message for each webpage to tell user what page they are visiting by jQuery and Bootstrap notify module
 * Interactive charts with tooltip to allow user to hover / click to see data of each elements of the charts
-* Filterable Data Table webpage to allow user to refine the data search for one or multiple criteria
 * Interactive sidebar that hide in large screen and appear in small screen, enhancing the UX on mobile device
 * Multiple element tags embedded in each visualization charts, which allows user to quickly navigate to point of interest by clicking on a specific chart name
+* Filterable Data Table webpage to allow user to refine the data search for one or multiple criteria. Filtered data is available to be downloaded with a button, format as *.CSV*
 * Several ```.sh``` and ```.bat``` files were created to automate the process of pushing or pulling on GitHub, or auto activate the python environment, start the ```application.py``` file, and run the web browser - saved significant amount of time for all team members
 
 ## Improvement Opportunities
