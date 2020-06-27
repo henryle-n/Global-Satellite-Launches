@@ -37,6 +37,7 @@
     box-sizing: border-box;
 }
 
+
 html {
     font-family: sans-serif;
     line-height: 1.15;
@@ -55,6 +56,12 @@ main,
 nav,
 section {
     display: block;
+}
+
+footer.py-5 {
+    background-color: #000000 !important;
+    padding: 15px !important;
+    box-shadow: 2px 0px 10px 2px whitesmoke;
 }
 
 body {
@@ -395,6 +402,10 @@ h6,
 h1,
 .h1 {
     font-size: 2.5rem;
+}
+
+h2.mt-0 {
+    padding-top: 40px;
 }
 
 h2,
@@ -6794,8 +6805,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-    /* background-color: #f8f9fa !important; */
-    background-color: #b0703b !important;
+    background-color: #b0703b;
 }
 
 a.bg-light:hover,
@@ -9921,7 +9931,7 @@ button.bg-dark:focus {
 }
 
 .text-white {
-    color: #e92121fd !important;
+    color: rgb(240, 112, 38) !important;
 }
 
 .text-primary {
@@ -10405,7 +10415,7 @@ ul {
 
 .padding-lg {
     display: block;
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 60px;
 }
 
@@ -10413,17 +10423,29 @@ ul {
     height: 349px;
 }
 
-.team-tile-section {
-    background: linear-gradient(to top, rgba(85, 45, 177, 0.432) 0%, rgba(49, 99, 104, 0.8) 100%),url("/static/assets/img/portfolio/fullsize/ourTeam.png") no-repeat center top / cover;
+/* .team-tile-section {
+    background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.6) 0%, 
+        rgba(0, 0, 0, 0.8) 100%),
+        url("/static/assets/img/portfolio/fullsize/ourTeam.png") 
+        no-repeat center top / cover;
     background-attachment: fixed;
+} */
+
+
+section#about {
+    background: linear-gradient(to top, 
+    rgba(0, 0, 0, 0.6) 0%, 
+    rgba(0, 0, 0, 0.8) 100%),
+    url("/static/assets/img/portfolio/fullsize/ourTeam.png") 
+    no-repeat center top / cover;
+background-attachment: fixed;
 }
 
 .team-tile-section .team-tile {
     float: left;
     width: 100%;
-    /* background: #fff; */
-    background: rgba(128, 53, 91, 0.603);
-    opacity: 1.7;
+    backdrop-filter: blur(3px) ;
     padding: 30px 20px;
     text-align: center;
     border: 2px solid #d5d5d5;
@@ -10507,6 +10529,8 @@ h2.proj-desc {
 img.WDB-pic {
     height: 1200px;
     width: 1200px;
+    background-color: #696969;
+    box-shadow:  0px 0px 5px 5px rgb(199, 199, 199);
 }
 
 @media screen and ( max-width: 900px) {
@@ -10526,7 +10550,9 @@ img.responsive {
 }
 
 section#contact.page-section {
-    background-image: url("/static/assets/img/portfolio/fullsize/nightEarth.jpg");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%),
+    url("/static/assets/img/portfolio/fullsize/nightEarth.jpg");
+    padding-bottom: 30px;
 }
 
 div.contact-text {
@@ -10597,10 +10623,8 @@ div.contact-text {
 
 
 
-section#proj-desciption{
+section#proj-desciption {
     padding: 0rem 0;
-    padding-top: 0rem;
-    margin-top: 0px;
     background-image: linear-gradient(to bottom,
     rgba(0, 0, 0, 0.836) 0%,
     rgba(0, 0, 0, 0) 100%),
@@ -10608,6 +10632,7 @@ section#proj-desciption{
     background-repeat: no-repeat;
     background-size: cover !important;
     background-attachment: fixed;
+    padding-bottom: 60px;
 }
 
 div.container-project{
@@ -10622,10 +10647,13 @@ hr.henry-divider-1 {
 
 
 section.api-section {
-    margin-top: 40px;
-    padding: 50px;
+    margin-top: 0px;
+    padding: 0px 50px;
 }
 
+h2.api-section-header {
+    margin-top: 30px;
+}
 
 span.hiddenText {
     opacity: 0 !important;
