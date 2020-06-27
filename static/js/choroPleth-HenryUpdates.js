@@ -28,9 +28,7 @@ function getLineGraph() {
       },
       options: {
         title: {
-            display: true,
-            text: 'Top 10 Satellite Owners/ Countries',
-            fontSize : 30
+            display: false,
         },
         legend: {
           display:false
@@ -40,7 +38,7 @@ function getLineGraph() {
             scaleLabel : {
               display: true,
               labelString: "Satellite Counts",
-              fontSize: 20,
+              fontSize: 14,
               fontColor : "#447E23"
             },
             
@@ -53,7 +51,7 @@ function getLineGraph() {
             scaleLabel : {
               display: true,
               labelString: "Satellite Owners/ Countries",
-              fontSize: 20,
+              fontSize: 14,
               fontColor : "#447E23"
             },
             

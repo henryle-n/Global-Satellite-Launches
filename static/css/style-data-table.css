@@ -4455,17 +4455,6 @@ tbody.collapse.in {
   margin-bottom: 2px
 }
 
-@media (min-width:768px) {
-  .navbar-right .dropdown-menu {
-    left: auto;
-    right: 0
-  }
-
-  .navbar-right .dropdown-menu-left {
-    left: 0;
-    right: auto
-  }
-}
 
 .btn-group,
 .btn-group-vertical {
@@ -8500,31 +8489,9 @@ body {
 .wrapper {
   position: relative;
   min-height: 100%;
-  padding-bottom: 130px;
+  padding-bottom: 0;
   overflow: auto;
-  background-color: rgb(4, 22, 98);
-}
-
-/* The footer is positioned at the bottom of the page */
-.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  min-height: 100px;
-  background: #4e5d6c;
-}
-
-/* The code styles the text at the bottom of the footer */
-.footer>.bottom {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 10px;
-  background: #04045c;
-  min-height: 40px;
-  font-size: 1.7rem;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .navbar {
@@ -9142,6 +9109,7 @@ button {
 
 #mainNav {
   background-color: rgb(0, 0, 0);
+  box-shadow: 0 0 10px 2px whitesmoke;
 }
 
 .nav-link {
@@ -9221,3 +9189,27 @@ html {
   background-color: rgb(29, 29, 29) !important;
 }
 
+div.footer-text>span {
+  display: inline;
+}
+
+.footer-section {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.876)!important;
+  box-shadow: 10px 0 10px 2px whitesmoke;
+  z-index: 2;
+}
+
+.footer-text {
+  text-align: center;
+  font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+}
+.footer-text-1 {
+  color: rgba(212, 212, 212, 0.568);
+  font-style: italic;
+  font-weight: 900px;
+}
+
+.footer-text-2 {
+  color: rgba(230, 87, 68, 0.979);
+}
