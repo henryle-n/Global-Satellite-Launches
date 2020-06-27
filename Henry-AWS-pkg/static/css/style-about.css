@@ -44,15 +44,6 @@ hr.henry-1 {
 }
 
 
-div.container.main-sect {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-}
-
-
 .jumbotron {
     position: relative;
     margin: 0;
@@ -198,6 +189,7 @@ h3.team-name {
 
 
 section.main-section {
+    display: flex;
     background: rgba(0, 0, 0, 0.835);
     z-index: 1000;
     position: relative;
