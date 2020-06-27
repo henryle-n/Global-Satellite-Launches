@@ -71,7 +71,7 @@ d3.json(dataUrl).then((data, err) => {
             y: yAxisDay,
             type: 'bar',
             marker: {
-                color: 'rgba(56, 20, 148, 0.55))'
+                color: 'rgba(56, 20, 148, 0.66))'
 
             }
         }];
@@ -90,7 +90,13 @@ d3.json(dataUrl).then((data, err) => {
                 titlefont: {
                     size: 17,
                     color: 'rgba(56, 20, 148, 1))'
-                }
+                },
+                showgrid: true,
+                zeroline: true,
+                showline: false,
+                gridcolor: 'rgba(0,0,0,0.1)',
+                gridwidth: 1,
+                zerolinecolor: '(0,0,0,0.8)',
             },
 
             yaxis: {
@@ -105,7 +111,13 @@ d3.json(dataUrl).then((data, err) => {
                     size: 17,
                     color: 'rgba(56, 20, 148, 1)'
                 },
-            }
+                showgrid: true,
+                zeroline: true,
+                showline: false,
+                gridcolor: 'rgba(0,0,0,0.1)',
+                gridwidth: 1,
+                zerolinecolor: '(0,0,0,0.8)',
+            },
 
         };
 
@@ -123,7 +135,7 @@ d3.json(dataUrl).then((data, err) => {
             y: yAxisMonth,
             type: 'bar',
             marker: {
-                color: 'rgba(225, 232, 17, 0.43))'
+                color: 'rgba(225, 232, 17, 0.66))'
             }
         }];
         var monthBarLayout = {
@@ -142,21 +154,28 @@ d3.json(dataUrl).then((data, err) => {
                 titlefont: {
                     size: 17,
                     color: 'rgba(158, 126, 0, 1))'
-                }
-            },
+                },
+                gridcolor: "rgba(0,0,0,0.1)",
+                gridwidth: 1,
+                linecolor: '(0,0,0,0.8)',
+                linewidth: 1
 
-            yaxis: {
-                zeroline: false,
-                gridwidth: 2
             },
             bargap: 0.04,
             yaxis: {
+                zeroline: true,
                 title: 'QUANTITY',
                 titlefont: {
                     family: 'monaco,Consolas,Lucida Console,monospace',
                     size: 17,
-                    color: 'rgba(158, 126, 0, 1))'
+
                 },
+                showgrid: true,
+                zeroline: true,
+                showline: false,
+                gridcolor: 'rgba(0,0,0,0.1)',
+                gridwidth: 1,
+                zerolinecolor: '(0,0,0,0.8)',
             }
 
         };
@@ -191,7 +210,15 @@ d3.json(dataUrl).then((data, err) => {
                 titlefont: {
                     size: 17,
                     color: 'rgba(7, 78, 100, 1))'
-                }
+                },
+                showgrid: true,
+                zeroline: true,
+                showline: false,
+                gridcolor: 'rgba(0,0,0,0.1)',
+                gridwidth: 1,
+                zerolinecolor: '(0,0,0,0.8)',
+
+
             },
 
             yaxis: {
@@ -206,6 +233,13 @@ d3.json(dataUrl).then((data, err) => {
                     size: 17,
                     color: 'rgba(7, 78, 100, 1))'
                 },
+                showgrid: true,
+                zeroline: true,
+                showline: false,
+                gridcolor: 'rgba(0,0,0,0.1)',
+                gridwidth: 1,
+                zerolinecolor: '(0,0,0,0.8)'
+
             }
 
         };
@@ -216,6 +250,6 @@ d3.json(dataUrl).then((data, err) => {
         // console.log("end running :: ", getScriptName());
     })
     // log any error while pulling promises
-    .catch(function(err) {
+    .catch(function (err) {
         console.log("Error(s) while running Promise :: ", err);
     })
