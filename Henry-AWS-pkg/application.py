@@ -14,7 +14,7 @@ from flask import Flask, jsonify, render_template
 data = SatLaunch("sqlite:///data/UCS_Satellite.db")
 
 ################## Flask App set up###############
-app = Flask(__name__)
+application = app = Flask(__name__)
 
 
 ####### custome routes for website and data######
