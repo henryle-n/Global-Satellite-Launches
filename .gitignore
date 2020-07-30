@@ -4,6 +4,7 @@ p2env
 .vscode
 .vscode
 Henry-Heroku-Offline
+.ipynb_checkpoints
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
