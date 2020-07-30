@@ -9,7 +9,7 @@ Henry-Heroku-Offline
 __pycache__/
 *.py[cod]
 *$py.class
-
+Heroku Package
 # C extensions
 *.so
 
