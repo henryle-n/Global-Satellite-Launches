@@ -54,7 +54,7 @@ Final website was hosted on both Amazon Web Services (AWS) and Heroku:
 
 ## 5. Languages, Tools & Techniques
 * **Languages**:
-    * Python |  HTML5 | CSS3 | JavaScript | SQL | Markdown
+    * Python3 |  HTML5 | CSS3 | JavaScript | SQL | Markdown
 * **Python** **Libraries/** **Modules**:
     * Pandas | CSV | OS | Numpy | Flask & RESTful APIs | SQLAlchemy | Datetime
 * **SQL** **Database**:
@@ -137,10 +137,15 @@ File names | Content Description | Author
 * Better format for all webpages to keep a consistent format. In this project, since there are 3 members working on different pages, the consistency of the format is not fixed intime before deadlines
 
 ## 12. How to Use
-* This repository contains all needed source codes for running the applications on either local PC or Cloud.
-* Due to the size of dev. environment, this is the only thing missing.
-* To create a new python environment:
-    `python -m venv <new-env-name>`
+This repository contains all needed source codes for running the applications on either local PC or Cloud. However, user needs to create new development environment if running on local PC as this was not uploaded to GitHub due to its large size.
+* Clone this repository to user local PC:
+    * `git clone https://github.com/henryle-n/Global-Satellite-Launches.git`
+* To create a new python environment in the project folder:
+    * `python -m venv <new-env-name>`
+* Activate newly created environment (recommend using CMD):
+    * `<new-env-name>\Scripts\activate`
 * Install needed libraries/ modules for Python:
-    `pip install -r requirements.txt`
-* 
+    * `pip install -r requirements.txt`
+* Run mini-server on local PC:
+    * `python application.py`
+
