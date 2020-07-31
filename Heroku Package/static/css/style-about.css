@@ -1,0 +1,238 @@
+@import "styles.css";
+
+
+* {
+    margin: 0,
+}
+
+#mainNav {
+    position: sticky;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.719);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: transparent;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    height: 100%;
+    background-color: transparent;
+}
+
+section {
+    display: block;
+    text-align: center;
+    padding: 0 0 20px;
+}
+
+section hr {
+    width: 50%;
+}
+
+hr.henry-1 {
+    height: 0px;
+    max-width: 60px;
+    border-style: solid;
+    border-color: rgb(255, 48, 48);
+    border-width: 4px 0 0 0;
+}
+
+
+.jumbotron {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.jumbotron .container .profile-img,
+.jumbotron .container h1,
+.jumbotron .container h4,
+.jumbotron .container hr,
+.jumbotron .container a {
+    position: relative;
+}
+
+.jumbotron .j-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.jumbotron .profile-img {
+    width: 25%;
+    margin: 20px 0;
+    border-radius: 100%;
+    border: 8px solid #eee;
+    -moz-box-shadow: 0px 0px 20px #ccc;
+    -webkit-box-shadow: 0px 0px 20px #ccc;
+    box-shadow: 0px 0px 20px #ccc;
+    filter: hue-rotate(30deg);
+    -webkit-filter: hue-rotate(30deg);
+    -moz-filter: hue-rotate(30deg);
+    -o-filter: hue-rotate(30deg);
+}
+
+.jumbotron h4 {
+    margin: 0 auto 20px;
+}
+
+
+.team-tile {
+    height: auto;
+    float: left;
+    width: 100%;
+    background:transparent;
+    padding: 50px 50px;
+    text-align: center;
+    border: 2px solid #d5d5d5;
+    margin: 0 0 28px;
+    backdrop-filter: blur(4px);
+    
+}
+
+
+.team-tile figure {
+    width: 148px;
+    height: 148px;
+    border-radius: 100%;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.team-tile img {
+    width: 148px;
+    height: 148px;
+    border-radius: 100%;
+}
+
+.team-tile h3 {
+    color: #9fec0f;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 6px 0;
+    text-transform: uppercase;
+    font-size: 23px;
+    padding-bottom: 30px;
+}
+
+.team-tile h3 a {
+    text-decoration: none;
+    color: #e3e54d;
+}
+
+.team-tile p {
+    color: #dfdfc0;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#contact-info-links {
+    color: #00ffe7;
+    background-color: transparent;
+    padding-left: 10px;
+    display: inline;
+}
+
+#contact-a {
+    display: inline;
+}
+
+#contact-ul {
+    justify-content: center;
+    position: relative;
+    margin-top: -50px;
+    transform: translate(40%, 50%);
+    padding-bottom: 80px;
+}
+
+
+.bg-light-ek {
+    background-color: #090422d9 !important;
+}
+
+p.job-title {
+    font-size: 18px !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    
+}
+
+h2.text-white.mt-0 {
+    padding: 30px 20px;
+    font-size: 40px;
+}
+
+h3.team-name {
+    font-size: 30px !important;
+    width: 100%;
+}
+
+.img-responsive {
+    width: 50px;
+    height: 50px;
+}
+
+
+section.main-section {
+    display: flex;
+    background: rgba(0, 0, 0, 0.835);
+    z-index: 1000;
+    position: relative;
+    padding-top: 50px;
+    background: linear-gradient(to bottom,
+    rgba(34, 32, 2, 0.6) 0%,
+    rgba(0, 0, 0, 0.8) 100%),
+    url("/static/assets/img/aboutMain.jpg") no-repeat center center fixed;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+i {
+    display: inline;
+}
+
+
+div.footer-section {
+    margin-top: 2px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.842);
+    box-shadow: 0 0 10px 10px rgba(255, 127, 80, 0.582);
+}
+
+.footer-text {
+    text-align: center;
+    font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+}
+.footer-text-1 {
+    color: rgba(212, 212, 212, 0.568);
+    font-style: italic;
+    font-weight: 900px;
+}
+
+.footer-text-2 {
+    color: rgba(230, 87, 68, 0.979);
+}
+
+ a#contact-a:hover, p#contact-info-links:hover {
+    color: rgb(123, 255, 0);
+    text-decoration: none !important;
+    text-transform: uppercase;
+}
