@@ -3,13 +3,13 @@ Web Application Penetration Test Questionnaire.docx
 p2env
 .vscode
 .vscode
-Henry-Heroku-Offline
+Heroku Package - Offline
 .ipynb_checkpoints
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-Heroku Package
+
 # C extensions
 *.so
 
