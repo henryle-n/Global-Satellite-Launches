@@ -146,12 +146,12 @@ File names | Content Description | Author
 * Better format for all webpages to keep a consistent format. In this project, since there are 3 members working on different pages, the consistency of the format is not fixed intime before deadlines
 
 ## 12. How to Use
-This repository contains all needed source codes for running the applications on either local PC or Cloud. However, user needs to create new development environment if running on local PC as this was not uploaded to GitHub due to its large size.
+This repository contains all needed source codes for running the applications on either local PC or Cloud. However, user needs to create new development environment if running on local PC as this was not uploaded to GitHub due to its large size. Below steps were done in Windows CMD.
 * Clone this repository to user local PC:
     * `git clone https://github.com/henryle-n/Global-Satellite-Launches.git`
 * To create a new python environment in the project folder:
     * `python -m venv <new-env-name>`
-* Activate newly created environment (recommend using CMD):
+* Activate newly created environment:
     * `<new-env-name>\Scripts\activate`
 * Install needed libraries/ modules for Python:
     * `pip install -r requirements.txt`
