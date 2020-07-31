@@ -46,11 +46,17 @@ Raw CSV of all Satellite history was downloaded:
 
 ## 4. Cloud Deployment
 Final website was hosted on both Amazon Web Services (AWS) and Heroku:
-#### AWS - Elastic Beanstalk with EC2
-* http://henekon-satellite.us-east-2.elasticbeanstalk.com/
+#### AWS - Elastic Beanstalk (EB) &  Elastic Compute Cloud (EC2)
+* Folder **AWS Package** contains a `.zip` file that was uploaded to AWS.
+* <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.html">Click here</a> for instructions.
+* Final Website:
+    * http://henekon-satellite.us-east-2.elasticbeanstalk.com/
 
 #### Heroku
-* https://henekon-satellite.herokuapp.com/
+* Folder Heroku Package contains files that were pushed to Heroku via Git. 
+* <a href="https://devcenter.heroku.com/articles/git">Click here</a> for instructions to push with Git. Note that there are also other methods, Git is just one of them.
+* Final website:
+    * https://henekon-satellite.herokuapp.com/
 
 ## 5. Languages, Tools & Techniques
 * **Languages**:
@@ -111,6 +117,9 @@ File names | Content Description | Author
 * Node.js and Chart.js are great tools beside Plotly.js for creating interactive charts.
 * Saving Node modules on app folder would eliminate problem if CDN goes offline, but would consume quite a bit of storage.
 * Learned new JS libraries/ modules, such as jQuery, Node.js, and Chart.js.
+* There are multiple ways to deploy packages to Amazon AWS. 
+    * Connect & deploy to EC2 directly thru a SSH connection (AWS CLI). EC2 is just another PC - remotely, same as someone's computer (of course in Linux instead of Windows).
+    * Via "Orchestration Services" provided by Amazon such as EB, ECS, Fargate (for large scale applications). This project was deployed by utilizing EB.
 
 #### O.J.Ndebbio
 * CSS & Bootsrap provide custom formats & decorations.
