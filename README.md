@@ -1,11 +1,11 @@
 # The Era of Global Communications and Surveillance
 
 ## 1. Background
-Have you ever wondered how people can call each other from anywhere in the world at any time?  
+Have you ever wondered how people can call each other anywhere anytime?  
 
-Or, have you ever wondered why our phone is so smart that it knows our location and gives us direction to wherever we want to go, or may be how the pilots know where to fly too? Well... There is no landmark up there in the air.
+Or, have you ever wondered why our phone is so smart that it knows our location and gives us direction to wherever we want to go, or may be how pilots know where to fly to?
 
-Thanks to 2,666 Satellites that are currently orbiting Earth 24/7, all of those are made possible. In this project, the team of three, led by ****Henry** Le**, with team members of **Ekin Kaplan** and **O.J. Ndebbio** explored and analyzed the dataset of Satellite Launches from 1974 - 2020 (46 years).
+Thanks to 2,666 Satellites that are currently orbiting Earth 24/7, all of those are made possible. In this project, the team of three, led by **Henry Le**, with team members of **Ekin Kaplan** and **O.J. Ndebbio** explored and analyzed the dataset of Satellite Launches from 1974 - 2020 (46 years).
 
 <u>What we'd love to explore: </u> 
 
@@ -81,17 +81,17 @@ The process of creating this project from start to finish is describing in the f
 
 ## 7. Table of Contents
 
-File names | Content Description | Author
------------- | ----------- | ----------
-**data** |  Processed/ cleaned .CSV files / SQLite DB | H. Le / E. Kaplan / O.J. Ndebbio
-**AWS Package** | Final package deployed on AWS | H. Le
-**Team Planning** | Workflow Proposal document with detailed plans and responsibilities      | H. Le / E. Kaplan / O.J. Ndebbio
-**static**| assests (images and fonts), CSS, JS, and Node modules  | H. Le / E. Kaplan / O.J. Ndebbio
-**templates**| all webpages of entire project |  H. Le / E. Kaplan / O.J. Ndebbio 
-**Auto*** **Files**| to help automate push & pull from GitHub; activate development environement and run server | H. Le
-**Extract-Transform-Load.ipynb**|  Extract, transform, & load data | H. Le / E. Kaplan / O.J. Ndebbio
-**SatelliteClass.py** | SQLAlchemy for connecting to SQLite DB and query data for Flask RESTful API |  H. Le 
-**application.py** | Flask RESTful APIs, Python driver for website |  H. Le 
+File names | Content Description 
+------------ | ----------- 
+**data** |  Processed/ cleaned .CSV files / SQLite DB
+**AWS Package** | Final package deployed on AWS
+**Team Planning** | Workflow Proposal document with detailed plans and responsibilities     
+**static**| assests (images and fonts), CSS, JS, and Node modules 
+**templates**| all webpages of entire project 
+**Auto*** **Files**| to help automate push & pull from GitHub; activate development environement and run server 
+**Extract-Transform-Load.ipynb**|  Extract, transform, & load data 
+**SatelliteClass.py** | SQLAlchemy for connecting to SQLite DB and query data for Flask RESTful API 
+**application.py** | Flask RESTful APIs, Python driver for website 
 
 ## 8. Summary Post-Data Exploration
 * U.S.A. by far the leader of the world in Satellite Counts, both as the manufacturer and as the user (1,327 satellites).
