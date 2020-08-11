@@ -60,19 +60,19 @@ Final website was hosted on both Amazon Web Services (AWS) and Heroku:
 
 ## 5. Languages, Tools & Techniques
 * **Languages**:
-    * Python3 |  HTML5 | CSS3 | JavaScript | SQL | Markdown
+    * Python 3 |  HTML 5 | CSS 3 | JavaScript ES-6 | SQL | Markdown
 * **Python** **Libraries/** **Modules**:
-    * Pandas | CSV | OS | Numpy | Flask & RESTful APIs | SQLAlchemy | Datetime
+    * Pandas v1.0.4 | CSV (Pandas) | OS (Pandas) | Numpy v1.18.5 | Flask (RESTful APIs) v1.1.2 | SQLAlchemy v1.3.17 | Datetime
 * **SQL** **Database**:
-    * SQLite
+    * SQLite (DB Browser ver. 3.11.2)
 * **JavaScript** **Libraries**:
-    * Node.js | Chart.js | Bootstrap.js | Plotly.js | GeoJSON | jQuery.js
+    * D3 v5 | D3 Tooltip v0.7.1 | Node | Chart v2.9.3 | Bootstrap v4 | Plotly v1.54.7 | GeoJSON | jQuery v3.5.1
 * **Cloud Services:**
-    * Amazon AWS |  Heroku
+    * Amazon AWS (EC2) |  Heroku
 * **Software/ Applications:**
-    * Visual Studio Code | Notepad++ | Google Chrome ver. 84x
+    * Visual Studio Code v1.47.3 | Notepad++ v7.8.7 | Google Chrome v84.0.4147.125
 * **Operating Systems:**
-    * Windows 10 Professional, ver. 1909 | macOS Mojave 10.14.6
+    * Windows 10 Professional v1909 | macOS Mojave v10.14.6
 
 ## 6. WorkFlow
 The process of creating this project from start to finish is describing in the flow chart as below:
