@@ -60,7 +60,10 @@ Final website was hosted on both Amazon Web Services (AWS) and Heroku:
 
 ## 5. Languages, Tools & Techniques
 * **Languages**:
-    * Python 3 |  HTML 5 | CSS 3 | JavaScript ES-6 | SQL | Markdown
+    * Python 3 
+    * HTML 5 | CSS 3 | JavaScript ES-6
+    * SQL
+    * Markdown
 * **Python** **Libraries/** **Modules**:
     * Pandas v1.0.4 | CSV (Pandas) | OS (Pandas) | Numpy v1.18.5 | Flask (RESTful APIs) v1.1.2 | SQLAlchemy v1.3.17 | Datetime
 * **SQL** **Database**:
